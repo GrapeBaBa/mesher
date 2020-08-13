@@ -1,0 +1,58 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.12'
+    }
+}
+
+plugins {
+    id 'org.springframework.boot' version '2.3.2.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+    id 'java'
+}
+
+apply plugin: 'com.google.protobuf'
+
+group = 'com.zhigui.crossmesh'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    annotationProcessor("org.springframework.boot:spring-boot-configuration-processor") {
+        exclude group: 'com.vaadin.external.google', module: 'android-json'
+    }
+    implementation 'org.hyperledger.fabric:fabric-gateway-java:2.2.0'
+    implementation('net.devh:grpc-server-spring-boot-starter:2.9.0.RELEASE') {
+        exclude group: 'io.grpc', module: 'grpc-netty-shaded'
+    }
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+protobuf {
+    generatedFilesBaseDir = "$projectDir/proto-gen"
+}
+
+clean {
+    delete protobuf.generatedFilesBaseDir
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ["src/main/java", "proto-gen/main/java"]
+        }
+    }
+}
