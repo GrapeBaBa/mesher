@@ -30,7 +30,7 @@ message Invocation {
 }
 
 message BranchTransaction {
-    TransactionID tx_id = 1;
+    URI uri = 1;
     Invocation invocation = 2;
 }
 
@@ -76,8 +76,8 @@ message PrimaryTransactionPreparedEvent {
 
     BranchTransaction primary_commit_tx = 2;
     BranchTransaction primary_rollback_tx = 3;
-
-    repeated BranchTransaction branch_prepare_txs = 4;
+    Invocation global_tx_status_query = 4;
+    repeated BranchTransaction branch_prepare_txs = 5;
 }
 
 message PrimaryTransactionConfirmedEvent {
@@ -95,6 +95,7 @@ message BranchTransactionPreparedEvent {
 message GlobalTransactionStatus {
     TransactionID primary_prepare_tx_id = 1;
     GlobalTransactionStatusType status = 2;
+    TransactionID primary_confirm_tx_id = 3;
 }
 
 message VerifyInfo {
@@ -102,7 +103,7 @@ message VerifyInfo {
     string function = 2;
 }
 
-message ResourceRegisteredEvent {
+message ResourceRegisteredOrUpdatedEvent {
     URI uri = 1;
     bytes connection = 2;
     ChainType type = 3;

@@ -3,6 +3,8 @@ package com.zhigui.crossmesh.mesher;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
+import static com.zhigui.crossmesh.proto.Types.*;
+
 /**
  * Created by IntelliJ IDEA.
  * Author: kaichen
@@ -19,6 +21,21 @@ public class Config {
 
     @Value("${mesher.coordinator.cross-monitor-thread-num}")
     private int crossMonitorThreadNum;
+
+    @Value("${mesher.meta-network-name}")
+    private String metaNetwork;
+
+    @Value("${mesher.meta-chain.name}")
+    private String metaChain;
+
+    @Value("${mesher.meta-chain.type}")
+    private ChainType metaChainType;
+
+    @Value("${mesher.meta-chain.resource-registry-contract}")
+    private String resourceRegistryContract;
+
+    @Value("${mesher.meta-chain.fabric.conn-path}")
+    private String fabricMetaChainConn;
 
     public String getSelfNetwork() {
         return selfNetwork;
@@ -42,5 +59,45 @@ public class Config {
 
     public void setCrossMonitorThreadNum(int crossMonitorThreadNum) {
         this.crossMonitorThreadNum = crossMonitorThreadNum;
+    }
+
+    public String getMetaNetwork() {
+        return metaNetwork;
+    }
+
+    public void setMetaNetwork(String metaNetwork) {
+        this.metaNetwork = metaNetwork;
+    }
+
+    public String getMetaChain() {
+        return metaChain;
+    }
+
+    public void setMetaChain(String metaChain) {
+        this.metaChain = metaChain;
+    }
+
+    public String getResourceRegistryContract() {
+        return resourceRegistryContract;
+    }
+
+    public void setResourceRegistryContract(String resourceRegistryContract) {
+        this.resourceRegistryContract = resourceRegistryContract;
+    }
+
+    public ChainType getMetaChainType() {
+        return metaChainType;
+    }
+
+    public void setMetaChainType(ChainType metaChainType) {
+        this.metaChainType = metaChainType;
+    }
+
+    public String getFabricMetaChainConn() {
+        return fabricMetaChainConn;
+    }
+
+    public void setFabricMetaChainConn(String fabricMetaChainConn) {
+        this.fabricMetaChainConn = fabricMetaChainConn;
     }
 }

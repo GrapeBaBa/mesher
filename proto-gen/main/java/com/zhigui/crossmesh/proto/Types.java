@@ -4332,19 +4332,19 @@ public final class Types {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.pb.TransactionID tx_id = 1;</code>
-     * @return Whether the txId field is set.
+     * <code>.pb.URI uri = 1;</code>
+     * @return Whether the uri field is set.
      */
-    boolean hasTxId();
+    boolean hasUri();
     /**
-     * <code>.pb.TransactionID tx_id = 1;</code>
-     * @return The txId.
+     * <code>.pb.URI uri = 1;</code>
+     * @return The uri.
      */
-    com.zhigui.crossmesh.proto.Types.TransactionID getTxId();
+    com.zhigui.crossmesh.proto.Types.URI getUri();
     /**
-     * <code>.pb.TransactionID tx_id = 1;</code>
+     * <code>.pb.URI uri = 1;</code>
      */
-    com.zhigui.crossmesh.proto.Types.TransactionIDOrBuilder getTxIdOrBuilder();
+    com.zhigui.crossmesh.proto.Types.URIOrBuilder getUriOrBuilder();
 
     /**
      * <code>.pb.Invocation invocation = 2;</code>
@@ -4407,14 +4407,14 @@ public final class Types {
               done = true;
               break;
             case 10: {
-              com.zhigui.crossmesh.proto.Types.TransactionID.Builder subBuilder = null;
-              if (txId_ != null) {
-                subBuilder = txId_.toBuilder();
+              com.zhigui.crossmesh.proto.Types.URI.Builder subBuilder = null;
+              if (uri_ != null) {
+                subBuilder = uri_.toBuilder();
               }
-              txId_ = input.readMessage(com.zhigui.crossmesh.proto.Types.TransactionID.parser(), extensionRegistry);
+              uri_ = input.readMessage(com.zhigui.crossmesh.proto.Types.URI.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(txId_);
-                txId_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(uri_);
+                uri_ = subBuilder.buildPartial();
               }
 
               break;
@@ -4464,27 +4464,27 @@ public final class Types {
               com.zhigui.crossmesh.proto.Types.BranchTransaction.class, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder.class);
     }
 
-    public static final int TX_ID_FIELD_NUMBER = 1;
-    private com.zhigui.crossmesh.proto.Types.TransactionID txId_;
+    public static final int URI_FIELD_NUMBER = 1;
+    private com.zhigui.crossmesh.proto.Types.URI uri_;
     /**
-     * <code>.pb.TransactionID tx_id = 1;</code>
-     * @return Whether the txId field is set.
+     * <code>.pb.URI uri = 1;</code>
+     * @return Whether the uri field is set.
      */
-    public boolean hasTxId() {
-      return txId_ != null;
+    public boolean hasUri() {
+      return uri_ != null;
     }
     /**
-     * <code>.pb.TransactionID tx_id = 1;</code>
-     * @return The txId.
+     * <code>.pb.URI uri = 1;</code>
+     * @return The uri.
      */
-    public com.zhigui.crossmesh.proto.Types.TransactionID getTxId() {
-      return txId_ == null ? com.zhigui.crossmesh.proto.Types.TransactionID.getDefaultInstance() : txId_;
+    public com.zhigui.crossmesh.proto.Types.URI getUri() {
+      return uri_ == null ? com.zhigui.crossmesh.proto.Types.URI.getDefaultInstance() : uri_;
     }
     /**
-     * <code>.pb.TransactionID tx_id = 1;</code>
+     * <code>.pb.URI uri = 1;</code>
      */
-    public com.zhigui.crossmesh.proto.Types.TransactionIDOrBuilder getTxIdOrBuilder() {
-      return getTxId();
+    public com.zhigui.crossmesh.proto.Types.URIOrBuilder getUriOrBuilder() {
+      return getUri();
     }
 
     public static final int INVOCATION_FIELD_NUMBER = 2;
@@ -4524,8 +4524,8 @@ public final class Types {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (txId_ != null) {
-        output.writeMessage(1, getTxId());
+      if (uri_ != null) {
+        output.writeMessage(1, getUri());
       }
       if (invocation_ != null) {
         output.writeMessage(2, getInvocation());
@@ -4539,9 +4539,9 @@ public final class Types {
       if (size != -1) return size;
 
       size = 0;
-      if (txId_ != null) {
+      if (uri_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getTxId());
+          .computeMessageSize(1, getUri());
       }
       if (invocation_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -4562,10 +4562,10 @@ public final class Types {
       }
       com.zhigui.crossmesh.proto.Types.BranchTransaction other = (com.zhigui.crossmesh.proto.Types.BranchTransaction) obj;
 
-      if (hasTxId() != other.hasTxId()) return false;
-      if (hasTxId()) {
-        if (!getTxId()
-            .equals(other.getTxId())) return false;
+      if (hasUri() != other.hasUri()) return false;
+      if (hasUri()) {
+        if (!getUri()
+            .equals(other.getUri())) return false;
       }
       if (hasInvocation() != other.hasInvocation()) return false;
       if (hasInvocation()) {
@@ -4583,9 +4583,9 @@ public final class Types {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasTxId()) {
-        hash = (37 * hash) + TX_ID_FIELD_NUMBER;
-        hash = (53 * hash) + getTxId().hashCode();
+      if (hasUri()) {
+        hash = (37 * hash) + URI_FIELD_NUMBER;
+        hash = (53 * hash) + getUri().hashCode();
       }
       if (hasInvocation()) {
         hash = (37 * hash) + INVOCATION_FIELD_NUMBER;
@@ -4724,11 +4724,11 @@ public final class Types {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (txIdBuilder_ == null) {
-          txId_ = null;
+        if (uriBuilder_ == null) {
+          uri_ = null;
         } else {
-          txId_ = null;
-          txIdBuilder_ = null;
+          uri_ = null;
+          uriBuilder_ = null;
         }
         if (invocationBuilder_ == null) {
           invocation_ = null;
@@ -4762,10 +4762,10 @@ public final class Types {
       @java.lang.Override
       public com.zhigui.crossmesh.proto.Types.BranchTransaction buildPartial() {
         com.zhigui.crossmesh.proto.Types.BranchTransaction result = new com.zhigui.crossmesh.proto.Types.BranchTransaction(this);
-        if (txIdBuilder_ == null) {
-          result.txId_ = txId_;
+        if (uriBuilder_ == null) {
+          result.uri_ = uri_;
         } else {
-          result.txId_ = txIdBuilder_.build();
+          result.uri_ = uriBuilder_.build();
         }
         if (invocationBuilder_ == null) {
           result.invocation_ = invocation_;
@@ -4820,8 +4820,8 @@ public final class Types {
 
       public Builder mergeFrom(com.zhigui.crossmesh.proto.Types.BranchTransaction other) {
         if (other == com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance()) return this;
-        if (other.hasTxId()) {
-          mergeTxId(other.getTxId());
+        if (other.hasUri()) {
+          mergeUri(other.getUri());
         }
         if (other.hasInvocation()) {
           mergeInvocation(other.getInvocation());
@@ -4855,123 +4855,123 @@ public final class Types {
         return this;
       }
 
-      private com.zhigui.crossmesh.proto.Types.TransactionID txId_;
+      private com.zhigui.crossmesh.proto.Types.URI uri_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.zhigui.crossmesh.proto.Types.TransactionID, com.zhigui.crossmesh.proto.Types.TransactionID.Builder, com.zhigui.crossmesh.proto.Types.TransactionIDOrBuilder> txIdBuilder_;
+          com.zhigui.crossmesh.proto.Types.URI, com.zhigui.crossmesh.proto.Types.URI.Builder, com.zhigui.crossmesh.proto.Types.URIOrBuilder> uriBuilder_;
       /**
-       * <code>.pb.TransactionID tx_id = 1;</code>
-       * @return Whether the txId field is set.
+       * <code>.pb.URI uri = 1;</code>
+       * @return Whether the uri field is set.
        */
-      public boolean hasTxId() {
-        return txIdBuilder_ != null || txId_ != null;
+      public boolean hasUri() {
+        return uriBuilder_ != null || uri_ != null;
       }
       /**
-       * <code>.pb.TransactionID tx_id = 1;</code>
-       * @return The txId.
+       * <code>.pb.URI uri = 1;</code>
+       * @return The uri.
        */
-      public com.zhigui.crossmesh.proto.Types.TransactionID getTxId() {
-        if (txIdBuilder_ == null) {
-          return txId_ == null ? com.zhigui.crossmesh.proto.Types.TransactionID.getDefaultInstance() : txId_;
+      public com.zhigui.crossmesh.proto.Types.URI getUri() {
+        if (uriBuilder_ == null) {
+          return uri_ == null ? com.zhigui.crossmesh.proto.Types.URI.getDefaultInstance() : uri_;
         } else {
-          return txIdBuilder_.getMessage();
+          return uriBuilder_.getMessage();
         }
       }
       /**
-       * <code>.pb.TransactionID tx_id = 1;</code>
+       * <code>.pb.URI uri = 1;</code>
        */
-      public Builder setTxId(com.zhigui.crossmesh.proto.Types.TransactionID value) {
-        if (txIdBuilder_ == null) {
+      public Builder setUri(com.zhigui.crossmesh.proto.Types.URI value) {
+        if (uriBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          txId_ = value;
+          uri_ = value;
           onChanged();
         } else {
-          txIdBuilder_.setMessage(value);
+          uriBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
-       * <code>.pb.TransactionID tx_id = 1;</code>
+       * <code>.pb.URI uri = 1;</code>
        */
-      public Builder setTxId(
-          com.zhigui.crossmesh.proto.Types.TransactionID.Builder builderForValue) {
-        if (txIdBuilder_ == null) {
-          txId_ = builderForValue.build();
+      public Builder setUri(
+          com.zhigui.crossmesh.proto.Types.URI.Builder builderForValue) {
+        if (uriBuilder_ == null) {
+          uri_ = builderForValue.build();
           onChanged();
         } else {
-          txIdBuilder_.setMessage(builderForValue.build());
+          uriBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
-       * <code>.pb.TransactionID tx_id = 1;</code>
+       * <code>.pb.URI uri = 1;</code>
        */
-      public Builder mergeTxId(com.zhigui.crossmesh.proto.Types.TransactionID value) {
-        if (txIdBuilder_ == null) {
-          if (txId_ != null) {
-            txId_ =
-              com.zhigui.crossmesh.proto.Types.TransactionID.newBuilder(txId_).mergeFrom(value).buildPartial();
+      public Builder mergeUri(com.zhigui.crossmesh.proto.Types.URI value) {
+        if (uriBuilder_ == null) {
+          if (uri_ != null) {
+            uri_ =
+              com.zhigui.crossmesh.proto.Types.URI.newBuilder(uri_).mergeFrom(value).buildPartial();
           } else {
-            txId_ = value;
+            uri_ = value;
           }
           onChanged();
         } else {
-          txIdBuilder_.mergeFrom(value);
+          uriBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
-       * <code>.pb.TransactionID tx_id = 1;</code>
+       * <code>.pb.URI uri = 1;</code>
        */
-      public Builder clearTxId() {
-        if (txIdBuilder_ == null) {
-          txId_ = null;
+      public Builder clearUri() {
+        if (uriBuilder_ == null) {
+          uri_ = null;
           onChanged();
         } else {
-          txId_ = null;
-          txIdBuilder_ = null;
+          uri_ = null;
+          uriBuilder_ = null;
         }
 
         return this;
       }
       /**
-       * <code>.pb.TransactionID tx_id = 1;</code>
+       * <code>.pb.URI uri = 1;</code>
        */
-      public com.zhigui.crossmesh.proto.Types.TransactionID.Builder getTxIdBuilder() {
+      public com.zhigui.crossmesh.proto.Types.URI.Builder getUriBuilder() {
         
         onChanged();
-        return getTxIdFieldBuilder().getBuilder();
+        return getUriFieldBuilder().getBuilder();
       }
       /**
-       * <code>.pb.TransactionID tx_id = 1;</code>
+       * <code>.pb.URI uri = 1;</code>
        */
-      public com.zhigui.crossmesh.proto.Types.TransactionIDOrBuilder getTxIdOrBuilder() {
-        if (txIdBuilder_ != null) {
-          return txIdBuilder_.getMessageOrBuilder();
+      public com.zhigui.crossmesh.proto.Types.URIOrBuilder getUriOrBuilder() {
+        if (uriBuilder_ != null) {
+          return uriBuilder_.getMessageOrBuilder();
         } else {
-          return txId_ == null ?
-              com.zhigui.crossmesh.proto.Types.TransactionID.getDefaultInstance() : txId_;
+          return uri_ == null ?
+              com.zhigui.crossmesh.proto.Types.URI.getDefaultInstance() : uri_;
         }
       }
       /**
-       * <code>.pb.TransactionID tx_id = 1;</code>
+       * <code>.pb.URI uri = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.zhigui.crossmesh.proto.Types.TransactionID, com.zhigui.crossmesh.proto.Types.TransactionID.Builder, com.zhigui.crossmesh.proto.Types.TransactionIDOrBuilder> 
-          getTxIdFieldBuilder() {
-        if (txIdBuilder_ == null) {
-          txIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.zhigui.crossmesh.proto.Types.TransactionID, com.zhigui.crossmesh.proto.Types.TransactionID.Builder, com.zhigui.crossmesh.proto.Types.TransactionIDOrBuilder>(
-                  getTxId(),
+          com.zhigui.crossmesh.proto.Types.URI, com.zhigui.crossmesh.proto.Types.URI.Builder, com.zhigui.crossmesh.proto.Types.URIOrBuilder> 
+          getUriFieldBuilder() {
+        if (uriBuilder_ == null) {
+          uriBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.zhigui.crossmesh.proto.Types.URI, com.zhigui.crossmesh.proto.Types.URI.Builder, com.zhigui.crossmesh.proto.Types.URIOrBuilder>(
+                  getUri(),
                   getParentForChildren(),
                   isClean());
-          txId_ = null;
+          uri_ = null;
         }
-        return txIdBuilder_;
+        return uriBuilder_;
       }
 
       private com.zhigui.crossmesh.proto.Types.Invocation invocation_;
@@ -8288,25 +8288,40 @@ public final class Types {
     com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getPrimaryRollbackTxOrBuilder();
 
     /**
-     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+     * <code>.pb.Invocation global_tx_status_query = 4;</code>
+     * @return Whether the globalTxStatusQuery field is set.
+     */
+    boolean hasGlobalTxStatusQuery();
+    /**
+     * <code>.pb.Invocation global_tx_status_query = 4;</code>
+     * @return The globalTxStatusQuery.
+     */
+    com.zhigui.crossmesh.proto.Types.Invocation getGlobalTxStatusQuery();
+    /**
+     * <code>.pb.Invocation global_tx_status_query = 4;</code>
+     */
+    com.zhigui.crossmesh.proto.Types.InvocationOrBuilder getGlobalTxStatusQueryOrBuilder();
+
+    /**
+     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
      */
     java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> 
         getBranchPrepareTxsList();
     /**
-     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
      */
     com.zhigui.crossmesh.proto.Types.BranchTransaction getBranchPrepareTxs(int index);
     /**
-     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
      */
     int getBranchPrepareTxsCount();
     /**
-     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
      */
     java.util.List<? extends com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> 
         getBranchPrepareTxsOrBuilderList();
     /**
-     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
      */
     com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getBranchPrepareTxsOrBuilder(
         int index);
@@ -8398,6 +8413,19 @@ public final class Types {
               break;
             }
             case 34: {
+              com.zhigui.crossmesh.proto.Types.Invocation.Builder subBuilder = null;
+              if (globalTxStatusQuery_ != null) {
+                subBuilder = globalTxStatusQuery_.toBuilder();
+              }
+              globalTxStatusQuery_ = input.readMessage(com.zhigui.crossmesh.proto.Types.Invocation.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(globalTxStatusQuery_);
+                globalTxStatusQuery_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 branchPrepareTxs_ = new java.util.ArrayList<com.zhigui.crossmesh.proto.Types.BranchTransaction>();
                 mutable_bitField0_ |= 0x00000001;
@@ -8510,35 +8538,58 @@ public final class Types {
       return getPrimaryRollbackTx();
     }
 
-    public static final int BRANCH_PREPARE_TXS_FIELD_NUMBER = 4;
+    public static final int GLOBAL_TX_STATUS_QUERY_FIELD_NUMBER = 4;
+    private com.zhigui.crossmesh.proto.Types.Invocation globalTxStatusQuery_;
+    /**
+     * <code>.pb.Invocation global_tx_status_query = 4;</code>
+     * @return Whether the globalTxStatusQuery field is set.
+     */
+    public boolean hasGlobalTxStatusQuery() {
+      return globalTxStatusQuery_ != null;
+    }
+    /**
+     * <code>.pb.Invocation global_tx_status_query = 4;</code>
+     * @return The globalTxStatusQuery.
+     */
+    public com.zhigui.crossmesh.proto.Types.Invocation getGlobalTxStatusQuery() {
+      return globalTxStatusQuery_ == null ? com.zhigui.crossmesh.proto.Types.Invocation.getDefaultInstance() : globalTxStatusQuery_;
+    }
+    /**
+     * <code>.pb.Invocation global_tx_status_query = 4;</code>
+     */
+    public com.zhigui.crossmesh.proto.Types.InvocationOrBuilder getGlobalTxStatusQueryOrBuilder() {
+      return getGlobalTxStatusQuery();
+    }
+
+    public static final int BRANCH_PREPARE_TXS_FIELD_NUMBER = 5;
     private java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> branchPrepareTxs_;
     /**
-     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
      */
     public java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> getBranchPrepareTxsList() {
       return branchPrepareTxs_;
     }
     /**
-     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
      */
     public java.util.List<? extends com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> 
         getBranchPrepareTxsOrBuilderList() {
       return branchPrepareTxs_;
     }
     /**
-     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
      */
     public int getBranchPrepareTxsCount() {
       return branchPrepareTxs_.size();
     }
     /**
-     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
      */
     public com.zhigui.crossmesh.proto.Types.BranchTransaction getBranchPrepareTxs(int index) {
       return branchPrepareTxs_.get(index);
     }
     /**
-     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
      */
     public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getBranchPrepareTxsOrBuilder(
         int index) {
@@ -8568,8 +8619,11 @@ public final class Types {
       if (primaryRollbackTx_ != null) {
         output.writeMessage(3, getPrimaryRollbackTx());
       }
+      if (globalTxStatusQuery_ != null) {
+        output.writeMessage(4, getGlobalTxStatusQuery());
+      }
       for (int i = 0; i < branchPrepareTxs_.size(); i++) {
-        output.writeMessage(4, branchPrepareTxs_.get(i));
+        output.writeMessage(5, branchPrepareTxs_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -8592,9 +8646,13 @@ public final class Types {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPrimaryRollbackTx());
       }
+      if (globalTxStatusQuery_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getGlobalTxStatusQuery());
+      }
       for (int i = 0; i < branchPrepareTxs_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, branchPrepareTxs_.get(i));
+          .computeMessageSize(5, branchPrepareTxs_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8626,6 +8684,11 @@ public final class Types {
         if (!getPrimaryRollbackTx()
             .equals(other.getPrimaryRollbackTx())) return false;
       }
+      if (hasGlobalTxStatusQuery() != other.hasGlobalTxStatusQuery()) return false;
+      if (hasGlobalTxStatusQuery()) {
+        if (!getGlobalTxStatusQuery()
+            .equals(other.getGlobalTxStatusQuery())) return false;
+      }
       if (!getBranchPrepareTxsList()
           .equals(other.getBranchPrepareTxsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -8650,6 +8713,10 @@ public final class Types {
       if (hasPrimaryRollbackTx()) {
         hash = (37 * hash) + PRIMARY_ROLLBACK_TX_FIELD_NUMBER;
         hash = (53 * hash) + getPrimaryRollbackTx().hashCode();
+      }
+      if (hasGlobalTxStatusQuery()) {
+        hash = (37 * hash) + GLOBAL_TX_STATUS_QUERY_FIELD_NUMBER;
+        hash = (53 * hash) + getGlobalTxStatusQuery().hashCode();
       }
       if (getBranchPrepareTxsCount() > 0) {
         hash = (37 * hash) + BRANCH_PREPARE_TXS_FIELD_NUMBER;
@@ -8807,6 +8874,12 @@ public final class Types {
           primaryRollbackTx_ = null;
           primaryRollbackTxBuilder_ = null;
         }
+        if (globalTxStatusQueryBuilder_ == null) {
+          globalTxStatusQuery_ = null;
+        } else {
+          globalTxStatusQuery_ = null;
+          globalTxStatusQueryBuilder_ = null;
+        }
         if (branchPrepareTxsBuilder_ == null) {
           branchPrepareTxs_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
@@ -8854,6 +8927,11 @@ public final class Types {
           result.primaryRollbackTx_ = primaryRollbackTx_;
         } else {
           result.primaryRollbackTx_ = primaryRollbackTxBuilder_.build();
+        }
+        if (globalTxStatusQueryBuilder_ == null) {
+          result.globalTxStatusQuery_ = globalTxStatusQuery_;
+        } else {
+          result.globalTxStatusQuery_ = globalTxStatusQueryBuilder_.build();
         }
         if (branchPrepareTxsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
@@ -8920,6 +8998,9 @@ public final class Types {
         }
         if (other.hasPrimaryRollbackTx()) {
           mergePrimaryRollbackTx(other.getPrimaryRollbackTx());
+        }
+        if (other.hasGlobalTxStatusQuery()) {
+          mergeGlobalTxStatusQuery(other.getGlobalTxStatusQuery());
         }
         if (branchPrepareTxsBuilder_ == null) {
           if (!other.branchPrepareTxs_.isEmpty()) {
@@ -9334,6 +9415,125 @@ public final class Types {
         return primaryRollbackTxBuilder_;
       }
 
+      private com.zhigui.crossmesh.proto.Types.Invocation globalTxStatusQuery_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.zhigui.crossmesh.proto.Types.Invocation, com.zhigui.crossmesh.proto.Types.Invocation.Builder, com.zhigui.crossmesh.proto.Types.InvocationOrBuilder> globalTxStatusQueryBuilder_;
+      /**
+       * <code>.pb.Invocation global_tx_status_query = 4;</code>
+       * @return Whether the globalTxStatusQuery field is set.
+       */
+      public boolean hasGlobalTxStatusQuery() {
+        return globalTxStatusQueryBuilder_ != null || globalTxStatusQuery_ != null;
+      }
+      /**
+       * <code>.pb.Invocation global_tx_status_query = 4;</code>
+       * @return The globalTxStatusQuery.
+       */
+      public com.zhigui.crossmesh.proto.Types.Invocation getGlobalTxStatusQuery() {
+        if (globalTxStatusQueryBuilder_ == null) {
+          return globalTxStatusQuery_ == null ? com.zhigui.crossmesh.proto.Types.Invocation.getDefaultInstance() : globalTxStatusQuery_;
+        } else {
+          return globalTxStatusQueryBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.pb.Invocation global_tx_status_query = 4;</code>
+       */
+      public Builder setGlobalTxStatusQuery(com.zhigui.crossmesh.proto.Types.Invocation value) {
+        if (globalTxStatusQueryBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          globalTxStatusQuery_ = value;
+          onChanged();
+        } else {
+          globalTxStatusQueryBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.pb.Invocation global_tx_status_query = 4;</code>
+       */
+      public Builder setGlobalTxStatusQuery(
+          com.zhigui.crossmesh.proto.Types.Invocation.Builder builderForValue) {
+        if (globalTxStatusQueryBuilder_ == null) {
+          globalTxStatusQuery_ = builderForValue.build();
+          onChanged();
+        } else {
+          globalTxStatusQueryBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.pb.Invocation global_tx_status_query = 4;</code>
+       */
+      public Builder mergeGlobalTxStatusQuery(com.zhigui.crossmesh.proto.Types.Invocation value) {
+        if (globalTxStatusQueryBuilder_ == null) {
+          if (globalTxStatusQuery_ != null) {
+            globalTxStatusQuery_ =
+              com.zhigui.crossmesh.proto.Types.Invocation.newBuilder(globalTxStatusQuery_).mergeFrom(value).buildPartial();
+          } else {
+            globalTxStatusQuery_ = value;
+          }
+          onChanged();
+        } else {
+          globalTxStatusQueryBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.pb.Invocation global_tx_status_query = 4;</code>
+       */
+      public Builder clearGlobalTxStatusQuery() {
+        if (globalTxStatusQueryBuilder_ == null) {
+          globalTxStatusQuery_ = null;
+          onChanged();
+        } else {
+          globalTxStatusQuery_ = null;
+          globalTxStatusQueryBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.pb.Invocation global_tx_status_query = 4;</code>
+       */
+      public com.zhigui.crossmesh.proto.Types.Invocation.Builder getGlobalTxStatusQueryBuilder() {
+        
+        onChanged();
+        return getGlobalTxStatusQueryFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.pb.Invocation global_tx_status_query = 4;</code>
+       */
+      public com.zhigui.crossmesh.proto.Types.InvocationOrBuilder getGlobalTxStatusQueryOrBuilder() {
+        if (globalTxStatusQueryBuilder_ != null) {
+          return globalTxStatusQueryBuilder_.getMessageOrBuilder();
+        } else {
+          return globalTxStatusQuery_ == null ?
+              com.zhigui.crossmesh.proto.Types.Invocation.getDefaultInstance() : globalTxStatusQuery_;
+        }
+      }
+      /**
+       * <code>.pb.Invocation global_tx_status_query = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.zhigui.crossmesh.proto.Types.Invocation, com.zhigui.crossmesh.proto.Types.Invocation.Builder, com.zhigui.crossmesh.proto.Types.InvocationOrBuilder> 
+          getGlobalTxStatusQueryFieldBuilder() {
+        if (globalTxStatusQueryBuilder_ == null) {
+          globalTxStatusQueryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.zhigui.crossmesh.proto.Types.Invocation, com.zhigui.crossmesh.proto.Types.Invocation.Builder, com.zhigui.crossmesh.proto.Types.InvocationOrBuilder>(
+                  getGlobalTxStatusQuery(),
+                  getParentForChildren(),
+                  isClean());
+          globalTxStatusQuery_ = null;
+        }
+        return globalTxStatusQueryBuilder_;
+      }
+
       private java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> branchPrepareTxs_ =
         java.util.Collections.emptyList();
       private void ensureBranchPrepareTxsIsMutable() {
@@ -9347,7 +9547,7 @@ public final class Types {
           com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> branchPrepareTxsBuilder_;
 
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
        */
       public java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> getBranchPrepareTxsList() {
         if (branchPrepareTxsBuilder_ == null) {
@@ -9357,7 +9557,7 @@ public final class Types {
         }
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
        */
       public int getBranchPrepareTxsCount() {
         if (branchPrepareTxsBuilder_ == null) {
@@ -9367,7 +9567,7 @@ public final class Types {
         }
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
        */
       public com.zhigui.crossmesh.proto.Types.BranchTransaction getBranchPrepareTxs(int index) {
         if (branchPrepareTxsBuilder_ == null) {
@@ -9377,7 +9577,7 @@ public final class Types {
         }
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
        */
       public Builder setBranchPrepareTxs(
           int index, com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
@@ -9394,7 +9594,7 @@ public final class Types {
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
        */
       public Builder setBranchPrepareTxs(
           int index, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder builderForValue) {
@@ -9408,7 +9608,7 @@ public final class Types {
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
        */
       public Builder addBranchPrepareTxs(com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
         if (branchPrepareTxsBuilder_ == null) {
@@ -9424,7 +9624,7 @@ public final class Types {
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
        */
       public Builder addBranchPrepareTxs(
           int index, com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
@@ -9441,7 +9641,7 @@ public final class Types {
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
        */
       public Builder addBranchPrepareTxs(
           com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder builderForValue) {
@@ -9455,7 +9655,7 @@ public final class Types {
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
        */
       public Builder addBranchPrepareTxs(
           int index, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder builderForValue) {
@@ -9469,7 +9669,7 @@ public final class Types {
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
        */
       public Builder addAllBranchPrepareTxs(
           java.lang.Iterable<? extends com.zhigui.crossmesh.proto.Types.BranchTransaction> values) {
@@ -9484,7 +9684,7 @@ public final class Types {
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
        */
       public Builder clearBranchPrepareTxs() {
         if (branchPrepareTxsBuilder_ == null) {
@@ -9497,7 +9697,7 @@ public final class Types {
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
        */
       public Builder removeBranchPrepareTxs(int index) {
         if (branchPrepareTxsBuilder_ == null) {
@@ -9510,14 +9710,14 @@ public final class Types {
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
        */
       public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder getBranchPrepareTxsBuilder(
           int index) {
         return getBranchPrepareTxsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
        */
       public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getBranchPrepareTxsOrBuilder(
           int index) {
@@ -9527,7 +9727,7 @@ public final class Types {
         }
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
        */
       public java.util.List<? extends com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> 
            getBranchPrepareTxsOrBuilderList() {
@@ -9538,14 +9738,14 @@ public final class Types {
         }
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
        */
       public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder addBranchPrepareTxsBuilder() {
         return getBranchPrepareTxsFieldBuilder().addBuilder(
             com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance());
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
        */
       public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder addBranchPrepareTxsBuilder(
           int index) {
@@ -9553,7 +9753,7 @@ public final class Types {
             index, com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance());
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
        */
       public java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder> 
            getBranchPrepareTxsBuilderList() {
@@ -11861,6 +12061,21 @@ public final class Types {
      * @return The status.
      */
     com.zhigui.crossmesh.proto.Types.GlobalTransactionStatusType getStatus();
+
+    /**
+     * <code>.pb.TransactionID primary_confirm_tx_id = 3;</code>
+     * @return Whether the primaryConfirmTxId field is set.
+     */
+    boolean hasPrimaryConfirmTxId();
+    /**
+     * <code>.pb.TransactionID primary_confirm_tx_id = 3;</code>
+     * @return The primaryConfirmTxId.
+     */
+    com.zhigui.crossmesh.proto.Types.TransactionID getPrimaryConfirmTxId();
+    /**
+     * <code>.pb.TransactionID primary_confirm_tx_id = 3;</code>
+     */
+    com.zhigui.crossmesh.proto.Types.TransactionIDOrBuilder getPrimaryConfirmTxIdOrBuilder();
   }
   /**
    * Protobuf type {@code pb.GlobalTransactionStatus}
@@ -11925,6 +12140,19 @@ public final class Types {
               int rawValue = input.readEnum();
 
               status_ = rawValue;
+              break;
+            }
+            case 26: {
+              com.zhigui.crossmesh.proto.Types.TransactionID.Builder subBuilder = null;
+              if (primaryConfirmTxId_ != null) {
+                subBuilder = primaryConfirmTxId_.toBuilder();
+              }
+              primaryConfirmTxId_ = input.readMessage(com.zhigui.crossmesh.proto.Types.TransactionID.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(primaryConfirmTxId_);
+                primaryConfirmTxId_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -12001,6 +12229,29 @@ public final class Types {
       return result == null ? com.zhigui.crossmesh.proto.Types.GlobalTransactionStatusType.UNRECOGNIZED : result;
     }
 
+    public static final int PRIMARY_CONFIRM_TX_ID_FIELD_NUMBER = 3;
+    private com.zhigui.crossmesh.proto.Types.TransactionID primaryConfirmTxId_;
+    /**
+     * <code>.pb.TransactionID primary_confirm_tx_id = 3;</code>
+     * @return Whether the primaryConfirmTxId field is set.
+     */
+    public boolean hasPrimaryConfirmTxId() {
+      return primaryConfirmTxId_ != null;
+    }
+    /**
+     * <code>.pb.TransactionID primary_confirm_tx_id = 3;</code>
+     * @return The primaryConfirmTxId.
+     */
+    public com.zhigui.crossmesh.proto.Types.TransactionID getPrimaryConfirmTxId() {
+      return primaryConfirmTxId_ == null ? com.zhigui.crossmesh.proto.Types.TransactionID.getDefaultInstance() : primaryConfirmTxId_;
+    }
+    /**
+     * <code>.pb.TransactionID primary_confirm_tx_id = 3;</code>
+     */
+    public com.zhigui.crossmesh.proto.Types.TransactionIDOrBuilder getPrimaryConfirmTxIdOrBuilder() {
+      return getPrimaryConfirmTxId();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12021,6 +12272,9 @@ public final class Types {
       if (status_ != com.zhigui.crossmesh.proto.Types.GlobalTransactionStatusType.PRIMARY_TRANSACTION_PREPARED.getNumber()) {
         output.writeEnum(2, status_);
       }
+      if (primaryConfirmTxId_ != null) {
+        output.writeMessage(3, getPrimaryConfirmTxId());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -12037,6 +12291,10 @@ public final class Types {
       if (status_ != com.zhigui.crossmesh.proto.Types.GlobalTransactionStatusType.PRIMARY_TRANSACTION_PREPARED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, status_);
+      }
+      if (primaryConfirmTxId_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPrimaryConfirmTxId());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -12059,6 +12317,11 @@ public final class Types {
             .equals(other.getPrimaryPrepareTxId())) return false;
       }
       if (status_ != other.status_) return false;
+      if (hasPrimaryConfirmTxId() != other.hasPrimaryConfirmTxId()) return false;
+      if (hasPrimaryConfirmTxId()) {
+        if (!getPrimaryConfirmTxId()
+            .equals(other.getPrimaryConfirmTxId())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -12076,6 +12339,10 @@ public final class Types {
       }
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
+      if (hasPrimaryConfirmTxId()) {
+        hash = (37 * hash) + PRIMARY_CONFIRM_TX_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getPrimaryConfirmTxId().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -12217,6 +12484,12 @@ public final class Types {
         }
         status_ = 0;
 
+        if (primaryConfirmTxIdBuilder_ == null) {
+          primaryConfirmTxId_ = null;
+        } else {
+          primaryConfirmTxId_ = null;
+          primaryConfirmTxIdBuilder_ = null;
+        }
         return this;
       }
 
@@ -12249,6 +12522,11 @@ public final class Types {
           result.primaryPrepareTxId_ = primaryPrepareTxIdBuilder_.build();
         }
         result.status_ = status_;
+        if (primaryConfirmTxIdBuilder_ == null) {
+          result.primaryConfirmTxId_ = primaryConfirmTxId_;
+        } else {
+          result.primaryConfirmTxId_ = primaryConfirmTxIdBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -12302,6 +12580,9 @@ public final class Types {
         }
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
+        }
+        if (other.hasPrimaryConfirmTxId()) {
+          mergePrimaryConfirmTxId(other.getPrimaryConfirmTxId());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -12501,6 +12782,125 @@ public final class Types {
         status_ = 0;
         onChanged();
         return this;
+      }
+
+      private com.zhigui.crossmesh.proto.Types.TransactionID primaryConfirmTxId_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.zhigui.crossmesh.proto.Types.TransactionID, com.zhigui.crossmesh.proto.Types.TransactionID.Builder, com.zhigui.crossmesh.proto.Types.TransactionIDOrBuilder> primaryConfirmTxIdBuilder_;
+      /**
+       * <code>.pb.TransactionID primary_confirm_tx_id = 3;</code>
+       * @return Whether the primaryConfirmTxId field is set.
+       */
+      public boolean hasPrimaryConfirmTxId() {
+        return primaryConfirmTxIdBuilder_ != null || primaryConfirmTxId_ != null;
+      }
+      /**
+       * <code>.pb.TransactionID primary_confirm_tx_id = 3;</code>
+       * @return The primaryConfirmTxId.
+       */
+      public com.zhigui.crossmesh.proto.Types.TransactionID getPrimaryConfirmTxId() {
+        if (primaryConfirmTxIdBuilder_ == null) {
+          return primaryConfirmTxId_ == null ? com.zhigui.crossmesh.proto.Types.TransactionID.getDefaultInstance() : primaryConfirmTxId_;
+        } else {
+          return primaryConfirmTxIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.pb.TransactionID primary_confirm_tx_id = 3;</code>
+       */
+      public Builder setPrimaryConfirmTxId(com.zhigui.crossmesh.proto.Types.TransactionID value) {
+        if (primaryConfirmTxIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          primaryConfirmTxId_ = value;
+          onChanged();
+        } else {
+          primaryConfirmTxIdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.pb.TransactionID primary_confirm_tx_id = 3;</code>
+       */
+      public Builder setPrimaryConfirmTxId(
+          com.zhigui.crossmesh.proto.Types.TransactionID.Builder builderForValue) {
+        if (primaryConfirmTxIdBuilder_ == null) {
+          primaryConfirmTxId_ = builderForValue.build();
+          onChanged();
+        } else {
+          primaryConfirmTxIdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.pb.TransactionID primary_confirm_tx_id = 3;</code>
+       */
+      public Builder mergePrimaryConfirmTxId(com.zhigui.crossmesh.proto.Types.TransactionID value) {
+        if (primaryConfirmTxIdBuilder_ == null) {
+          if (primaryConfirmTxId_ != null) {
+            primaryConfirmTxId_ =
+              com.zhigui.crossmesh.proto.Types.TransactionID.newBuilder(primaryConfirmTxId_).mergeFrom(value).buildPartial();
+          } else {
+            primaryConfirmTxId_ = value;
+          }
+          onChanged();
+        } else {
+          primaryConfirmTxIdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.pb.TransactionID primary_confirm_tx_id = 3;</code>
+       */
+      public Builder clearPrimaryConfirmTxId() {
+        if (primaryConfirmTxIdBuilder_ == null) {
+          primaryConfirmTxId_ = null;
+          onChanged();
+        } else {
+          primaryConfirmTxId_ = null;
+          primaryConfirmTxIdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.pb.TransactionID primary_confirm_tx_id = 3;</code>
+       */
+      public com.zhigui.crossmesh.proto.Types.TransactionID.Builder getPrimaryConfirmTxIdBuilder() {
+        
+        onChanged();
+        return getPrimaryConfirmTxIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.pb.TransactionID primary_confirm_tx_id = 3;</code>
+       */
+      public com.zhigui.crossmesh.proto.Types.TransactionIDOrBuilder getPrimaryConfirmTxIdOrBuilder() {
+        if (primaryConfirmTxIdBuilder_ != null) {
+          return primaryConfirmTxIdBuilder_.getMessageOrBuilder();
+        } else {
+          return primaryConfirmTxId_ == null ?
+              com.zhigui.crossmesh.proto.Types.TransactionID.getDefaultInstance() : primaryConfirmTxId_;
+        }
+      }
+      /**
+       * <code>.pb.TransactionID primary_confirm_tx_id = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.zhigui.crossmesh.proto.Types.TransactionID, com.zhigui.crossmesh.proto.Types.TransactionID.Builder, com.zhigui.crossmesh.proto.Types.TransactionIDOrBuilder> 
+          getPrimaryConfirmTxIdFieldBuilder() {
+        if (primaryConfirmTxIdBuilder_ == null) {
+          primaryConfirmTxIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.zhigui.crossmesh.proto.Types.TransactionID, com.zhigui.crossmesh.proto.Types.TransactionID.Builder, com.zhigui.crossmesh.proto.Types.TransactionIDOrBuilder>(
+                  getPrimaryConfirmTxId(),
+                  getParentForChildren(),
+                  isClean());
+          primaryConfirmTxId_ = null;
+        }
+        return primaryConfirmTxIdBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -13269,8 +13669,8 @@ public final class Types {
 
   }
 
-  public interface ResourceRegisteredEventOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:pb.ResourceRegisteredEvent)
+  public interface ResourceRegisteredOrUpdatedEventOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pb.ResourceRegisteredOrUpdatedEvent)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -13306,18 +13706,18 @@ public final class Types {
     com.zhigui.crossmesh.proto.Types.ChainType getType();
   }
   /**
-   * Protobuf type {@code pb.ResourceRegisteredEvent}
+   * Protobuf type {@code pb.ResourceRegisteredOrUpdatedEvent}
    */
-  public  static final class ResourceRegisteredEvent extends
+  public  static final class ResourceRegisteredOrUpdatedEvent extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:pb.ResourceRegisteredEvent)
-      ResourceRegisteredEventOrBuilder {
+      // @@protoc_insertion_point(message_implements:pb.ResourceRegisteredOrUpdatedEvent)
+      ResourceRegisteredOrUpdatedEventOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use ResourceRegisteredEvent.newBuilder() to construct.
-    private ResourceRegisteredEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use ResourceRegisteredOrUpdatedEvent.newBuilder() to construct.
+    private ResourceRegisteredOrUpdatedEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private ResourceRegisteredEvent() {
+    private ResourceRegisteredOrUpdatedEvent() {
       connection_ = com.google.protobuf.ByteString.EMPTY;
       type_ = 0;
     }
@@ -13326,7 +13726,7 @@ public final class Types {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new ResourceRegisteredEvent();
+      return new ResourceRegisteredOrUpdatedEvent();
     }
 
     @java.lang.Override
@@ -13334,7 +13734,7 @@ public final class Types {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private ResourceRegisteredEvent(
+    private ResourceRegisteredOrUpdatedEvent(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -13397,15 +13797,15 @@ public final class Types {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.zhigui.crossmesh.proto.Types.internal_static_pb_ResourceRegisteredEvent_descriptor;
+      return com.zhigui.crossmesh.proto.Types.internal_static_pb_ResourceRegisteredOrUpdatedEvent_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.zhigui.crossmesh.proto.Types.internal_static_pb_ResourceRegisteredEvent_fieldAccessorTable
+      return com.zhigui.crossmesh.proto.Types.internal_static_pb_ResourceRegisteredOrUpdatedEvent_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent.class, com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent.Builder.class);
+              com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent.class, com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent.Builder.class);
     }
 
     public static final int URI_FIELD_NUMBER = 1;
@@ -13514,10 +13914,10 @@ public final class Types {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent)) {
+      if (!(obj instanceof com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent)) {
         return super.equals(obj);
       }
-      com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent other = (com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent) obj;
+      com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent other = (com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent) obj;
 
       if (hasUri() != other.hasUri()) return false;
       if (hasUri()) {
@@ -13551,69 +13951,69 @@ public final class Types {
       return hash;
     }
 
-    public static com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent parseFrom(
+    public static com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent parseFrom(
+    public static com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent parseFrom(
+    public static com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent parseFrom(
+    public static com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent parseFrom(byte[] data)
+    public static com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent parseFrom(
+    public static com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent parseFrom(java.io.InputStream input)
+    public static com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent parseFrom(
+    public static com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent parseDelimitedFrom(java.io.InputStream input)
+    public static com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent parseDelimitedFrom(
+    public static com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent parseFrom(
+    public static com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent parseFrom(
+    public static com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -13626,7 +14026,7 @@ public final class Types {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent prototype) {
+    public static Builder newBuilder(com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -13642,26 +14042,26 @@ public final class Types {
       return builder;
     }
     /**
-     * Protobuf type {@code pb.ResourceRegisteredEvent}
+     * Protobuf type {@code pb.ResourceRegisteredOrUpdatedEvent}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:pb.ResourceRegisteredEvent)
-        com.zhigui.crossmesh.proto.Types.ResourceRegisteredEventOrBuilder {
+        // @@protoc_insertion_point(builder_implements:pb.ResourceRegisteredOrUpdatedEvent)
+        com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEventOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.zhigui.crossmesh.proto.Types.internal_static_pb_ResourceRegisteredEvent_descriptor;
+        return com.zhigui.crossmesh.proto.Types.internal_static_pb_ResourceRegisteredOrUpdatedEvent_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.zhigui.crossmesh.proto.Types.internal_static_pb_ResourceRegisteredEvent_fieldAccessorTable
+        return com.zhigui.crossmesh.proto.Types.internal_static_pb_ResourceRegisteredOrUpdatedEvent_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent.class, com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent.Builder.class);
+                com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent.class, com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent.Builder.class);
       }
 
-      // Construct using com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent.newBuilder()
+      // Construct using com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -13695,17 +14095,17 @@ public final class Types {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.zhigui.crossmesh.proto.Types.internal_static_pb_ResourceRegisteredEvent_descriptor;
+        return com.zhigui.crossmesh.proto.Types.internal_static_pb_ResourceRegisteredOrUpdatedEvent_descriptor;
       }
 
       @java.lang.Override
-      public com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent getDefaultInstanceForType() {
-        return com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent.getDefaultInstance();
+      public com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent getDefaultInstanceForType() {
+        return com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent build() {
-        com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent result = buildPartial();
+      public com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent build() {
+        com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -13713,8 +14113,8 @@ public final class Types {
       }
 
       @java.lang.Override
-      public com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent buildPartial() {
-        com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent result = new com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent(this);
+      public com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent buildPartial() {
+        com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent result = new com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent(this);
         if (uriBuilder_ == null) {
           result.uri_ = uri_;
         } else {
@@ -13760,16 +14160,16 @@ public final class Types {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent) {
-          return mergeFrom((com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent)other);
+        if (other instanceof com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent) {
+          return mergeFrom((com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent other) {
-        if (other == com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent other) {
+        if (other == com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent.getDefaultInstance()) return this;
         if (other.hasUri()) {
           mergeUri(other.getUri());
         }
@@ -13794,11 +14194,11 @@ public final class Types {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent parsedMessage = null;
+        com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent) e.getUnfinishedMessage();
+          parsedMessage = (com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -14024,41 +14424,41 @@ public final class Types {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:pb.ResourceRegisteredEvent)
+      // @@protoc_insertion_point(builder_scope:pb.ResourceRegisteredOrUpdatedEvent)
     }
 
-    // @@protoc_insertion_point(class_scope:pb.ResourceRegisteredEvent)
-    private static final com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:pb.ResourceRegisteredOrUpdatedEvent)
+    private static final com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent();
+      DEFAULT_INSTANCE = new com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent();
     }
 
-    public static com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent getDefaultInstance() {
+    public static com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ResourceRegisteredEvent>
-        PARSER = new com.google.protobuf.AbstractParser<ResourceRegisteredEvent>() {
+    private static final com.google.protobuf.Parser<ResourceRegisteredOrUpdatedEvent>
+        PARSER = new com.google.protobuf.AbstractParser<ResourceRegisteredOrUpdatedEvent>() {
       @java.lang.Override
-      public ResourceRegisteredEvent parsePartialFrom(
+      public ResourceRegisteredOrUpdatedEvent parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ResourceRegisteredEvent(input, extensionRegistry);
+        return new ResourceRegisteredOrUpdatedEvent(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<ResourceRegisteredEvent> parser() {
+    public static com.google.protobuf.Parser<ResourceRegisteredOrUpdatedEvent> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<ResourceRegisteredEvent> getParserForType() {
+    public com.google.protobuf.Parser<ResourceRegisteredOrUpdatedEvent> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.zhigui.crossmesh.proto.Types.ResourceRegisteredEvent getDefaultInstanceForType() {
+    public com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -14130,10 +14530,10 @@ public final class Types {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pb_VerifyInfo_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_pb_ResourceRegisteredEvent_descriptor;
+    internal_static_pb_ResourceRegisteredOrUpdatedEvent_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_pb_ResourceRegisteredEvent_fieldAccessorTable;
+      internal_static_pb_ResourceRegisteredOrUpdatedEvent_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -14158,44 +14558,47 @@ public final class Types {
       "\022\n\nttl_height\030\007 \001(\004\022,\n\010ttl_time\030\010 \001(\0132\032." +
       "google.protobuf.Timestamp\":\n\nInvocation\022" +
       "\020\n\010contract\030\001 \001(\t\022\014\n\004func\030\002 \001(\t\022\014\n\004args\030" +
-      "\003 \003(\t\"Y\n\021BranchTransaction\022 \n\005tx_id\030\001 \001(" +
-      "\0132\021.pb.TransactionID\022\"\n\ninvocation\030\002 \001(\013" +
-      "2\016.pb.Invocation\"\245\001\n\031BranchTransactionRe" +
-      "sponse\022 \n\005tx_id\030\001 \001(\0132\021.pb.TransactionID" +
-      "\0224\n\006status\030\002 \001(\0162$.pb.BranchTransactionR" +
-      "esponse.Status\022\r\n\005proof\030\003 \001(\014\"!\n\006Status\022" +
-      "\013\n\007SUCCESS\020\000\022\n\n\006FAILED\020\001\"-\n\017PrimaryLockM" +
-      "eta\022\013\n\003xid\030\001 \001(\t\022\r\n\005chain\030\002 \001(\t\"%\n\003URI\022\017" +
-      "\n\007network\030\001 \001(\t\022\r\n\005chain\030\002 \001(\t\"1\n\rTransa" +
-      "ctionID\022\024\n\003uri\030\001 \001(\0132\007.pb.URI\022\n\n\002id\030\002 \001(" +
-      "\t\"\354\001\n\037PrimaryTransactionPreparedEvent\0220\n" +
-      "\025primary_prepare_tx_id\030\001 \001(\0132\021.pb.Transa" +
-      "ctionID\0220\n\021primary_commit_tx\030\002 \001(\0132\025.pb." +
-      "BranchTransaction\0222\n\023primary_rollback_tx" +
-      "\030\003 \001(\0132\025.pb.BranchTransaction\0221\n\022branch_" +
-      "prepare_txs\030\004 \003(\0132\025.pb.BranchTransaction" +
-      "\"\222\001\n PrimaryTransactionConfirmedEvent\0220\n" +
-      "\025primary_confirm_tx_id\030\001 \001(\0132\021.pb.Transa" +
-      "ctionID\022<\n\035branch_commit_or_rollback_txs" +
-      "\030\002 \003(\0132\025.pb.BranchTransaction\"\330\001\n\036Branch" +
-      "TransactionPreparedEvent\0220\n\025primary_prep" +
-      "are_tx_id\030\001 \001(\0132\021.pb.TransactionID\022.\n\026gl" +
-      "obal_tx_status_query\030\002 \001(\0132\016.pb.Invocati" +
-      "on\022(\n\tcommit_tx\030\003 \001(\0132\025.pb.BranchTransac" +
-      "tion\022*\n\013rollback_tx\030\004 \001(\0132\025.pb.BranchTra" +
-      "nsaction\"|\n\027GlobalTransactionStatus\0220\n\025p" +
-      "rimary_prepare_tx_id\030\001 \001(\0132\021.pb.Transact" +
-      "ionID\022/\n\006status\030\002 \001(\0162\037.pb.GlobalTransac" +
-      "tionStatusType\"0\n\nVerifyInfo\022\020\n\010Contract" +
-      "\030\001 \001(\t\022\020\n\010function\030\002 \001(\t\"`\n\027ResourceRegi" +
-      "steredEvent\022\024\n\003uri\030\001 \001(\0132\007.pb.URI\022\022\n\ncon" +
-      "nection\030\002 \001(\014\022\033\n\004type\030\003 \001(\0162\r.pb.ChainTy" +
-      "pe*1\n\tChainType\022\n\n\006FABRIC\020\000\022\016\n\nXUPERCHAI" +
-      "N\020\001\022\010\n\004BCOS\020\002*\204\001\n\033GlobalTransactionStatu" +
-      "sType\022 \n\034PRIMARY_TRANSACTION_PREPARED\020\000\022" +
-      "!\n\035PRIMARY_TRANSACTION_COMMITTED\020\001\022 \n\034PR" +
-      "IMARY_TRANSACTION_CANCELED\020\002B\034\n\032com.zhig" +
-      "ui.crossmesh.protob\006proto3"
+      "\003 \003(\t\"M\n\021BranchTransaction\022\024\n\003uri\030\001 \001(\0132" +
+      "\007.pb.URI\022\"\n\ninvocation\030\002 \001(\0132\016.pb.Invoca" +
+      "tion\"\245\001\n\031BranchTransactionResponse\022 \n\005tx" +
+      "_id\030\001 \001(\0132\021.pb.TransactionID\0224\n\006status\030\002" +
+      " \001(\0162$.pb.BranchTransactionResponse.Stat" +
+      "us\022\r\n\005proof\030\003 \001(\014\"!\n\006Status\022\013\n\007SUCCESS\020\000" +
+      "\022\n\n\006FAILED\020\001\"-\n\017PrimaryLockMeta\022\013\n\003xid\030\001" +
+      " \001(\t\022\r\n\005chain\030\002 \001(\t\"%\n\003URI\022\017\n\007network\030\001 " +
+      "\001(\t\022\r\n\005chain\030\002 \001(\t\"1\n\rTransactionID\022\024\n\003u" +
+      "ri\030\001 \001(\0132\007.pb.URI\022\n\n\002id\030\002 \001(\t\"\234\002\n\037Primar" +
+      "yTransactionPreparedEvent\0220\n\025primary_pre" +
+      "pare_tx_id\030\001 \001(\0132\021.pb.TransactionID\0220\n\021p" +
+      "rimary_commit_tx\030\002 \001(\0132\025.pb.BranchTransa" +
+      "ction\0222\n\023primary_rollback_tx\030\003 \001(\0132\025.pb." +
+      "BranchTransaction\022.\n\026global_tx_status_qu" +
+      "ery\030\004 \001(\0132\016.pb.Invocation\0221\n\022branch_prep" +
+      "are_txs\030\005 \003(\0132\025.pb.BranchTransaction\"\222\001\n" +
+      " PrimaryTransactionConfirmedEvent\0220\n\025pri" +
+      "mary_confirm_tx_id\030\001 \001(\0132\021.pb.Transactio" +
+      "nID\022<\n\035branch_commit_or_rollback_txs\030\002 \003" +
+      "(\0132\025.pb.BranchTransaction\"\330\001\n\036BranchTran" +
+      "sactionPreparedEvent\0220\n\025primary_prepare_" +
+      "tx_id\030\001 \001(\0132\021.pb.TransactionID\022.\n\026global" +
+      "_tx_status_query\030\002 \001(\0132\016.pb.Invocation\022(" +
+      "\n\tcommit_tx\030\003 \001(\0132\025.pb.BranchTransaction" +
+      "\022*\n\013rollback_tx\030\004 \001(\0132\025.pb.BranchTransac" +
+      "tion\"\256\001\n\027GlobalTransactionStatus\0220\n\025prim" +
+      "ary_prepare_tx_id\030\001 \001(\0132\021.pb.Transaction" +
+      "ID\022/\n\006status\030\002 \001(\0162\037.pb.GlobalTransactio" +
+      "nStatusType\0220\n\025primary_confirm_tx_id\030\003 \001" +
+      "(\0132\021.pb.TransactionID\"0\n\nVerifyInfo\022\020\n\010C" +
+      "ontract\030\001 \001(\t\022\020\n\010function\030\002 \001(\t\"i\n Resou" +
+      "rceRegisteredOrUpdatedEvent\022\024\n\003uri\030\001 \001(\013" +
+      "2\007.pb.URI\022\022\n\nconnection\030\002 \001(\014\022\033\n\004type\030\003 " +
+      "\001(\0162\r.pb.ChainType*1\n\tChainType\022\n\n\006FABRI" +
+      "C\020\000\022\016\n\nXUPERCHAIN\020\001\022\010\n\004BCOS\020\002*\204\001\n\033Global" +
+      "TransactionStatusType\022 \n\034PRIMARY_TRANSAC" +
+      "TION_PREPARED\020\000\022!\n\035PRIMARY_TRANSACTION_C" +
+      "OMMITTED\020\001\022 \n\034PRIMARY_TRANSACTION_CANCEL" +
+      "ED\020\002B\034\n\032com.zhigui.crossmesh.protob\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14225,7 +14628,7 @@ public final class Types {
     internal_static_pb_BranchTransaction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pb_BranchTransaction_descriptor,
-        new java.lang.String[] { "TxId", "Invocation", });
+        new java.lang.String[] { "Uri", "Invocation", });
     internal_static_pb_BranchTransactionResponse_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_pb_BranchTransactionResponse_fieldAccessorTable = new
@@ -14255,7 +14658,7 @@ public final class Types {
     internal_static_pb_PrimaryTransactionPreparedEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pb_PrimaryTransactionPreparedEvent_descriptor,
-        new java.lang.String[] { "PrimaryPrepareTxId", "PrimaryCommitTx", "PrimaryRollbackTx", "BranchPrepareTxs", });
+        new java.lang.String[] { "PrimaryPrepareTxId", "PrimaryCommitTx", "PrimaryRollbackTx", "GlobalTxStatusQuery", "BranchPrepareTxs", });
     internal_static_pb_PrimaryTransactionConfirmedEvent_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_pb_PrimaryTransactionConfirmedEvent_fieldAccessorTable = new
@@ -14273,18 +14676,18 @@ public final class Types {
     internal_static_pb_GlobalTransactionStatus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pb_GlobalTransactionStatus_descriptor,
-        new java.lang.String[] { "PrimaryPrepareTxId", "Status", });
+        new java.lang.String[] { "PrimaryPrepareTxId", "Status", "PrimaryConfirmTxId", });
     internal_static_pb_VerifyInfo_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_pb_VerifyInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pb_VerifyInfo_descriptor,
         new java.lang.String[] { "Contract", "Function", });
-    internal_static_pb_ResourceRegisteredEvent_descriptor =
+    internal_static_pb_ResourceRegisteredOrUpdatedEvent_descriptor =
       getDescriptor().getMessageTypes().get(13);
-    internal_static_pb_ResourceRegisteredEvent_fieldAccessorTable = new
+    internal_static_pb_ResourceRegisteredOrUpdatedEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_pb_ResourceRegisteredEvent_descriptor,
+        internal_static_pb_ResourceRegisteredOrUpdatedEvent_descriptor,
         new java.lang.String[] { "Uri", "Connection", "Type", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
