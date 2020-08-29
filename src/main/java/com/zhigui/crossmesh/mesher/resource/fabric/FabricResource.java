@@ -65,7 +65,7 @@ public class FabricResource implements Resource {
     }
 
     @Override
-    public CompletableFuture<BranchTransactionResponse> submitBranchTransaction(BranchTransaction branchTx, Invocation globalTxQuery) {
+    public CompletableFuture<BranchTransactionResponse> submitBranchTransaction(BranchTransaction branchTx) {
         return CompletableFuture.supplyAsync(() -> {
             String contractName = branchTx.getInvocation().getContract();
             if (network == null) {
@@ -76,11 +76,8 @@ public class FabricResource implements Resource {
             if (contract == null) {
                 throw new RuntimeException("contract service not found");
             }
-            if (!branchTx.getUri().equals(this.uri)) {
+            if (!branchTx.getTxId().getUri().equals(this.uri)) {
                 throw new RuntimeException("resource uri not match transaction uri");
-            }
-            if (selfNetwork.equals(uri.getNetwork())) {
-                contract.addContractListener(new CrossContractListener("CROSS_CONTRACT_LISTENER", coordinator));
             }
 
             Transaction tx = contract.createTransaction(branchTx.getInvocation().getFunc());
@@ -88,8 +85,6 @@ public class FabricResource implements Resource {
             TransactionID branchTransactionId = TransactionID.newBuilder().setUri(this.uri).setId(tx.getTransactionId()).build();
             builder.setTxId(branchTransactionId);
             transactionResults.computeIfAbsent(tx.getTransactionId(), s -> new CompletableFuture<>());
-            // Add global tx query invocation to branch transaction invocation args
-            branchTx.getInvocation().getArgsList().add(globalTxQuery.toByteString().toString());
             try {
                 tx.submit(branchTx.getInvocation().getArgsList().toArray(new String[0]));
                 builder.setStatus(BranchTransactionResponse.Status.SUCCESS);
@@ -207,7 +202,7 @@ public class FabricResource implements Resource {
                 if (contract == null) {
                     throw new RuntimeException("contract service not found");
                 }
-                contract.addContractListener(new CrossContractListener("CROSS_CONTRACT_LISTENER", coordinator));
+                contract.addContractListener(new CrossContractListener("CROSS_CONTRACT_LISTENER", coordinator, jsonElement.getAsString()));
             });
         }
 

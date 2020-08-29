@@ -14,13 +14,11 @@ message Lock {
 
 message GlobalTransaction {
     TransactionID primary_prepare_tx_id = 1;
-    BranchTransaction primary_commit_tx = 2;
-    BranchTransaction primary_rollback_tx = 3;
-    repeated BranchTransaction branch_prepare_txs = 4;
-    repeated BranchTransaction branch_commit_txs = 5;
-    repeated BranchTransaction branch_rollback_txs = 6;
-    uint64 ttl_height = 7;
-    google.protobuf.Timestamp ttl_time = 8;
+    BranchTransaction primary_confirm_tx = 2;
+    repeated BranchTransaction branch_prepare_txs = 3;
+    repeated BranchTransaction branch_confirm_txs = 4;
+    uint64 ttl_height = 5;
+    google.protobuf.Timestamp ttl_time = 6;
 }
 
 message Invocation {
@@ -30,8 +28,9 @@ message Invocation {
 }
 
 message BranchTransaction {
-    URI uri = 1;
+    TransactionID tx_id = 1;
     Invocation invocation = 2;
+    string proof = 3;
 }
 
 message BranchTransactionResponse {
@@ -74,22 +73,21 @@ message TransactionID {
 message PrimaryTransactionPreparedEvent {
     TransactionID primary_prepare_tx_id = 1;
 
-    BranchTransaction primary_commit_tx = 2;
-    BranchTransaction primary_rollback_tx = 3;
-    Invocation global_tx_status_query = 4;
-    repeated BranchTransaction branch_prepare_txs = 5;
+    BranchTransaction primary_confirm_tx = 2;
+    Invocation global_tx_status_query = 3;
+    repeated BranchTransaction branch_prepare_txs = 4;
+    repeated BranchTransaction branch_confirm_txs = 5;
 }
 
 message PrimaryTransactionConfirmedEvent {
     TransactionID primary_confirm_tx_id = 1;
-    repeated BranchTransaction branch_commit_or_rollback_txs = 2;
+    repeated BranchTransaction branch_confirm_txs = 2;
 }
 
 message BranchTransactionPreparedEvent {
     TransactionID primary_prepare_tx_id = 1;
     Invocation global_tx_status_query = 2;
-    BranchTransaction commit_tx = 3;
-    BranchTransaction rollback_tx = 4;
+    BranchTransaction confirm_tx = 3;
 }
 
 message GlobalTransactionStatus {

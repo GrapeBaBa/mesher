@@ -1022,125 +1022,86 @@ public final class Types {
     com.zhigui.crossmesh.proto.Types.TransactionIDOrBuilder getPrimaryPrepareTxIdOrBuilder();
 
     /**
-     * <code>.pb.BranchTransaction primary_commit_tx = 2;</code>
-     * @return Whether the primaryCommitTx field is set.
+     * <code>.pb.BranchTransaction primary_confirm_tx = 2;</code>
+     * @return Whether the primaryConfirmTx field is set.
      */
-    boolean hasPrimaryCommitTx();
+    boolean hasPrimaryConfirmTx();
     /**
-     * <code>.pb.BranchTransaction primary_commit_tx = 2;</code>
-     * @return The primaryCommitTx.
+     * <code>.pb.BranchTransaction primary_confirm_tx = 2;</code>
+     * @return The primaryConfirmTx.
      */
-    com.zhigui.crossmesh.proto.Types.BranchTransaction getPrimaryCommitTx();
+    com.zhigui.crossmesh.proto.Types.BranchTransaction getPrimaryConfirmTx();
     /**
-     * <code>.pb.BranchTransaction primary_commit_tx = 2;</code>
+     * <code>.pb.BranchTransaction primary_confirm_tx = 2;</code>
      */
-    com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getPrimaryCommitTxOrBuilder();
+    com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getPrimaryConfirmTxOrBuilder();
 
     /**
-     * <code>.pb.BranchTransaction primary_rollback_tx = 3;</code>
-     * @return Whether the primaryRollbackTx field is set.
-     */
-    boolean hasPrimaryRollbackTx();
-    /**
-     * <code>.pb.BranchTransaction primary_rollback_tx = 3;</code>
-     * @return The primaryRollbackTx.
-     */
-    com.zhigui.crossmesh.proto.Types.BranchTransaction getPrimaryRollbackTx();
-    /**
-     * <code>.pb.BranchTransaction primary_rollback_tx = 3;</code>
-     */
-    com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getPrimaryRollbackTxOrBuilder();
-
-    /**
-     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 3;</code>
      */
     java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> 
         getBranchPrepareTxsList();
     /**
-     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 3;</code>
      */
     com.zhigui.crossmesh.proto.Types.BranchTransaction getBranchPrepareTxs(int index);
     /**
-     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 3;</code>
      */
     int getBranchPrepareTxsCount();
     /**
-     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 3;</code>
      */
     java.util.List<? extends com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> 
         getBranchPrepareTxsOrBuilderList();
     /**
-     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 3;</code>
      */
     com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getBranchPrepareTxsOrBuilder(
         int index);
 
     /**
-     * <code>repeated .pb.BranchTransaction branch_commit_txs = 5;</code>
+     * <code>repeated .pb.BranchTransaction branch_confirm_txs = 4;</code>
      */
     java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> 
-        getBranchCommitTxsList();
+        getBranchConfirmTxsList();
     /**
-     * <code>repeated .pb.BranchTransaction branch_commit_txs = 5;</code>
+     * <code>repeated .pb.BranchTransaction branch_confirm_txs = 4;</code>
      */
-    com.zhigui.crossmesh.proto.Types.BranchTransaction getBranchCommitTxs(int index);
+    com.zhigui.crossmesh.proto.Types.BranchTransaction getBranchConfirmTxs(int index);
     /**
-     * <code>repeated .pb.BranchTransaction branch_commit_txs = 5;</code>
+     * <code>repeated .pb.BranchTransaction branch_confirm_txs = 4;</code>
      */
-    int getBranchCommitTxsCount();
+    int getBranchConfirmTxsCount();
     /**
-     * <code>repeated .pb.BranchTransaction branch_commit_txs = 5;</code>
+     * <code>repeated .pb.BranchTransaction branch_confirm_txs = 4;</code>
      */
     java.util.List<? extends com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> 
-        getBranchCommitTxsOrBuilderList();
+        getBranchConfirmTxsOrBuilderList();
     /**
-     * <code>repeated .pb.BranchTransaction branch_commit_txs = 5;</code>
+     * <code>repeated .pb.BranchTransaction branch_confirm_txs = 4;</code>
      */
-    com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getBranchCommitTxsOrBuilder(
+    com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getBranchConfirmTxsOrBuilder(
         int index);
 
     /**
-     * <code>repeated .pb.BranchTransaction branch_rollback_txs = 6;</code>
-     */
-    java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> 
-        getBranchRollbackTxsList();
-    /**
-     * <code>repeated .pb.BranchTransaction branch_rollback_txs = 6;</code>
-     */
-    com.zhigui.crossmesh.proto.Types.BranchTransaction getBranchRollbackTxs(int index);
-    /**
-     * <code>repeated .pb.BranchTransaction branch_rollback_txs = 6;</code>
-     */
-    int getBranchRollbackTxsCount();
-    /**
-     * <code>repeated .pb.BranchTransaction branch_rollback_txs = 6;</code>
-     */
-    java.util.List<? extends com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> 
-        getBranchRollbackTxsOrBuilderList();
-    /**
-     * <code>repeated .pb.BranchTransaction branch_rollback_txs = 6;</code>
-     */
-    com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getBranchRollbackTxsOrBuilder(
-        int index);
-
-    /**
-     * <code>uint64 ttl_height = 7;</code>
+     * <code>uint64 ttl_height = 5;</code>
      * @return The ttlHeight.
      */
     long getTtlHeight();
 
     /**
-     * <code>.google.protobuf.Timestamp ttl_time = 8;</code>
+     * <code>.google.protobuf.Timestamp ttl_time = 6;</code>
      * @return Whether the ttlTime field is set.
      */
     boolean hasTtlTime();
     /**
-     * <code>.google.protobuf.Timestamp ttl_time = 8;</code>
+     * <code>.google.protobuf.Timestamp ttl_time = 6;</code>
      * @return The ttlTime.
      */
     com.google.protobuf.Timestamp getTtlTime();
     /**
-     * <code>.google.protobuf.Timestamp ttl_time = 8;</code>
+     * <code>.google.protobuf.Timestamp ttl_time = 6;</code>
      */
     com.google.protobuf.TimestampOrBuilder getTtlTimeOrBuilder();
   }
@@ -1158,8 +1119,7 @@ public final class Types {
     }
     private GlobalTransaction() {
       branchPrepareTxs_ = java.util.Collections.emptyList();
-      branchCommitTxs_ = java.util.Collections.emptyList();
-      branchRollbackTxs_ = java.util.Collections.emptyList();
+      branchConfirmTxs_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -1208,31 +1168,18 @@ public final class Types {
             }
             case 18: {
               com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder subBuilder = null;
-              if (primaryCommitTx_ != null) {
-                subBuilder = primaryCommitTx_.toBuilder();
+              if (primaryConfirmTx_ != null) {
+                subBuilder = primaryConfirmTx_.toBuilder();
               }
-              primaryCommitTx_ = input.readMessage(com.zhigui.crossmesh.proto.Types.BranchTransaction.parser(), extensionRegistry);
+              primaryConfirmTx_ = input.readMessage(com.zhigui.crossmesh.proto.Types.BranchTransaction.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(primaryCommitTx_);
-                primaryCommitTx_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(primaryConfirmTx_);
+                primaryConfirmTx_ = subBuilder.buildPartial();
               }
 
               break;
             }
             case 26: {
-              com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder subBuilder = null;
-              if (primaryRollbackTx_ != null) {
-                subBuilder = primaryRollbackTx_.toBuilder();
-              }
-              primaryRollbackTx_ = input.readMessage(com.zhigui.crossmesh.proto.Types.BranchTransaction.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(primaryRollbackTx_);
-                primaryRollbackTx_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 34: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 branchPrepareTxs_ = new java.util.ArrayList<com.zhigui.crossmesh.proto.Types.BranchTransaction>();
                 mutable_bitField0_ |= 0x00000001;
@@ -1241,30 +1188,21 @@ public final class Types {
                   input.readMessage(com.zhigui.crossmesh.proto.Types.BranchTransaction.parser(), extensionRegistry));
               break;
             }
-            case 42: {
+            case 34: {
               if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                branchCommitTxs_ = new java.util.ArrayList<com.zhigui.crossmesh.proto.Types.BranchTransaction>();
+                branchConfirmTxs_ = new java.util.ArrayList<com.zhigui.crossmesh.proto.Types.BranchTransaction>();
                 mutable_bitField0_ |= 0x00000002;
               }
-              branchCommitTxs_.add(
+              branchConfirmTxs_.add(
                   input.readMessage(com.zhigui.crossmesh.proto.Types.BranchTransaction.parser(), extensionRegistry));
               break;
             }
-            case 50: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                branchRollbackTxs_ = new java.util.ArrayList<com.zhigui.crossmesh.proto.Types.BranchTransaction>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              branchRollbackTxs_.add(
-                  input.readMessage(com.zhigui.crossmesh.proto.Types.BranchTransaction.parser(), extensionRegistry));
-              break;
-            }
-            case 56: {
+            case 40: {
 
               ttlHeight_ = input.readUInt64();
               break;
             }
-            case 66: {
+            case 50: {
               com.google.protobuf.Timestamp.Builder subBuilder = null;
               if (ttlTime_ != null) {
                 subBuilder = ttlTime_.toBuilder();
@@ -1296,10 +1234,7 @@ public final class Types {
           branchPrepareTxs_ = java.util.Collections.unmodifiableList(branchPrepareTxs_);
         }
         if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          branchCommitTxs_ = java.util.Collections.unmodifiableList(branchCommitTxs_);
-        }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          branchRollbackTxs_ = java.util.Collections.unmodifiableList(branchRollbackTxs_);
+          branchConfirmTxs_ = java.util.Collections.unmodifiableList(branchConfirmTxs_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -1341,185 +1276,127 @@ public final class Types {
       return getPrimaryPrepareTxId();
     }
 
-    public static final int PRIMARY_COMMIT_TX_FIELD_NUMBER = 2;
-    private com.zhigui.crossmesh.proto.Types.BranchTransaction primaryCommitTx_;
+    public static final int PRIMARY_CONFIRM_TX_FIELD_NUMBER = 2;
+    private com.zhigui.crossmesh.proto.Types.BranchTransaction primaryConfirmTx_;
     /**
-     * <code>.pb.BranchTransaction primary_commit_tx = 2;</code>
-     * @return Whether the primaryCommitTx field is set.
+     * <code>.pb.BranchTransaction primary_confirm_tx = 2;</code>
+     * @return Whether the primaryConfirmTx field is set.
      */
-    public boolean hasPrimaryCommitTx() {
-      return primaryCommitTx_ != null;
+    public boolean hasPrimaryConfirmTx() {
+      return primaryConfirmTx_ != null;
     }
     /**
-     * <code>.pb.BranchTransaction primary_commit_tx = 2;</code>
-     * @return The primaryCommitTx.
+     * <code>.pb.BranchTransaction primary_confirm_tx = 2;</code>
+     * @return The primaryConfirmTx.
      */
-    public com.zhigui.crossmesh.proto.Types.BranchTransaction getPrimaryCommitTx() {
-      return primaryCommitTx_ == null ? com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance() : primaryCommitTx_;
+    public com.zhigui.crossmesh.proto.Types.BranchTransaction getPrimaryConfirmTx() {
+      return primaryConfirmTx_ == null ? com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance() : primaryConfirmTx_;
     }
     /**
-     * <code>.pb.BranchTransaction primary_commit_tx = 2;</code>
+     * <code>.pb.BranchTransaction primary_confirm_tx = 2;</code>
      */
-    public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getPrimaryCommitTxOrBuilder() {
-      return getPrimaryCommitTx();
-    }
-
-    public static final int PRIMARY_ROLLBACK_TX_FIELD_NUMBER = 3;
-    private com.zhigui.crossmesh.proto.Types.BranchTransaction primaryRollbackTx_;
-    /**
-     * <code>.pb.BranchTransaction primary_rollback_tx = 3;</code>
-     * @return Whether the primaryRollbackTx field is set.
-     */
-    public boolean hasPrimaryRollbackTx() {
-      return primaryRollbackTx_ != null;
-    }
-    /**
-     * <code>.pb.BranchTransaction primary_rollback_tx = 3;</code>
-     * @return The primaryRollbackTx.
-     */
-    public com.zhigui.crossmesh.proto.Types.BranchTransaction getPrimaryRollbackTx() {
-      return primaryRollbackTx_ == null ? com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance() : primaryRollbackTx_;
-    }
-    /**
-     * <code>.pb.BranchTransaction primary_rollback_tx = 3;</code>
-     */
-    public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getPrimaryRollbackTxOrBuilder() {
-      return getPrimaryRollbackTx();
+    public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getPrimaryConfirmTxOrBuilder() {
+      return getPrimaryConfirmTx();
     }
 
-    public static final int BRANCH_PREPARE_TXS_FIELD_NUMBER = 4;
+    public static final int BRANCH_PREPARE_TXS_FIELD_NUMBER = 3;
     private java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> branchPrepareTxs_;
     /**
-     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 3;</code>
      */
     public java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> getBranchPrepareTxsList() {
       return branchPrepareTxs_;
     }
     /**
-     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 3;</code>
      */
     public java.util.List<? extends com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> 
         getBranchPrepareTxsOrBuilderList() {
       return branchPrepareTxs_;
     }
     /**
-     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 3;</code>
      */
     public int getBranchPrepareTxsCount() {
       return branchPrepareTxs_.size();
     }
     /**
-     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 3;</code>
      */
     public com.zhigui.crossmesh.proto.Types.BranchTransaction getBranchPrepareTxs(int index) {
       return branchPrepareTxs_.get(index);
     }
     /**
-     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 3;</code>
      */
     public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getBranchPrepareTxsOrBuilder(
         int index) {
       return branchPrepareTxs_.get(index);
     }
 
-    public static final int BRANCH_COMMIT_TXS_FIELD_NUMBER = 5;
-    private java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> branchCommitTxs_;
+    public static final int BRANCH_CONFIRM_TXS_FIELD_NUMBER = 4;
+    private java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> branchConfirmTxs_;
     /**
-     * <code>repeated .pb.BranchTransaction branch_commit_txs = 5;</code>
+     * <code>repeated .pb.BranchTransaction branch_confirm_txs = 4;</code>
      */
-    public java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> getBranchCommitTxsList() {
-      return branchCommitTxs_;
+    public java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> getBranchConfirmTxsList() {
+      return branchConfirmTxs_;
     }
     /**
-     * <code>repeated .pb.BranchTransaction branch_commit_txs = 5;</code>
-     */
-    public java.util.List<? extends com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> 
-        getBranchCommitTxsOrBuilderList() {
-      return branchCommitTxs_;
-    }
-    /**
-     * <code>repeated .pb.BranchTransaction branch_commit_txs = 5;</code>
-     */
-    public int getBranchCommitTxsCount() {
-      return branchCommitTxs_.size();
-    }
-    /**
-     * <code>repeated .pb.BranchTransaction branch_commit_txs = 5;</code>
-     */
-    public com.zhigui.crossmesh.proto.Types.BranchTransaction getBranchCommitTxs(int index) {
-      return branchCommitTxs_.get(index);
-    }
-    /**
-     * <code>repeated .pb.BranchTransaction branch_commit_txs = 5;</code>
-     */
-    public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getBranchCommitTxsOrBuilder(
-        int index) {
-      return branchCommitTxs_.get(index);
-    }
-
-    public static final int BRANCH_ROLLBACK_TXS_FIELD_NUMBER = 6;
-    private java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> branchRollbackTxs_;
-    /**
-     * <code>repeated .pb.BranchTransaction branch_rollback_txs = 6;</code>
-     */
-    public java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> getBranchRollbackTxsList() {
-      return branchRollbackTxs_;
-    }
-    /**
-     * <code>repeated .pb.BranchTransaction branch_rollback_txs = 6;</code>
+     * <code>repeated .pb.BranchTransaction branch_confirm_txs = 4;</code>
      */
     public java.util.List<? extends com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> 
-        getBranchRollbackTxsOrBuilderList() {
-      return branchRollbackTxs_;
+        getBranchConfirmTxsOrBuilderList() {
+      return branchConfirmTxs_;
     }
     /**
-     * <code>repeated .pb.BranchTransaction branch_rollback_txs = 6;</code>
+     * <code>repeated .pb.BranchTransaction branch_confirm_txs = 4;</code>
      */
-    public int getBranchRollbackTxsCount() {
-      return branchRollbackTxs_.size();
+    public int getBranchConfirmTxsCount() {
+      return branchConfirmTxs_.size();
     }
     /**
-     * <code>repeated .pb.BranchTransaction branch_rollback_txs = 6;</code>
+     * <code>repeated .pb.BranchTransaction branch_confirm_txs = 4;</code>
      */
-    public com.zhigui.crossmesh.proto.Types.BranchTransaction getBranchRollbackTxs(int index) {
-      return branchRollbackTxs_.get(index);
+    public com.zhigui.crossmesh.proto.Types.BranchTransaction getBranchConfirmTxs(int index) {
+      return branchConfirmTxs_.get(index);
     }
     /**
-     * <code>repeated .pb.BranchTransaction branch_rollback_txs = 6;</code>
+     * <code>repeated .pb.BranchTransaction branch_confirm_txs = 4;</code>
      */
-    public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getBranchRollbackTxsOrBuilder(
+    public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getBranchConfirmTxsOrBuilder(
         int index) {
-      return branchRollbackTxs_.get(index);
+      return branchConfirmTxs_.get(index);
     }
 
-    public static final int TTL_HEIGHT_FIELD_NUMBER = 7;
+    public static final int TTL_HEIGHT_FIELD_NUMBER = 5;
     private long ttlHeight_;
     /**
-     * <code>uint64 ttl_height = 7;</code>
+     * <code>uint64 ttl_height = 5;</code>
      * @return The ttlHeight.
      */
     public long getTtlHeight() {
       return ttlHeight_;
     }
 
-    public static final int TTL_TIME_FIELD_NUMBER = 8;
+    public static final int TTL_TIME_FIELD_NUMBER = 6;
     private com.google.protobuf.Timestamp ttlTime_;
     /**
-     * <code>.google.protobuf.Timestamp ttl_time = 8;</code>
+     * <code>.google.protobuf.Timestamp ttl_time = 6;</code>
      * @return Whether the ttlTime field is set.
      */
     public boolean hasTtlTime() {
       return ttlTime_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp ttl_time = 8;</code>
+     * <code>.google.protobuf.Timestamp ttl_time = 6;</code>
      * @return The ttlTime.
      */
     public com.google.protobuf.Timestamp getTtlTime() {
       return ttlTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : ttlTime_;
     }
     /**
-     * <code>.google.protobuf.Timestamp ttl_time = 8;</code>
+     * <code>.google.protobuf.Timestamp ttl_time = 6;</code>
      */
     public com.google.protobuf.TimestampOrBuilder getTtlTimeOrBuilder() {
       return getTtlTime();
@@ -1542,26 +1419,20 @@ public final class Types {
       if (primaryPrepareTxId_ != null) {
         output.writeMessage(1, getPrimaryPrepareTxId());
       }
-      if (primaryCommitTx_ != null) {
-        output.writeMessage(2, getPrimaryCommitTx());
-      }
-      if (primaryRollbackTx_ != null) {
-        output.writeMessage(3, getPrimaryRollbackTx());
+      if (primaryConfirmTx_ != null) {
+        output.writeMessage(2, getPrimaryConfirmTx());
       }
       for (int i = 0; i < branchPrepareTxs_.size(); i++) {
-        output.writeMessage(4, branchPrepareTxs_.get(i));
+        output.writeMessage(3, branchPrepareTxs_.get(i));
       }
-      for (int i = 0; i < branchCommitTxs_.size(); i++) {
-        output.writeMessage(5, branchCommitTxs_.get(i));
-      }
-      for (int i = 0; i < branchRollbackTxs_.size(); i++) {
-        output.writeMessage(6, branchRollbackTxs_.get(i));
+      for (int i = 0; i < branchConfirmTxs_.size(); i++) {
+        output.writeMessage(4, branchConfirmTxs_.get(i));
       }
       if (ttlHeight_ != 0L) {
-        output.writeUInt64(7, ttlHeight_);
+        output.writeUInt64(5, ttlHeight_);
       }
       if (ttlTime_ != null) {
-        output.writeMessage(8, getTtlTime());
+        output.writeMessage(6, getTtlTime());
       }
       unknownFields.writeTo(output);
     }
@@ -1576,33 +1447,25 @@ public final class Types {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPrimaryPrepareTxId());
       }
-      if (primaryCommitTx_ != null) {
+      if (primaryConfirmTx_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getPrimaryCommitTx());
-      }
-      if (primaryRollbackTx_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getPrimaryRollbackTx());
+          .computeMessageSize(2, getPrimaryConfirmTx());
       }
       for (int i = 0; i < branchPrepareTxs_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, branchPrepareTxs_.get(i));
+          .computeMessageSize(3, branchPrepareTxs_.get(i));
       }
-      for (int i = 0; i < branchCommitTxs_.size(); i++) {
+      for (int i = 0; i < branchConfirmTxs_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, branchCommitTxs_.get(i));
-      }
-      for (int i = 0; i < branchRollbackTxs_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, branchRollbackTxs_.get(i));
+          .computeMessageSize(4, branchConfirmTxs_.get(i));
       }
       if (ttlHeight_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(7, ttlHeight_);
+          .computeUInt64Size(5, ttlHeight_);
       }
       if (ttlTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, getTtlTime());
+          .computeMessageSize(6, getTtlTime());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1624,22 +1487,15 @@ public final class Types {
         if (!getPrimaryPrepareTxId()
             .equals(other.getPrimaryPrepareTxId())) return false;
       }
-      if (hasPrimaryCommitTx() != other.hasPrimaryCommitTx()) return false;
-      if (hasPrimaryCommitTx()) {
-        if (!getPrimaryCommitTx()
-            .equals(other.getPrimaryCommitTx())) return false;
-      }
-      if (hasPrimaryRollbackTx() != other.hasPrimaryRollbackTx()) return false;
-      if (hasPrimaryRollbackTx()) {
-        if (!getPrimaryRollbackTx()
-            .equals(other.getPrimaryRollbackTx())) return false;
+      if (hasPrimaryConfirmTx() != other.hasPrimaryConfirmTx()) return false;
+      if (hasPrimaryConfirmTx()) {
+        if (!getPrimaryConfirmTx()
+            .equals(other.getPrimaryConfirmTx())) return false;
       }
       if (!getBranchPrepareTxsList()
           .equals(other.getBranchPrepareTxsList())) return false;
-      if (!getBranchCommitTxsList()
-          .equals(other.getBranchCommitTxsList())) return false;
-      if (!getBranchRollbackTxsList()
-          .equals(other.getBranchRollbackTxsList())) return false;
+      if (!getBranchConfirmTxsList()
+          .equals(other.getBranchConfirmTxsList())) return false;
       if (getTtlHeight()
           != other.getTtlHeight()) return false;
       if (hasTtlTime() != other.hasTtlTime()) return false;
@@ -1662,25 +1518,17 @@ public final class Types {
         hash = (37 * hash) + PRIMARY_PREPARE_TX_ID_FIELD_NUMBER;
         hash = (53 * hash) + getPrimaryPrepareTxId().hashCode();
       }
-      if (hasPrimaryCommitTx()) {
-        hash = (37 * hash) + PRIMARY_COMMIT_TX_FIELD_NUMBER;
-        hash = (53 * hash) + getPrimaryCommitTx().hashCode();
-      }
-      if (hasPrimaryRollbackTx()) {
-        hash = (37 * hash) + PRIMARY_ROLLBACK_TX_FIELD_NUMBER;
-        hash = (53 * hash) + getPrimaryRollbackTx().hashCode();
+      if (hasPrimaryConfirmTx()) {
+        hash = (37 * hash) + PRIMARY_CONFIRM_TX_FIELD_NUMBER;
+        hash = (53 * hash) + getPrimaryConfirmTx().hashCode();
       }
       if (getBranchPrepareTxsCount() > 0) {
         hash = (37 * hash) + BRANCH_PREPARE_TXS_FIELD_NUMBER;
         hash = (53 * hash) + getBranchPrepareTxsList().hashCode();
       }
-      if (getBranchCommitTxsCount() > 0) {
-        hash = (37 * hash) + BRANCH_COMMIT_TXS_FIELD_NUMBER;
-        hash = (53 * hash) + getBranchCommitTxsList().hashCode();
-      }
-      if (getBranchRollbackTxsCount() > 0) {
-        hash = (37 * hash) + BRANCH_ROLLBACK_TXS_FIELD_NUMBER;
-        hash = (53 * hash) + getBranchRollbackTxsList().hashCode();
+      if (getBranchConfirmTxsCount() > 0) {
+        hash = (37 * hash) + BRANCH_CONFIRM_TXS_FIELD_NUMBER;
+        hash = (53 * hash) + getBranchConfirmTxsList().hashCode();
       }
       hash = (37 * hash) + TTL_HEIGHT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -1818,8 +1666,7 @@ public final class Types {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
           getBranchPrepareTxsFieldBuilder();
-          getBranchCommitTxsFieldBuilder();
-          getBranchRollbackTxsFieldBuilder();
+          getBranchConfirmTxsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -1831,17 +1678,11 @@ public final class Types {
           primaryPrepareTxId_ = null;
           primaryPrepareTxIdBuilder_ = null;
         }
-        if (primaryCommitTxBuilder_ == null) {
-          primaryCommitTx_ = null;
+        if (primaryConfirmTxBuilder_ == null) {
+          primaryConfirmTx_ = null;
         } else {
-          primaryCommitTx_ = null;
-          primaryCommitTxBuilder_ = null;
-        }
-        if (primaryRollbackTxBuilder_ == null) {
-          primaryRollbackTx_ = null;
-        } else {
-          primaryRollbackTx_ = null;
-          primaryRollbackTxBuilder_ = null;
+          primaryConfirmTx_ = null;
+          primaryConfirmTxBuilder_ = null;
         }
         if (branchPrepareTxsBuilder_ == null) {
           branchPrepareTxs_ = java.util.Collections.emptyList();
@@ -1849,17 +1690,11 @@ public final class Types {
         } else {
           branchPrepareTxsBuilder_.clear();
         }
-        if (branchCommitTxsBuilder_ == null) {
-          branchCommitTxs_ = java.util.Collections.emptyList();
+        if (branchConfirmTxsBuilder_ == null) {
+          branchConfirmTxs_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000002);
         } else {
-          branchCommitTxsBuilder_.clear();
-        }
-        if (branchRollbackTxsBuilder_ == null) {
-          branchRollbackTxs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
-        } else {
-          branchRollbackTxsBuilder_.clear();
+          branchConfirmTxsBuilder_.clear();
         }
         ttlHeight_ = 0L;
 
@@ -1901,15 +1736,10 @@ public final class Types {
         } else {
           result.primaryPrepareTxId_ = primaryPrepareTxIdBuilder_.build();
         }
-        if (primaryCommitTxBuilder_ == null) {
-          result.primaryCommitTx_ = primaryCommitTx_;
+        if (primaryConfirmTxBuilder_ == null) {
+          result.primaryConfirmTx_ = primaryConfirmTx_;
         } else {
-          result.primaryCommitTx_ = primaryCommitTxBuilder_.build();
-        }
-        if (primaryRollbackTxBuilder_ == null) {
-          result.primaryRollbackTx_ = primaryRollbackTx_;
-        } else {
-          result.primaryRollbackTx_ = primaryRollbackTxBuilder_.build();
+          result.primaryConfirmTx_ = primaryConfirmTxBuilder_.build();
         }
         if (branchPrepareTxsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
@@ -1920,23 +1750,14 @@ public final class Types {
         } else {
           result.branchPrepareTxs_ = branchPrepareTxsBuilder_.build();
         }
-        if (branchCommitTxsBuilder_ == null) {
+        if (branchConfirmTxsBuilder_ == null) {
           if (((bitField0_ & 0x00000002) != 0)) {
-            branchCommitTxs_ = java.util.Collections.unmodifiableList(branchCommitTxs_);
+            branchConfirmTxs_ = java.util.Collections.unmodifiableList(branchConfirmTxs_);
             bitField0_ = (bitField0_ & ~0x00000002);
           }
-          result.branchCommitTxs_ = branchCommitTxs_;
+          result.branchConfirmTxs_ = branchConfirmTxs_;
         } else {
-          result.branchCommitTxs_ = branchCommitTxsBuilder_.build();
-        }
-        if (branchRollbackTxsBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
-            branchRollbackTxs_ = java.util.Collections.unmodifiableList(branchRollbackTxs_);
-            bitField0_ = (bitField0_ & ~0x00000004);
-          }
-          result.branchRollbackTxs_ = branchRollbackTxs_;
-        } else {
-          result.branchRollbackTxs_ = branchRollbackTxsBuilder_.build();
+          result.branchConfirmTxs_ = branchConfirmTxsBuilder_.build();
         }
         result.ttlHeight_ = ttlHeight_;
         if (ttlTimeBuilder_ == null) {
@@ -1995,11 +1816,8 @@ public final class Types {
         if (other.hasPrimaryPrepareTxId()) {
           mergePrimaryPrepareTxId(other.getPrimaryPrepareTxId());
         }
-        if (other.hasPrimaryCommitTx()) {
-          mergePrimaryCommitTx(other.getPrimaryCommitTx());
-        }
-        if (other.hasPrimaryRollbackTx()) {
-          mergePrimaryRollbackTx(other.getPrimaryRollbackTx());
+        if (other.hasPrimaryConfirmTx()) {
+          mergePrimaryConfirmTx(other.getPrimaryConfirmTx());
         }
         if (branchPrepareTxsBuilder_ == null) {
           if (!other.branchPrepareTxs_.isEmpty()) {
@@ -2027,55 +1845,29 @@ public final class Types {
             }
           }
         }
-        if (branchCommitTxsBuilder_ == null) {
-          if (!other.branchCommitTxs_.isEmpty()) {
-            if (branchCommitTxs_.isEmpty()) {
-              branchCommitTxs_ = other.branchCommitTxs_;
+        if (branchConfirmTxsBuilder_ == null) {
+          if (!other.branchConfirmTxs_.isEmpty()) {
+            if (branchConfirmTxs_.isEmpty()) {
+              branchConfirmTxs_ = other.branchConfirmTxs_;
               bitField0_ = (bitField0_ & ~0x00000002);
             } else {
-              ensureBranchCommitTxsIsMutable();
-              branchCommitTxs_.addAll(other.branchCommitTxs_);
+              ensureBranchConfirmTxsIsMutable();
+              branchConfirmTxs_.addAll(other.branchConfirmTxs_);
             }
             onChanged();
           }
         } else {
-          if (!other.branchCommitTxs_.isEmpty()) {
-            if (branchCommitTxsBuilder_.isEmpty()) {
-              branchCommitTxsBuilder_.dispose();
-              branchCommitTxsBuilder_ = null;
-              branchCommitTxs_ = other.branchCommitTxs_;
+          if (!other.branchConfirmTxs_.isEmpty()) {
+            if (branchConfirmTxsBuilder_.isEmpty()) {
+              branchConfirmTxsBuilder_.dispose();
+              branchConfirmTxsBuilder_ = null;
+              branchConfirmTxs_ = other.branchConfirmTxs_;
               bitField0_ = (bitField0_ & ~0x00000002);
-              branchCommitTxsBuilder_ = 
+              branchConfirmTxsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getBranchCommitTxsFieldBuilder() : null;
+                   getBranchConfirmTxsFieldBuilder() : null;
             } else {
-              branchCommitTxsBuilder_.addAllMessages(other.branchCommitTxs_);
-            }
-          }
-        }
-        if (branchRollbackTxsBuilder_ == null) {
-          if (!other.branchRollbackTxs_.isEmpty()) {
-            if (branchRollbackTxs_.isEmpty()) {
-              branchRollbackTxs_ = other.branchRollbackTxs_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-            } else {
-              ensureBranchRollbackTxsIsMutable();
-              branchRollbackTxs_.addAll(other.branchRollbackTxs_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.branchRollbackTxs_.isEmpty()) {
-            if (branchRollbackTxsBuilder_.isEmpty()) {
-              branchRollbackTxsBuilder_.dispose();
-              branchRollbackTxsBuilder_ = null;
-              branchRollbackTxs_ = other.branchRollbackTxs_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-              branchRollbackTxsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getBranchRollbackTxsFieldBuilder() : null;
-            } else {
-              branchRollbackTxsBuilder_.addAllMessages(other.branchRollbackTxs_);
+              branchConfirmTxsBuilder_.addAllMessages(other.branchConfirmTxs_);
             }
           }
         }
@@ -2234,242 +2026,123 @@ public final class Types {
         return primaryPrepareTxIdBuilder_;
       }
 
-      private com.zhigui.crossmesh.proto.Types.BranchTransaction primaryCommitTx_;
+      private com.zhigui.crossmesh.proto.Types.BranchTransaction primaryConfirmTx_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> primaryCommitTxBuilder_;
+          com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> primaryConfirmTxBuilder_;
       /**
-       * <code>.pb.BranchTransaction primary_commit_tx = 2;</code>
-       * @return Whether the primaryCommitTx field is set.
+       * <code>.pb.BranchTransaction primary_confirm_tx = 2;</code>
+       * @return Whether the primaryConfirmTx field is set.
        */
-      public boolean hasPrimaryCommitTx() {
-        return primaryCommitTxBuilder_ != null || primaryCommitTx_ != null;
+      public boolean hasPrimaryConfirmTx() {
+        return primaryConfirmTxBuilder_ != null || primaryConfirmTx_ != null;
       }
       /**
-       * <code>.pb.BranchTransaction primary_commit_tx = 2;</code>
-       * @return The primaryCommitTx.
+       * <code>.pb.BranchTransaction primary_confirm_tx = 2;</code>
+       * @return The primaryConfirmTx.
        */
-      public com.zhigui.crossmesh.proto.Types.BranchTransaction getPrimaryCommitTx() {
-        if (primaryCommitTxBuilder_ == null) {
-          return primaryCommitTx_ == null ? com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance() : primaryCommitTx_;
+      public com.zhigui.crossmesh.proto.Types.BranchTransaction getPrimaryConfirmTx() {
+        if (primaryConfirmTxBuilder_ == null) {
+          return primaryConfirmTx_ == null ? com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance() : primaryConfirmTx_;
         } else {
-          return primaryCommitTxBuilder_.getMessage();
+          return primaryConfirmTxBuilder_.getMessage();
         }
       }
       /**
-       * <code>.pb.BranchTransaction primary_commit_tx = 2;</code>
+       * <code>.pb.BranchTransaction primary_confirm_tx = 2;</code>
        */
-      public Builder setPrimaryCommitTx(com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
-        if (primaryCommitTxBuilder_ == null) {
+      public Builder setPrimaryConfirmTx(com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
+        if (primaryConfirmTxBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          primaryCommitTx_ = value;
+          primaryConfirmTx_ = value;
           onChanged();
         } else {
-          primaryCommitTxBuilder_.setMessage(value);
+          primaryConfirmTxBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
-       * <code>.pb.BranchTransaction primary_commit_tx = 2;</code>
+       * <code>.pb.BranchTransaction primary_confirm_tx = 2;</code>
        */
-      public Builder setPrimaryCommitTx(
+      public Builder setPrimaryConfirmTx(
           com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder builderForValue) {
-        if (primaryCommitTxBuilder_ == null) {
-          primaryCommitTx_ = builderForValue.build();
+        if (primaryConfirmTxBuilder_ == null) {
+          primaryConfirmTx_ = builderForValue.build();
           onChanged();
         } else {
-          primaryCommitTxBuilder_.setMessage(builderForValue.build());
+          primaryConfirmTxBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
-       * <code>.pb.BranchTransaction primary_commit_tx = 2;</code>
+       * <code>.pb.BranchTransaction primary_confirm_tx = 2;</code>
        */
-      public Builder mergePrimaryCommitTx(com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
-        if (primaryCommitTxBuilder_ == null) {
-          if (primaryCommitTx_ != null) {
-            primaryCommitTx_ =
-              com.zhigui.crossmesh.proto.Types.BranchTransaction.newBuilder(primaryCommitTx_).mergeFrom(value).buildPartial();
+      public Builder mergePrimaryConfirmTx(com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
+        if (primaryConfirmTxBuilder_ == null) {
+          if (primaryConfirmTx_ != null) {
+            primaryConfirmTx_ =
+              com.zhigui.crossmesh.proto.Types.BranchTransaction.newBuilder(primaryConfirmTx_).mergeFrom(value).buildPartial();
           } else {
-            primaryCommitTx_ = value;
+            primaryConfirmTx_ = value;
           }
           onChanged();
         } else {
-          primaryCommitTxBuilder_.mergeFrom(value);
+          primaryConfirmTxBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
-       * <code>.pb.BranchTransaction primary_commit_tx = 2;</code>
+       * <code>.pb.BranchTransaction primary_confirm_tx = 2;</code>
        */
-      public Builder clearPrimaryCommitTx() {
-        if (primaryCommitTxBuilder_ == null) {
-          primaryCommitTx_ = null;
+      public Builder clearPrimaryConfirmTx() {
+        if (primaryConfirmTxBuilder_ == null) {
+          primaryConfirmTx_ = null;
           onChanged();
         } else {
-          primaryCommitTx_ = null;
-          primaryCommitTxBuilder_ = null;
+          primaryConfirmTx_ = null;
+          primaryConfirmTxBuilder_ = null;
         }
 
         return this;
       }
       /**
-       * <code>.pb.BranchTransaction primary_commit_tx = 2;</code>
+       * <code>.pb.BranchTransaction primary_confirm_tx = 2;</code>
        */
-      public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder getPrimaryCommitTxBuilder() {
+      public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder getPrimaryConfirmTxBuilder() {
         
         onChanged();
-        return getPrimaryCommitTxFieldBuilder().getBuilder();
+        return getPrimaryConfirmTxFieldBuilder().getBuilder();
       }
       /**
-       * <code>.pb.BranchTransaction primary_commit_tx = 2;</code>
+       * <code>.pb.BranchTransaction primary_confirm_tx = 2;</code>
        */
-      public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getPrimaryCommitTxOrBuilder() {
-        if (primaryCommitTxBuilder_ != null) {
-          return primaryCommitTxBuilder_.getMessageOrBuilder();
+      public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getPrimaryConfirmTxOrBuilder() {
+        if (primaryConfirmTxBuilder_ != null) {
+          return primaryConfirmTxBuilder_.getMessageOrBuilder();
         } else {
-          return primaryCommitTx_ == null ?
-              com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance() : primaryCommitTx_;
+          return primaryConfirmTx_ == null ?
+              com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance() : primaryConfirmTx_;
         }
       }
       /**
-       * <code>.pb.BranchTransaction primary_commit_tx = 2;</code>
+       * <code>.pb.BranchTransaction primary_confirm_tx = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> 
-          getPrimaryCommitTxFieldBuilder() {
-        if (primaryCommitTxBuilder_ == null) {
-          primaryCommitTxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          getPrimaryConfirmTxFieldBuilder() {
+        if (primaryConfirmTxBuilder_ == null) {
+          primaryConfirmTxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder>(
-                  getPrimaryCommitTx(),
+                  getPrimaryConfirmTx(),
                   getParentForChildren(),
                   isClean());
-          primaryCommitTx_ = null;
+          primaryConfirmTx_ = null;
         }
-        return primaryCommitTxBuilder_;
-      }
-
-      private com.zhigui.crossmesh.proto.Types.BranchTransaction primaryRollbackTx_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> primaryRollbackTxBuilder_;
-      /**
-       * <code>.pb.BranchTransaction primary_rollback_tx = 3;</code>
-       * @return Whether the primaryRollbackTx field is set.
-       */
-      public boolean hasPrimaryRollbackTx() {
-        return primaryRollbackTxBuilder_ != null || primaryRollbackTx_ != null;
-      }
-      /**
-       * <code>.pb.BranchTransaction primary_rollback_tx = 3;</code>
-       * @return The primaryRollbackTx.
-       */
-      public com.zhigui.crossmesh.proto.Types.BranchTransaction getPrimaryRollbackTx() {
-        if (primaryRollbackTxBuilder_ == null) {
-          return primaryRollbackTx_ == null ? com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance() : primaryRollbackTx_;
-        } else {
-          return primaryRollbackTxBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.pb.BranchTransaction primary_rollback_tx = 3;</code>
-       */
-      public Builder setPrimaryRollbackTx(com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
-        if (primaryRollbackTxBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          primaryRollbackTx_ = value;
-          onChanged();
-        } else {
-          primaryRollbackTxBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.pb.BranchTransaction primary_rollback_tx = 3;</code>
-       */
-      public Builder setPrimaryRollbackTx(
-          com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder builderForValue) {
-        if (primaryRollbackTxBuilder_ == null) {
-          primaryRollbackTx_ = builderForValue.build();
-          onChanged();
-        } else {
-          primaryRollbackTxBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.pb.BranchTransaction primary_rollback_tx = 3;</code>
-       */
-      public Builder mergePrimaryRollbackTx(com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
-        if (primaryRollbackTxBuilder_ == null) {
-          if (primaryRollbackTx_ != null) {
-            primaryRollbackTx_ =
-              com.zhigui.crossmesh.proto.Types.BranchTransaction.newBuilder(primaryRollbackTx_).mergeFrom(value).buildPartial();
-          } else {
-            primaryRollbackTx_ = value;
-          }
-          onChanged();
-        } else {
-          primaryRollbackTxBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.pb.BranchTransaction primary_rollback_tx = 3;</code>
-       */
-      public Builder clearPrimaryRollbackTx() {
-        if (primaryRollbackTxBuilder_ == null) {
-          primaryRollbackTx_ = null;
-          onChanged();
-        } else {
-          primaryRollbackTx_ = null;
-          primaryRollbackTxBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.pb.BranchTransaction primary_rollback_tx = 3;</code>
-       */
-      public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder getPrimaryRollbackTxBuilder() {
-        
-        onChanged();
-        return getPrimaryRollbackTxFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.pb.BranchTransaction primary_rollback_tx = 3;</code>
-       */
-      public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getPrimaryRollbackTxOrBuilder() {
-        if (primaryRollbackTxBuilder_ != null) {
-          return primaryRollbackTxBuilder_.getMessageOrBuilder();
-        } else {
-          return primaryRollbackTx_ == null ?
-              com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance() : primaryRollbackTx_;
-        }
-      }
-      /**
-       * <code>.pb.BranchTransaction primary_rollback_tx = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> 
-          getPrimaryRollbackTxFieldBuilder() {
-        if (primaryRollbackTxBuilder_ == null) {
-          primaryRollbackTxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder>(
-                  getPrimaryRollbackTx(),
-                  getParentForChildren(),
-                  isClean());
-          primaryRollbackTx_ = null;
-        }
-        return primaryRollbackTxBuilder_;
+        return primaryConfirmTxBuilder_;
       }
 
       private java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> branchPrepareTxs_ =
@@ -2485,7 +2158,7 @@ public final class Types {
           com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> branchPrepareTxsBuilder_;
 
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 3;</code>
        */
       public java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> getBranchPrepareTxsList() {
         if (branchPrepareTxsBuilder_ == null) {
@@ -2495,7 +2168,7 @@ public final class Types {
         }
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 3;</code>
        */
       public int getBranchPrepareTxsCount() {
         if (branchPrepareTxsBuilder_ == null) {
@@ -2505,7 +2178,7 @@ public final class Types {
         }
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 3;</code>
        */
       public com.zhigui.crossmesh.proto.Types.BranchTransaction getBranchPrepareTxs(int index) {
         if (branchPrepareTxsBuilder_ == null) {
@@ -2515,7 +2188,7 @@ public final class Types {
         }
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 3;</code>
        */
       public Builder setBranchPrepareTxs(
           int index, com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
@@ -2532,7 +2205,7 @@ public final class Types {
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 3;</code>
        */
       public Builder setBranchPrepareTxs(
           int index, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder builderForValue) {
@@ -2546,7 +2219,7 @@ public final class Types {
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 3;</code>
        */
       public Builder addBranchPrepareTxs(com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
         if (branchPrepareTxsBuilder_ == null) {
@@ -2562,7 +2235,7 @@ public final class Types {
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 3;</code>
        */
       public Builder addBranchPrepareTxs(
           int index, com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
@@ -2579,7 +2252,7 @@ public final class Types {
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 3;</code>
        */
       public Builder addBranchPrepareTxs(
           com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder builderForValue) {
@@ -2593,7 +2266,7 @@ public final class Types {
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 3;</code>
        */
       public Builder addBranchPrepareTxs(
           int index, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder builderForValue) {
@@ -2607,7 +2280,7 @@ public final class Types {
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 3;</code>
        */
       public Builder addAllBranchPrepareTxs(
           java.lang.Iterable<? extends com.zhigui.crossmesh.proto.Types.BranchTransaction> values) {
@@ -2622,7 +2295,7 @@ public final class Types {
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 3;</code>
        */
       public Builder clearBranchPrepareTxs() {
         if (branchPrepareTxsBuilder_ == null) {
@@ -2635,7 +2308,7 @@ public final class Types {
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 3;</code>
        */
       public Builder removeBranchPrepareTxs(int index) {
         if (branchPrepareTxsBuilder_ == null) {
@@ -2648,14 +2321,14 @@ public final class Types {
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 3;</code>
        */
       public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder getBranchPrepareTxsBuilder(
           int index) {
         return getBranchPrepareTxsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 3;</code>
        */
       public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getBranchPrepareTxsOrBuilder(
           int index) {
@@ -2665,7 +2338,7 @@ public final class Types {
         }
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 3;</code>
        */
       public java.util.List<? extends com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> 
            getBranchPrepareTxsOrBuilderList() {
@@ -2676,14 +2349,14 @@ public final class Types {
         }
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 3;</code>
        */
       public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder addBranchPrepareTxsBuilder() {
         return getBranchPrepareTxsFieldBuilder().addBuilder(
             com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance());
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 3;</code>
        */
       public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder addBranchPrepareTxsBuilder(
           int index) {
@@ -2691,7 +2364,7 @@ public final class Types {
             index, com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance());
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 3;</code>
        */
       public java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder> 
            getBranchPrepareTxsBuilderList() {
@@ -2712,496 +2385,256 @@ public final class Types {
         return branchPrepareTxsBuilder_;
       }
 
-      private java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> branchCommitTxs_ =
+      private java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> branchConfirmTxs_ =
         java.util.Collections.emptyList();
-      private void ensureBranchCommitTxsIsMutable() {
+      private void ensureBranchConfirmTxsIsMutable() {
         if (!((bitField0_ & 0x00000002) != 0)) {
-          branchCommitTxs_ = new java.util.ArrayList<com.zhigui.crossmesh.proto.Types.BranchTransaction>(branchCommitTxs_);
+          branchConfirmTxs_ = new java.util.ArrayList<com.zhigui.crossmesh.proto.Types.BranchTransaction>(branchConfirmTxs_);
           bitField0_ |= 0x00000002;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> branchCommitTxsBuilder_;
+          com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> branchConfirmTxsBuilder_;
 
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 4;</code>
        */
-      public java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> getBranchCommitTxsList() {
-        if (branchCommitTxsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(branchCommitTxs_);
+      public java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> getBranchConfirmTxsList() {
+        if (branchConfirmTxsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(branchConfirmTxs_);
         } else {
-          return branchCommitTxsBuilder_.getMessageList();
+          return branchConfirmTxsBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 4;</code>
        */
-      public int getBranchCommitTxsCount() {
-        if (branchCommitTxsBuilder_ == null) {
-          return branchCommitTxs_.size();
+      public int getBranchConfirmTxsCount() {
+        if (branchConfirmTxsBuilder_ == null) {
+          return branchConfirmTxs_.size();
         } else {
-          return branchCommitTxsBuilder_.getCount();
+          return branchConfirmTxsBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 4;</code>
        */
-      public com.zhigui.crossmesh.proto.Types.BranchTransaction getBranchCommitTxs(int index) {
-        if (branchCommitTxsBuilder_ == null) {
-          return branchCommitTxs_.get(index);
+      public com.zhigui.crossmesh.proto.Types.BranchTransaction getBranchConfirmTxs(int index) {
+        if (branchConfirmTxsBuilder_ == null) {
+          return branchConfirmTxs_.get(index);
         } else {
-          return branchCommitTxsBuilder_.getMessage(index);
+          return branchConfirmTxsBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 4;</code>
        */
-      public Builder setBranchCommitTxs(
+      public Builder setBranchConfirmTxs(
           int index, com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
-        if (branchCommitTxsBuilder_ == null) {
+        if (branchConfirmTxsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureBranchCommitTxsIsMutable();
-          branchCommitTxs_.set(index, value);
+          ensureBranchConfirmTxsIsMutable();
+          branchConfirmTxs_.set(index, value);
           onChanged();
         } else {
-          branchCommitTxsBuilder_.setMessage(index, value);
+          branchConfirmTxsBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 4;</code>
        */
-      public Builder setBranchCommitTxs(
+      public Builder setBranchConfirmTxs(
           int index, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder builderForValue) {
-        if (branchCommitTxsBuilder_ == null) {
-          ensureBranchCommitTxsIsMutable();
-          branchCommitTxs_.set(index, builderForValue.build());
+        if (branchConfirmTxsBuilder_ == null) {
+          ensureBranchConfirmTxsIsMutable();
+          branchConfirmTxs_.set(index, builderForValue.build());
           onChanged();
         } else {
-          branchCommitTxsBuilder_.setMessage(index, builderForValue.build());
+          branchConfirmTxsBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 4;</code>
        */
-      public Builder addBranchCommitTxs(com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
-        if (branchCommitTxsBuilder_ == null) {
+      public Builder addBranchConfirmTxs(com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
+        if (branchConfirmTxsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureBranchCommitTxsIsMutable();
-          branchCommitTxs_.add(value);
+          ensureBranchConfirmTxsIsMutable();
+          branchConfirmTxs_.add(value);
           onChanged();
         } else {
-          branchCommitTxsBuilder_.addMessage(value);
+          branchConfirmTxsBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 4;</code>
        */
-      public Builder addBranchCommitTxs(
+      public Builder addBranchConfirmTxs(
           int index, com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
-        if (branchCommitTxsBuilder_ == null) {
+        if (branchConfirmTxsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureBranchCommitTxsIsMutable();
-          branchCommitTxs_.add(index, value);
+          ensureBranchConfirmTxsIsMutable();
+          branchConfirmTxs_.add(index, value);
           onChanged();
         } else {
-          branchCommitTxsBuilder_.addMessage(index, value);
+          branchConfirmTxsBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 4;</code>
        */
-      public Builder addBranchCommitTxs(
+      public Builder addBranchConfirmTxs(
           com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder builderForValue) {
-        if (branchCommitTxsBuilder_ == null) {
-          ensureBranchCommitTxsIsMutable();
-          branchCommitTxs_.add(builderForValue.build());
+        if (branchConfirmTxsBuilder_ == null) {
+          ensureBranchConfirmTxsIsMutable();
+          branchConfirmTxs_.add(builderForValue.build());
           onChanged();
         } else {
-          branchCommitTxsBuilder_.addMessage(builderForValue.build());
+          branchConfirmTxsBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 4;</code>
        */
-      public Builder addBranchCommitTxs(
+      public Builder addBranchConfirmTxs(
           int index, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder builderForValue) {
-        if (branchCommitTxsBuilder_ == null) {
-          ensureBranchCommitTxsIsMutable();
-          branchCommitTxs_.add(index, builderForValue.build());
+        if (branchConfirmTxsBuilder_ == null) {
+          ensureBranchConfirmTxsIsMutable();
+          branchConfirmTxs_.add(index, builderForValue.build());
           onChanged();
         } else {
-          branchCommitTxsBuilder_.addMessage(index, builderForValue.build());
+          branchConfirmTxsBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 4;</code>
        */
-      public Builder addAllBranchCommitTxs(
+      public Builder addAllBranchConfirmTxs(
           java.lang.Iterable<? extends com.zhigui.crossmesh.proto.Types.BranchTransaction> values) {
-        if (branchCommitTxsBuilder_ == null) {
-          ensureBranchCommitTxsIsMutable();
+        if (branchConfirmTxsBuilder_ == null) {
+          ensureBranchConfirmTxsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, branchCommitTxs_);
+              values, branchConfirmTxs_);
           onChanged();
         } else {
-          branchCommitTxsBuilder_.addAllMessages(values);
+          branchConfirmTxsBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 4;</code>
        */
-      public Builder clearBranchCommitTxs() {
-        if (branchCommitTxsBuilder_ == null) {
-          branchCommitTxs_ = java.util.Collections.emptyList();
+      public Builder clearBranchConfirmTxs() {
+        if (branchConfirmTxsBuilder_ == null) {
+          branchConfirmTxs_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
-          branchCommitTxsBuilder_.clear();
+          branchConfirmTxsBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 4;</code>
        */
-      public Builder removeBranchCommitTxs(int index) {
-        if (branchCommitTxsBuilder_ == null) {
-          ensureBranchCommitTxsIsMutable();
-          branchCommitTxs_.remove(index);
+      public Builder removeBranchConfirmTxs(int index) {
+        if (branchConfirmTxsBuilder_ == null) {
+          ensureBranchConfirmTxsIsMutable();
+          branchConfirmTxs_.remove(index);
           onChanged();
         } else {
-          branchCommitTxsBuilder_.remove(index);
+          branchConfirmTxsBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 4;</code>
        */
-      public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder getBranchCommitTxsBuilder(
+      public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder getBranchConfirmTxsBuilder(
           int index) {
-        return getBranchCommitTxsFieldBuilder().getBuilder(index);
+        return getBranchConfirmTxsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 4;</code>
        */
-      public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getBranchCommitTxsOrBuilder(
+      public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getBranchConfirmTxsOrBuilder(
           int index) {
-        if (branchCommitTxsBuilder_ == null) {
-          return branchCommitTxs_.get(index);  } else {
-          return branchCommitTxsBuilder_.getMessageOrBuilder(index);
+        if (branchConfirmTxsBuilder_ == null) {
+          return branchConfirmTxs_.get(index);  } else {
+          return branchConfirmTxsBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 4;</code>
        */
       public java.util.List<? extends com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> 
-           getBranchCommitTxsOrBuilderList() {
-        if (branchCommitTxsBuilder_ != null) {
-          return branchCommitTxsBuilder_.getMessageOrBuilderList();
+           getBranchConfirmTxsOrBuilderList() {
+        if (branchConfirmTxsBuilder_ != null) {
+          return branchConfirmTxsBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(branchCommitTxs_);
+          return java.util.Collections.unmodifiableList(branchConfirmTxs_);
         }
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 4;</code>
        */
-      public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder addBranchCommitTxsBuilder() {
-        return getBranchCommitTxsFieldBuilder().addBuilder(
+      public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder addBranchConfirmTxsBuilder() {
+        return getBranchConfirmTxsFieldBuilder().addBuilder(
             com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance());
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 4;</code>
        */
-      public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder addBranchCommitTxsBuilder(
+      public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder addBranchConfirmTxsBuilder(
           int index) {
-        return getBranchCommitTxsFieldBuilder().addBuilder(
+        return getBranchConfirmTxsFieldBuilder().addBuilder(
             index, com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance());
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 4;</code>
        */
       public java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder> 
-           getBranchCommitTxsBuilderList() {
-        return getBranchCommitTxsFieldBuilder().getBuilderList();
+           getBranchConfirmTxsBuilderList() {
+        return getBranchConfirmTxsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
           com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> 
-          getBranchCommitTxsFieldBuilder() {
-        if (branchCommitTxsBuilder_ == null) {
-          branchCommitTxsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+          getBranchConfirmTxsFieldBuilder() {
+        if (branchConfirmTxsBuilder_ == null) {
+          branchConfirmTxsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder>(
-                  branchCommitTxs_,
+                  branchConfirmTxs_,
                   ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
-          branchCommitTxs_ = null;
+          branchConfirmTxs_ = null;
         }
-        return branchCommitTxsBuilder_;
-      }
-
-      private java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> branchRollbackTxs_ =
-        java.util.Collections.emptyList();
-      private void ensureBranchRollbackTxsIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
-          branchRollbackTxs_ = new java.util.ArrayList<com.zhigui.crossmesh.proto.Types.BranchTransaction>(branchRollbackTxs_);
-          bitField0_ |= 0x00000004;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> branchRollbackTxsBuilder_;
-
-      /**
-       * <code>repeated .pb.BranchTransaction branch_rollback_txs = 6;</code>
-       */
-      public java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> getBranchRollbackTxsList() {
-        if (branchRollbackTxsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(branchRollbackTxs_);
-        } else {
-          return branchRollbackTxsBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .pb.BranchTransaction branch_rollback_txs = 6;</code>
-       */
-      public int getBranchRollbackTxsCount() {
-        if (branchRollbackTxsBuilder_ == null) {
-          return branchRollbackTxs_.size();
-        } else {
-          return branchRollbackTxsBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .pb.BranchTransaction branch_rollback_txs = 6;</code>
-       */
-      public com.zhigui.crossmesh.proto.Types.BranchTransaction getBranchRollbackTxs(int index) {
-        if (branchRollbackTxsBuilder_ == null) {
-          return branchRollbackTxs_.get(index);
-        } else {
-          return branchRollbackTxsBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .pb.BranchTransaction branch_rollback_txs = 6;</code>
-       */
-      public Builder setBranchRollbackTxs(
-          int index, com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
-        if (branchRollbackTxsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureBranchRollbackTxsIsMutable();
-          branchRollbackTxs_.set(index, value);
-          onChanged();
-        } else {
-          branchRollbackTxsBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .pb.BranchTransaction branch_rollback_txs = 6;</code>
-       */
-      public Builder setBranchRollbackTxs(
-          int index, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder builderForValue) {
-        if (branchRollbackTxsBuilder_ == null) {
-          ensureBranchRollbackTxsIsMutable();
-          branchRollbackTxs_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          branchRollbackTxsBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .pb.BranchTransaction branch_rollback_txs = 6;</code>
-       */
-      public Builder addBranchRollbackTxs(com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
-        if (branchRollbackTxsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureBranchRollbackTxsIsMutable();
-          branchRollbackTxs_.add(value);
-          onChanged();
-        } else {
-          branchRollbackTxsBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .pb.BranchTransaction branch_rollback_txs = 6;</code>
-       */
-      public Builder addBranchRollbackTxs(
-          int index, com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
-        if (branchRollbackTxsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureBranchRollbackTxsIsMutable();
-          branchRollbackTxs_.add(index, value);
-          onChanged();
-        } else {
-          branchRollbackTxsBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .pb.BranchTransaction branch_rollback_txs = 6;</code>
-       */
-      public Builder addBranchRollbackTxs(
-          com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder builderForValue) {
-        if (branchRollbackTxsBuilder_ == null) {
-          ensureBranchRollbackTxsIsMutable();
-          branchRollbackTxs_.add(builderForValue.build());
-          onChanged();
-        } else {
-          branchRollbackTxsBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .pb.BranchTransaction branch_rollback_txs = 6;</code>
-       */
-      public Builder addBranchRollbackTxs(
-          int index, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder builderForValue) {
-        if (branchRollbackTxsBuilder_ == null) {
-          ensureBranchRollbackTxsIsMutable();
-          branchRollbackTxs_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          branchRollbackTxsBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .pb.BranchTransaction branch_rollback_txs = 6;</code>
-       */
-      public Builder addAllBranchRollbackTxs(
-          java.lang.Iterable<? extends com.zhigui.crossmesh.proto.Types.BranchTransaction> values) {
-        if (branchRollbackTxsBuilder_ == null) {
-          ensureBranchRollbackTxsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, branchRollbackTxs_);
-          onChanged();
-        } else {
-          branchRollbackTxsBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .pb.BranchTransaction branch_rollback_txs = 6;</code>
-       */
-      public Builder clearBranchRollbackTxs() {
-        if (branchRollbackTxsBuilder_ == null) {
-          branchRollbackTxs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
-          onChanged();
-        } else {
-          branchRollbackTxsBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .pb.BranchTransaction branch_rollback_txs = 6;</code>
-       */
-      public Builder removeBranchRollbackTxs(int index) {
-        if (branchRollbackTxsBuilder_ == null) {
-          ensureBranchRollbackTxsIsMutable();
-          branchRollbackTxs_.remove(index);
-          onChanged();
-        } else {
-          branchRollbackTxsBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .pb.BranchTransaction branch_rollback_txs = 6;</code>
-       */
-      public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder getBranchRollbackTxsBuilder(
-          int index) {
-        return getBranchRollbackTxsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .pb.BranchTransaction branch_rollback_txs = 6;</code>
-       */
-      public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getBranchRollbackTxsOrBuilder(
-          int index) {
-        if (branchRollbackTxsBuilder_ == null) {
-          return branchRollbackTxs_.get(index);  } else {
-          return branchRollbackTxsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .pb.BranchTransaction branch_rollback_txs = 6;</code>
-       */
-      public java.util.List<? extends com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> 
-           getBranchRollbackTxsOrBuilderList() {
-        if (branchRollbackTxsBuilder_ != null) {
-          return branchRollbackTxsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(branchRollbackTxs_);
-        }
-      }
-      /**
-       * <code>repeated .pb.BranchTransaction branch_rollback_txs = 6;</code>
-       */
-      public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder addBranchRollbackTxsBuilder() {
-        return getBranchRollbackTxsFieldBuilder().addBuilder(
-            com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .pb.BranchTransaction branch_rollback_txs = 6;</code>
-       */
-      public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder addBranchRollbackTxsBuilder(
-          int index) {
-        return getBranchRollbackTxsFieldBuilder().addBuilder(
-            index, com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .pb.BranchTransaction branch_rollback_txs = 6;</code>
-       */
-      public java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder> 
-           getBranchRollbackTxsBuilderList() {
-        return getBranchRollbackTxsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> 
-          getBranchRollbackTxsFieldBuilder() {
-        if (branchRollbackTxsBuilder_ == null) {
-          branchRollbackTxsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder>(
-                  branchRollbackTxs_,
-                  ((bitField0_ & 0x00000004) != 0),
-                  getParentForChildren(),
-                  isClean());
-          branchRollbackTxs_ = null;
-        }
-        return branchRollbackTxsBuilder_;
+        return branchConfirmTxsBuilder_;
       }
 
       private long ttlHeight_ ;
       /**
-       * <code>uint64 ttl_height = 7;</code>
+       * <code>uint64 ttl_height = 5;</code>
        * @return The ttlHeight.
        */
       public long getTtlHeight() {
         return ttlHeight_;
       }
       /**
-       * <code>uint64 ttl_height = 7;</code>
+       * <code>uint64 ttl_height = 5;</code>
        * @param value The ttlHeight to set.
        * @return This builder for chaining.
        */
@@ -3212,7 +2645,7 @@ public final class Types {
         return this;
       }
       /**
-       * <code>uint64 ttl_height = 7;</code>
+       * <code>uint64 ttl_height = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearTtlHeight() {
@@ -3226,14 +2659,14 @@ public final class Types {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> ttlTimeBuilder_;
       /**
-       * <code>.google.protobuf.Timestamp ttl_time = 8;</code>
+       * <code>.google.protobuf.Timestamp ttl_time = 6;</code>
        * @return Whether the ttlTime field is set.
        */
       public boolean hasTtlTime() {
         return ttlTimeBuilder_ != null || ttlTime_ != null;
       }
       /**
-       * <code>.google.protobuf.Timestamp ttl_time = 8;</code>
+       * <code>.google.protobuf.Timestamp ttl_time = 6;</code>
        * @return The ttlTime.
        */
       public com.google.protobuf.Timestamp getTtlTime() {
@@ -3244,7 +2677,7 @@ public final class Types {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp ttl_time = 8;</code>
+       * <code>.google.protobuf.Timestamp ttl_time = 6;</code>
        */
       public Builder setTtlTime(com.google.protobuf.Timestamp value) {
         if (ttlTimeBuilder_ == null) {
@@ -3260,7 +2693,7 @@ public final class Types {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp ttl_time = 8;</code>
+       * <code>.google.protobuf.Timestamp ttl_time = 6;</code>
        */
       public Builder setTtlTime(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -3274,7 +2707,7 @@ public final class Types {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp ttl_time = 8;</code>
+       * <code>.google.protobuf.Timestamp ttl_time = 6;</code>
        */
       public Builder mergeTtlTime(com.google.protobuf.Timestamp value) {
         if (ttlTimeBuilder_ == null) {
@@ -3292,7 +2725,7 @@ public final class Types {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp ttl_time = 8;</code>
+       * <code>.google.protobuf.Timestamp ttl_time = 6;</code>
        */
       public Builder clearTtlTime() {
         if (ttlTimeBuilder_ == null) {
@@ -3306,7 +2739,7 @@ public final class Types {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp ttl_time = 8;</code>
+       * <code>.google.protobuf.Timestamp ttl_time = 6;</code>
        */
       public com.google.protobuf.Timestamp.Builder getTtlTimeBuilder() {
         
@@ -3314,7 +2747,7 @@ public final class Types {
         return getTtlTimeFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.Timestamp ttl_time = 8;</code>
+       * <code>.google.protobuf.Timestamp ttl_time = 6;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getTtlTimeOrBuilder() {
         if (ttlTimeBuilder_ != null) {
@@ -3325,7 +2758,7 @@ public final class Types {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp ttl_time = 8;</code>
+       * <code>.google.protobuf.Timestamp ttl_time = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -4332,19 +3765,19 @@ public final class Types {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.pb.URI uri = 1;</code>
-     * @return Whether the uri field is set.
+     * <code>.pb.TransactionID tx_id = 1;</code>
+     * @return Whether the txId field is set.
      */
-    boolean hasUri();
+    boolean hasTxId();
     /**
-     * <code>.pb.URI uri = 1;</code>
-     * @return The uri.
+     * <code>.pb.TransactionID tx_id = 1;</code>
+     * @return The txId.
      */
-    com.zhigui.crossmesh.proto.Types.URI getUri();
+    com.zhigui.crossmesh.proto.Types.TransactionID getTxId();
     /**
-     * <code>.pb.URI uri = 1;</code>
+     * <code>.pb.TransactionID tx_id = 1;</code>
      */
-    com.zhigui.crossmesh.proto.Types.URIOrBuilder getUriOrBuilder();
+    com.zhigui.crossmesh.proto.Types.TransactionIDOrBuilder getTxIdOrBuilder();
 
     /**
      * <code>.pb.Invocation invocation = 2;</code>
@@ -4360,6 +3793,18 @@ public final class Types {
      * <code>.pb.Invocation invocation = 2;</code>
      */
     com.zhigui.crossmesh.proto.Types.InvocationOrBuilder getInvocationOrBuilder();
+
+    /**
+     * <code>string proof = 3;</code>
+     * @return The proof.
+     */
+    java.lang.String getProof();
+    /**
+     * <code>string proof = 3;</code>
+     * @return The bytes for proof.
+     */
+    com.google.protobuf.ByteString
+        getProofBytes();
   }
   /**
    * Protobuf type {@code pb.BranchTransaction}
@@ -4374,6 +3819,7 @@ public final class Types {
       super(builder);
     }
     private BranchTransaction() {
+      proof_ = "";
     }
 
     @java.lang.Override
@@ -4407,14 +3853,14 @@ public final class Types {
               done = true;
               break;
             case 10: {
-              com.zhigui.crossmesh.proto.Types.URI.Builder subBuilder = null;
-              if (uri_ != null) {
-                subBuilder = uri_.toBuilder();
+              com.zhigui.crossmesh.proto.Types.TransactionID.Builder subBuilder = null;
+              if (txId_ != null) {
+                subBuilder = txId_.toBuilder();
               }
-              uri_ = input.readMessage(com.zhigui.crossmesh.proto.Types.URI.parser(), extensionRegistry);
+              txId_ = input.readMessage(com.zhigui.crossmesh.proto.Types.TransactionID.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(uri_);
-                uri_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(txId_);
+                txId_ = subBuilder.buildPartial();
               }
 
               break;
@@ -4430,6 +3876,12 @@ public final class Types {
                 invocation_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              proof_ = s;
               break;
             }
             default: {
@@ -4464,27 +3916,27 @@ public final class Types {
               com.zhigui.crossmesh.proto.Types.BranchTransaction.class, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder.class);
     }
 
-    public static final int URI_FIELD_NUMBER = 1;
-    private com.zhigui.crossmesh.proto.Types.URI uri_;
+    public static final int TX_ID_FIELD_NUMBER = 1;
+    private com.zhigui.crossmesh.proto.Types.TransactionID txId_;
     /**
-     * <code>.pb.URI uri = 1;</code>
-     * @return Whether the uri field is set.
+     * <code>.pb.TransactionID tx_id = 1;</code>
+     * @return Whether the txId field is set.
      */
-    public boolean hasUri() {
-      return uri_ != null;
+    public boolean hasTxId() {
+      return txId_ != null;
     }
     /**
-     * <code>.pb.URI uri = 1;</code>
-     * @return The uri.
+     * <code>.pb.TransactionID tx_id = 1;</code>
+     * @return The txId.
      */
-    public com.zhigui.crossmesh.proto.Types.URI getUri() {
-      return uri_ == null ? com.zhigui.crossmesh.proto.Types.URI.getDefaultInstance() : uri_;
+    public com.zhigui.crossmesh.proto.Types.TransactionID getTxId() {
+      return txId_ == null ? com.zhigui.crossmesh.proto.Types.TransactionID.getDefaultInstance() : txId_;
     }
     /**
-     * <code>.pb.URI uri = 1;</code>
+     * <code>.pb.TransactionID tx_id = 1;</code>
      */
-    public com.zhigui.crossmesh.proto.Types.URIOrBuilder getUriOrBuilder() {
-      return getUri();
+    public com.zhigui.crossmesh.proto.Types.TransactionIDOrBuilder getTxIdOrBuilder() {
+      return getTxId();
     }
 
     public static final int INVOCATION_FIELD_NUMBER = 2;
@@ -4510,6 +3962,42 @@ public final class Types {
       return getInvocation();
     }
 
+    public static final int PROOF_FIELD_NUMBER = 3;
+    private volatile java.lang.Object proof_;
+    /**
+     * <code>string proof = 3;</code>
+     * @return The proof.
+     */
+    public java.lang.String getProof() {
+      java.lang.Object ref = proof_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        proof_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string proof = 3;</code>
+     * @return The bytes for proof.
+     */
+    public com.google.protobuf.ByteString
+        getProofBytes() {
+      java.lang.Object ref = proof_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        proof_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4524,11 +4012,14 @@ public final class Types {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (uri_ != null) {
-        output.writeMessage(1, getUri());
+      if (txId_ != null) {
+        output.writeMessage(1, getTxId());
       }
       if (invocation_ != null) {
         output.writeMessage(2, getInvocation());
+      }
+      if (!getProofBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, proof_);
       }
       unknownFields.writeTo(output);
     }
@@ -4539,13 +4030,16 @@ public final class Types {
       if (size != -1) return size;
 
       size = 0;
-      if (uri_ != null) {
+      if (txId_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getUri());
+          .computeMessageSize(1, getTxId());
       }
       if (invocation_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getInvocation());
+      }
+      if (!getProofBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, proof_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4562,16 +4056,18 @@ public final class Types {
       }
       com.zhigui.crossmesh.proto.Types.BranchTransaction other = (com.zhigui.crossmesh.proto.Types.BranchTransaction) obj;
 
-      if (hasUri() != other.hasUri()) return false;
-      if (hasUri()) {
-        if (!getUri()
-            .equals(other.getUri())) return false;
+      if (hasTxId() != other.hasTxId()) return false;
+      if (hasTxId()) {
+        if (!getTxId()
+            .equals(other.getTxId())) return false;
       }
       if (hasInvocation() != other.hasInvocation()) return false;
       if (hasInvocation()) {
         if (!getInvocation()
             .equals(other.getInvocation())) return false;
       }
+      if (!getProof()
+          .equals(other.getProof())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4583,14 +4079,16 @@ public final class Types {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasUri()) {
-        hash = (37 * hash) + URI_FIELD_NUMBER;
-        hash = (53 * hash) + getUri().hashCode();
+      if (hasTxId()) {
+        hash = (37 * hash) + TX_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getTxId().hashCode();
       }
       if (hasInvocation()) {
         hash = (37 * hash) + INVOCATION_FIELD_NUMBER;
         hash = (53 * hash) + getInvocation().hashCode();
       }
+      hash = (37 * hash) + PROOF_FIELD_NUMBER;
+      hash = (53 * hash) + getProof().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4724,11 +4222,11 @@ public final class Types {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (uriBuilder_ == null) {
-          uri_ = null;
+        if (txIdBuilder_ == null) {
+          txId_ = null;
         } else {
-          uri_ = null;
-          uriBuilder_ = null;
+          txId_ = null;
+          txIdBuilder_ = null;
         }
         if (invocationBuilder_ == null) {
           invocation_ = null;
@@ -4736,6 +4234,8 @@ public final class Types {
           invocation_ = null;
           invocationBuilder_ = null;
         }
+        proof_ = "";
+
         return this;
       }
 
@@ -4762,16 +4262,17 @@ public final class Types {
       @java.lang.Override
       public com.zhigui.crossmesh.proto.Types.BranchTransaction buildPartial() {
         com.zhigui.crossmesh.proto.Types.BranchTransaction result = new com.zhigui.crossmesh.proto.Types.BranchTransaction(this);
-        if (uriBuilder_ == null) {
-          result.uri_ = uri_;
+        if (txIdBuilder_ == null) {
+          result.txId_ = txId_;
         } else {
-          result.uri_ = uriBuilder_.build();
+          result.txId_ = txIdBuilder_.build();
         }
         if (invocationBuilder_ == null) {
           result.invocation_ = invocation_;
         } else {
           result.invocation_ = invocationBuilder_.build();
         }
+        result.proof_ = proof_;
         onBuilt();
         return result;
       }
@@ -4820,11 +4321,15 @@ public final class Types {
 
       public Builder mergeFrom(com.zhigui.crossmesh.proto.Types.BranchTransaction other) {
         if (other == com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance()) return this;
-        if (other.hasUri()) {
-          mergeUri(other.getUri());
+        if (other.hasTxId()) {
+          mergeTxId(other.getTxId());
         }
         if (other.hasInvocation()) {
           mergeInvocation(other.getInvocation());
+        }
+        if (!other.getProof().isEmpty()) {
+          proof_ = other.proof_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4855,123 +4360,123 @@ public final class Types {
         return this;
       }
 
-      private com.zhigui.crossmesh.proto.Types.URI uri_;
+      private com.zhigui.crossmesh.proto.Types.TransactionID txId_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.zhigui.crossmesh.proto.Types.URI, com.zhigui.crossmesh.proto.Types.URI.Builder, com.zhigui.crossmesh.proto.Types.URIOrBuilder> uriBuilder_;
+          com.zhigui.crossmesh.proto.Types.TransactionID, com.zhigui.crossmesh.proto.Types.TransactionID.Builder, com.zhigui.crossmesh.proto.Types.TransactionIDOrBuilder> txIdBuilder_;
       /**
-       * <code>.pb.URI uri = 1;</code>
-       * @return Whether the uri field is set.
+       * <code>.pb.TransactionID tx_id = 1;</code>
+       * @return Whether the txId field is set.
        */
-      public boolean hasUri() {
-        return uriBuilder_ != null || uri_ != null;
+      public boolean hasTxId() {
+        return txIdBuilder_ != null || txId_ != null;
       }
       /**
-       * <code>.pb.URI uri = 1;</code>
-       * @return The uri.
+       * <code>.pb.TransactionID tx_id = 1;</code>
+       * @return The txId.
        */
-      public com.zhigui.crossmesh.proto.Types.URI getUri() {
-        if (uriBuilder_ == null) {
-          return uri_ == null ? com.zhigui.crossmesh.proto.Types.URI.getDefaultInstance() : uri_;
+      public com.zhigui.crossmesh.proto.Types.TransactionID getTxId() {
+        if (txIdBuilder_ == null) {
+          return txId_ == null ? com.zhigui.crossmesh.proto.Types.TransactionID.getDefaultInstance() : txId_;
         } else {
-          return uriBuilder_.getMessage();
+          return txIdBuilder_.getMessage();
         }
       }
       /**
-       * <code>.pb.URI uri = 1;</code>
+       * <code>.pb.TransactionID tx_id = 1;</code>
        */
-      public Builder setUri(com.zhigui.crossmesh.proto.Types.URI value) {
-        if (uriBuilder_ == null) {
+      public Builder setTxId(com.zhigui.crossmesh.proto.Types.TransactionID value) {
+        if (txIdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          uri_ = value;
+          txId_ = value;
           onChanged();
         } else {
-          uriBuilder_.setMessage(value);
+          txIdBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
-       * <code>.pb.URI uri = 1;</code>
+       * <code>.pb.TransactionID tx_id = 1;</code>
        */
-      public Builder setUri(
-          com.zhigui.crossmesh.proto.Types.URI.Builder builderForValue) {
-        if (uriBuilder_ == null) {
-          uri_ = builderForValue.build();
+      public Builder setTxId(
+          com.zhigui.crossmesh.proto.Types.TransactionID.Builder builderForValue) {
+        if (txIdBuilder_ == null) {
+          txId_ = builderForValue.build();
           onChanged();
         } else {
-          uriBuilder_.setMessage(builderForValue.build());
+          txIdBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
-       * <code>.pb.URI uri = 1;</code>
+       * <code>.pb.TransactionID tx_id = 1;</code>
        */
-      public Builder mergeUri(com.zhigui.crossmesh.proto.Types.URI value) {
-        if (uriBuilder_ == null) {
-          if (uri_ != null) {
-            uri_ =
-              com.zhigui.crossmesh.proto.Types.URI.newBuilder(uri_).mergeFrom(value).buildPartial();
+      public Builder mergeTxId(com.zhigui.crossmesh.proto.Types.TransactionID value) {
+        if (txIdBuilder_ == null) {
+          if (txId_ != null) {
+            txId_ =
+              com.zhigui.crossmesh.proto.Types.TransactionID.newBuilder(txId_).mergeFrom(value).buildPartial();
           } else {
-            uri_ = value;
+            txId_ = value;
           }
           onChanged();
         } else {
-          uriBuilder_.mergeFrom(value);
+          txIdBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
-       * <code>.pb.URI uri = 1;</code>
+       * <code>.pb.TransactionID tx_id = 1;</code>
        */
-      public Builder clearUri() {
-        if (uriBuilder_ == null) {
-          uri_ = null;
+      public Builder clearTxId() {
+        if (txIdBuilder_ == null) {
+          txId_ = null;
           onChanged();
         } else {
-          uri_ = null;
-          uriBuilder_ = null;
+          txId_ = null;
+          txIdBuilder_ = null;
         }
 
         return this;
       }
       /**
-       * <code>.pb.URI uri = 1;</code>
+       * <code>.pb.TransactionID tx_id = 1;</code>
        */
-      public com.zhigui.crossmesh.proto.Types.URI.Builder getUriBuilder() {
+      public com.zhigui.crossmesh.proto.Types.TransactionID.Builder getTxIdBuilder() {
         
         onChanged();
-        return getUriFieldBuilder().getBuilder();
+        return getTxIdFieldBuilder().getBuilder();
       }
       /**
-       * <code>.pb.URI uri = 1;</code>
+       * <code>.pb.TransactionID tx_id = 1;</code>
        */
-      public com.zhigui.crossmesh.proto.Types.URIOrBuilder getUriOrBuilder() {
-        if (uriBuilder_ != null) {
-          return uriBuilder_.getMessageOrBuilder();
+      public com.zhigui.crossmesh.proto.Types.TransactionIDOrBuilder getTxIdOrBuilder() {
+        if (txIdBuilder_ != null) {
+          return txIdBuilder_.getMessageOrBuilder();
         } else {
-          return uri_ == null ?
-              com.zhigui.crossmesh.proto.Types.URI.getDefaultInstance() : uri_;
+          return txId_ == null ?
+              com.zhigui.crossmesh.proto.Types.TransactionID.getDefaultInstance() : txId_;
         }
       }
       /**
-       * <code>.pb.URI uri = 1;</code>
+       * <code>.pb.TransactionID tx_id = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.zhigui.crossmesh.proto.Types.URI, com.zhigui.crossmesh.proto.Types.URI.Builder, com.zhigui.crossmesh.proto.Types.URIOrBuilder> 
-          getUriFieldBuilder() {
-        if (uriBuilder_ == null) {
-          uriBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.zhigui.crossmesh.proto.Types.URI, com.zhigui.crossmesh.proto.Types.URI.Builder, com.zhigui.crossmesh.proto.Types.URIOrBuilder>(
-                  getUri(),
+          com.zhigui.crossmesh.proto.Types.TransactionID, com.zhigui.crossmesh.proto.Types.TransactionID.Builder, com.zhigui.crossmesh.proto.Types.TransactionIDOrBuilder> 
+          getTxIdFieldBuilder() {
+        if (txIdBuilder_ == null) {
+          txIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.zhigui.crossmesh.proto.Types.TransactionID, com.zhigui.crossmesh.proto.Types.TransactionID.Builder, com.zhigui.crossmesh.proto.Types.TransactionIDOrBuilder>(
+                  getTxId(),
                   getParentForChildren(),
                   isClean());
-          uri_ = null;
+          txId_ = null;
         }
-        return uriBuilder_;
+        return txIdBuilder_;
       }
 
       private com.zhigui.crossmesh.proto.Types.Invocation invocation_;
@@ -5091,6 +4596,82 @@ public final class Types {
           invocation_ = null;
         }
         return invocationBuilder_;
+      }
+
+      private java.lang.Object proof_ = "";
+      /**
+       * <code>string proof = 3;</code>
+       * @return The proof.
+       */
+      public java.lang.String getProof() {
+        java.lang.Object ref = proof_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          proof_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string proof = 3;</code>
+       * @return The bytes for proof.
+       */
+      public com.google.protobuf.ByteString
+          getProofBytes() {
+        java.lang.Object ref = proof_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          proof_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string proof = 3;</code>
+       * @param value The proof to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProof(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        proof_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string proof = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProof() {
+        
+        proof_ = getDefaultInstance().getProof();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string proof = 3;</code>
+       * @param value The bytes for proof to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProofBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        proof_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -8258,72 +7839,81 @@ public final class Types {
     com.zhigui.crossmesh.proto.Types.TransactionIDOrBuilder getPrimaryPrepareTxIdOrBuilder();
 
     /**
-     * <code>.pb.BranchTransaction primary_commit_tx = 2;</code>
-     * @return Whether the primaryCommitTx field is set.
+     * <code>.pb.BranchTransaction primary_confirm_tx = 2;</code>
+     * @return Whether the primaryConfirmTx field is set.
      */
-    boolean hasPrimaryCommitTx();
+    boolean hasPrimaryConfirmTx();
     /**
-     * <code>.pb.BranchTransaction primary_commit_tx = 2;</code>
-     * @return The primaryCommitTx.
+     * <code>.pb.BranchTransaction primary_confirm_tx = 2;</code>
+     * @return The primaryConfirmTx.
      */
-    com.zhigui.crossmesh.proto.Types.BranchTransaction getPrimaryCommitTx();
+    com.zhigui.crossmesh.proto.Types.BranchTransaction getPrimaryConfirmTx();
     /**
-     * <code>.pb.BranchTransaction primary_commit_tx = 2;</code>
+     * <code>.pb.BranchTransaction primary_confirm_tx = 2;</code>
      */
-    com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getPrimaryCommitTxOrBuilder();
+    com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getPrimaryConfirmTxOrBuilder();
 
     /**
-     * <code>.pb.BranchTransaction primary_rollback_tx = 3;</code>
-     * @return Whether the primaryRollbackTx field is set.
-     */
-    boolean hasPrimaryRollbackTx();
-    /**
-     * <code>.pb.BranchTransaction primary_rollback_tx = 3;</code>
-     * @return The primaryRollbackTx.
-     */
-    com.zhigui.crossmesh.proto.Types.BranchTransaction getPrimaryRollbackTx();
-    /**
-     * <code>.pb.BranchTransaction primary_rollback_tx = 3;</code>
-     */
-    com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getPrimaryRollbackTxOrBuilder();
-
-    /**
-     * <code>.pb.Invocation global_tx_status_query = 4;</code>
+     * <code>.pb.Invocation global_tx_status_query = 3;</code>
      * @return Whether the globalTxStatusQuery field is set.
      */
     boolean hasGlobalTxStatusQuery();
     /**
-     * <code>.pb.Invocation global_tx_status_query = 4;</code>
+     * <code>.pb.Invocation global_tx_status_query = 3;</code>
      * @return The globalTxStatusQuery.
      */
     com.zhigui.crossmesh.proto.Types.Invocation getGlobalTxStatusQuery();
     /**
-     * <code>.pb.Invocation global_tx_status_query = 4;</code>
+     * <code>.pb.Invocation global_tx_status_query = 3;</code>
      */
     com.zhigui.crossmesh.proto.Types.InvocationOrBuilder getGlobalTxStatusQueryOrBuilder();
 
     /**
-     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
+     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
      */
     java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> 
         getBranchPrepareTxsList();
     /**
-     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
+     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
      */
     com.zhigui.crossmesh.proto.Types.BranchTransaction getBranchPrepareTxs(int index);
     /**
-     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
+     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
      */
     int getBranchPrepareTxsCount();
     /**
-     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
+     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
      */
     java.util.List<? extends com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> 
         getBranchPrepareTxsOrBuilderList();
     /**
-     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
+     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
      */
     com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getBranchPrepareTxsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .pb.BranchTransaction branch_confirm_txs = 5;</code>
+     */
+    java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> 
+        getBranchConfirmTxsList();
+    /**
+     * <code>repeated .pb.BranchTransaction branch_confirm_txs = 5;</code>
+     */
+    com.zhigui.crossmesh.proto.Types.BranchTransaction getBranchConfirmTxs(int index);
+    /**
+     * <code>repeated .pb.BranchTransaction branch_confirm_txs = 5;</code>
+     */
+    int getBranchConfirmTxsCount();
+    /**
+     * <code>repeated .pb.BranchTransaction branch_confirm_txs = 5;</code>
+     */
+    java.util.List<? extends com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> 
+        getBranchConfirmTxsOrBuilderList();
+    /**
+     * <code>repeated .pb.BranchTransaction branch_confirm_txs = 5;</code>
+     */
+    com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getBranchConfirmTxsOrBuilder(
         int index);
   }
   /**
@@ -8340,6 +7930,7 @@ public final class Types {
     }
     private PrimaryTransactionPreparedEvent() {
       branchPrepareTxs_ = java.util.Collections.emptyList();
+      branchConfirmTxs_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -8388,31 +7979,18 @@ public final class Types {
             }
             case 18: {
               com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder subBuilder = null;
-              if (primaryCommitTx_ != null) {
-                subBuilder = primaryCommitTx_.toBuilder();
+              if (primaryConfirmTx_ != null) {
+                subBuilder = primaryConfirmTx_.toBuilder();
               }
-              primaryCommitTx_ = input.readMessage(com.zhigui.crossmesh.proto.Types.BranchTransaction.parser(), extensionRegistry);
+              primaryConfirmTx_ = input.readMessage(com.zhigui.crossmesh.proto.Types.BranchTransaction.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(primaryCommitTx_);
-                primaryCommitTx_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(primaryConfirmTx_);
+                primaryConfirmTx_ = subBuilder.buildPartial();
               }
 
               break;
             }
             case 26: {
-              com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder subBuilder = null;
-              if (primaryRollbackTx_ != null) {
-                subBuilder = primaryRollbackTx_.toBuilder();
-              }
-              primaryRollbackTx_ = input.readMessage(com.zhigui.crossmesh.proto.Types.BranchTransaction.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(primaryRollbackTx_);
-                primaryRollbackTx_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 34: {
               com.zhigui.crossmesh.proto.Types.Invocation.Builder subBuilder = null;
               if (globalTxStatusQuery_ != null) {
                 subBuilder = globalTxStatusQuery_.toBuilder();
@@ -8425,12 +8003,21 @@ public final class Types {
 
               break;
             }
-            case 42: {
+            case 34: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 branchPrepareTxs_ = new java.util.ArrayList<com.zhigui.crossmesh.proto.Types.BranchTransaction>();
                 mutable_bitField0_ |= 0x00000001;
               }
               branchPrepareTxs_.add(
+                  input.readMessage(com.zhigui.crossmesh.proto.Types.BranchTransaction.parser(), extensionRegistry));
+              break;
+            }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                branchConfirmTxs_ = new java.util.ArrayList<com.zhigui.crossmesh.proto.Types.BranchTransaction>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              branchConfirmTxs_.add(
                   input.readMessage(com.zhigui.crossmesh.proto.Types.BranchTransaction.parser(), extensionRegistry));
               break;
             }
@@ -8451,6 +8038,9 @@ public final class Types {
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
           branchPrepareTxs_ = java.util.Collections.unmodifiableList(branchPrepareTxs_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          branchConfirmTxs_ = java.util.Collections.unmodifiableList(branchConfirmTxs_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -8492,108 +8082,120 @@ public final class Types {
       return getPrimaryPrepareTxId();
     }
 
-    public static final int PRIMARY_COMMIT_TX_FIELD_NUMBER = 2;
-    private com.zhigui.crossmesh.proto.Types.BranchTransaction primaryCommitTx_;
+    public static final int PRIMARY_CONFIRM_TX_FIELD_NUMBER = 2;
+    private com.zhigui.crossmesh.proto.Types.BranchTransaction primaryConfirmTx_;
     /**
-     * <code>.pb.BranchTransaction primary_commit_tx = 2;</code>
-     * @return Whether the primaryCommitTx field is set.
+     * <code>.pb.BranchTransaction primary_confirm_tx = 2;</code>
+     * @return Whether the primaryConfirmTx field is set.
      */
-    public boolean hasPrimaryCommitTx() {
-      return primaryCommitTx_ != null;
+    public boolean hasPrimaryConfirmTx() {
+      return primaryConfirmTx_ != null;
     }
     /**
-     * <code>.pb.BranchTransaction primary_commit_tx = 2;</code>
-     * @return The primaryCommitTx.
+     * <code>.pb.BranchTransaction primary_confirm_tx = 2;</code>
+     * @return The primaryConfirmTx.
      */
-    public com.zhigui.crossmesh.proto.Types.BranchTransaction getPrimaryCommitTx() {
-      return primaryCommitTx_ == null ? com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance() : primaryCommitTx_;
+    public com.zhigui.crossmesh.proto.Types.BranchTransaction getPrimaryConfirmTx() {
+      return primaryConfirmTx_ == null ? com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance() : primaryConfirmTx_;
     }
     /**
-     * <code>.pb.BranchTransaction primary_commit_tx = 2;</code>
+     * <code>.pb.BranchTransaction primary_confirm_tx = 2;</code>
      */
-    public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getPrimaryCommitTxOrBuilder() {
-      return getPrimaryCommitTx();
-    }
-
-    public static final int PRIMARY_ROLLBACK_TX_FIELD_NUMBER = 3;
-    private com.zhigui.crossmesh.proto.Types.BranchTransaction primaryRollbackTx_;
-    /**
-     * <code>.pb.BranchTransaction primary_rollback_tx = 3;</code>
-     * @return Whether the primaryRollbackTx field is set.
-     */
-    public boolean hasPrimaryRollbackTx() {
-      return primaryRollbackTx_ != null;
-    }
-    /**
-     * <code>.pb.BranchTransaction primary_rollback_tx = 3;</code>
-     * @return The primaryRollbackTx.
-     */
-    public com.zhigui.crossmesh.proto.Types.BranchTransaction getPrimaryRollbackTx() {
-      return primaryRollbackTx_ == null ? com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance() : primaryRollbackTx_;
-    }
-    /**
-     * <code>.pb.BranchTransaction primary_rollback_tx = 3;</code>
-     */
-    public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getPrimaryRollbackTxOrBuilder() {
-      return getPrimaryRollbackTx();
+    public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getPrimaryConfirmTxOrBuilder() {
+      return getPrimaryConfirmTx();
     }
 
-    public static final int GLOBAL_TX_STATUS_QUERY_FIELD_NUMBER = 4;
+    public static final int GLOBAL_TX_STATUS_QUERY_FIELD_NUMBER = 3;
     private com.zhigui.crossmesh.proto.Types.Invocation globalTxStatusQuery_;
     /**
-     * <code>.pb.Invocation global_tx_status_query = 4;</code>
+     * <code>.pb.Invocation global_tx_status_query = 3;</code>
      * @return Whether the globalTxStatusQuery field is set.
      */
     public boolean hasGlobalTxStatusQuery() {
       return globalTxStatusQuery_ != null;
     }
     /**
-     * <code>.pb.Invocation global_tx_status_query = 4;</code>
+     * <code>.pb.Invocation global_tx_status_query = 3;</code>
      * @return The globalTxStatusQuery.
      */
     public com.zhigui.crossmesh.proto.Types.Invocation getGlobalTxStatusQuery() {
       return globalTxStatusQuery_ == null ? com.zhigui.crossmesh.proto.Types.Invocation.getDefaultInstance() : globalTxStatusQuery_;
     }
     /**
-     * <code>.pb.Invocation global_tx_status_query = 4;</code>
+     * <code>.pb.Invocation global_tx_status_query = 3;</code>
      */
     public com.zhigui.crossmesh.proto.Types.InvocationOrBuilder getGlobalTxStatusQueryOrBuilder() {
       return getGlobalTxStatusQuery();
     }
 
-    public static final int BRANCH_PREPARE_TXS_FIELD_NUMBER = 5;
+    public static final int BRANCH_PREPARE_TXS_FIELD_NUMBER = 4;
     private java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> branchPrepareTxs_;
     /**
-     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
+     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
      */
     public java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> getBranchPrepareTxsList() {
       return branchPrepareTxs_;
     }
     /**
-     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
+     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
      */
     public java.util.List<? extends com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> 
         getBranchPrepareTxsOrBuilderList() {
       return branchPrepareTxs_;
     }
     /**
-     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
+     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
      */
     public int getBranchPrepareTxsCount() {
       return branchPrepareTxs_.size();
     }
     /**
-     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
+     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
      */
     public com.zhigui.crossmesh.proto.Types.BranchTransaction getBranchPrepareTxs(int index) {
       return branchPrepareTxs_.get(index);
     }
     /**
-     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
+     * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
      */
     public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getBranchPrepareTxsOrBuilder(
         int index) {
       return branchPrepareTxs_.get(index);
+    }
+
+    public static final int BRANCH_CONFIRM_TXS_FIELD_NUMBER = 5;
+    private java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> branchConfirmTxs_;
+    /**
+     * <code>repeated .pb.BranchTransaction branch_confirm_txs = 5;</code>
+     */
+    public java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> getBranchConfirmTxsList() {
+      return branchConfirmTxs_;
+    }
+    /**
+     * <code>repeated .pb.BranchTransaction branch_confirm_txs = 5;</code>
+     */
+    public java.util.List<? extends com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> 
+        getBranchConfirmTxsOrBuilderList() {
+      return branchConfirmTxs_;
+    }
+    /**
+     * <code>repeated .pb.BranchTransaction branch_confirm_txs = 5;</code>
+     */
+    public int getBranchConfirmTxsCount() {
+      return branchConfirmTxs_.size();
+    }
+    /**
+     * <code>repeated .pb.BranchTransaction branch_confirm_txs = 5;</code>
+     */
+    public com.zhigui.crossmesh.proto.Types.BranchTransaction getBranchConfirmTxs(int index) {
+      return branchConfirmTxs_.get(index);
+    }
+    /**
+     * <code>repeated .pb.BranchTransaction branch_confirm_txs = 5;</code>
+     */
+    public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getBranchConfirmTxsOrBuilder(
+        int index) {
+      return branchConfirmTxs_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -8613,17 +8215,17 @@ public final class Types {
       if (primaryPrepareTxId_ != null) {
         output.writeMessage(1, getPrimaryPrepareTxId());
       }
-      if (primaryCommitTx_ != null) {
-        output.writeMessage(2, getPrimaryCommitTx());
-      }
-      if (primaryRollbackTx_ != null) {
-        output.writeMessage(3, getPrimaryRollbackTx());
+      if (primaryConfirmTx_ != null) {
+        output.writeMessage(2, getPrimaryConfirmTx());
       }
       if (globalTxStatusQuery_ != null) {
-        output.writeMessage(4, getGlobalTxStatusQuery());
+        output.writeMessage(3, getGlobalTxStatusQuery());
       }
       for (int i = 0; i < branchPrepareTxs_.size(); i++) {
-        output.writeMessage(5, branchPrepareTxs_.get(i));
+        output.writeMessage(4, branchPrepareTxs_.get(i));
+      }
+      for (int i = 0; i < branchConfirmTxs_.size(); i++) {
+        output.writeMessage(5, branchConfirmTxs_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -8638,21 +8240,21 @@ public final class Types {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPrimaryPrepareTxId());
       }
-      if (primaryCommitTx_ != null) {
+      if (primaryConfirmTx_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getPrimaryCommitTx());
-      }
-      if (primaryRollbackTx_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getPrimaryRollbackTx());
+          .computeMessageSize(2, getPrimaryConfirmTx());
       }
       if (globalTxStatusQuery_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getGlobalTxStatusQuery());
+          .computeMessageSize(3, getGlobalTxStatusQuery());
       }
       for (int i = 0; i < branchPrepareTxs_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, branchPrepareTxs_.get(i));
+          .computeMessageSize(4, branchPrepareTxs_.get(i));
+      }
+      for (int i = 0; i < branchConfirmTxs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, branchConfirmTxs_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8674,15 +8276,10 @@ public final class Types {
         if (!getPrimaryPrepareTxId()
             .equals(other.getPrimaryPrepareTxId())) return false;
       }
-      if (hasPrimaryCommitTx() != other.hasPrimaryCommitTx()) return false;
-      if (hasPrimaryCommitTx()) {
-        if (!getPrimaryCommitTx()
-            .equals(other.getPrimaryCommitTx())) return false;
-      }
-      if (hasPrimaryRollbackTx() != other.hasPrimaryRollbackTx()) return false;
-      if (hasPrimaryRollbackTx()) {
-        if (!getPrimaryRollbackTx()
-            .equals(other.getPrimaryRollbackTx())) return false;
+      if (hasPrimaryConfirmTx() != other.hasPrimaryConfirmTx()) return false;
+      if (hasPrimaryConfirmTx()) {
+        if (!getPrimaryConfirmTx()
+            .equals(other.getPrimaryConfirmTx())) return false;
       }
       if (hasGlobalTxStatusQuery() != other.hasGlobalTxStatusQuery()) return false;
       if (hasGlobalTxStatusQuery()) {
@@ -8691,6 +8288,8 @@ public final class Types {
       }
       if (!getBranchPrepareTxsList()
           .equals(other.getBranchPrepareTxsList())) return false;
+      if (!getBranchConfirmTxsList()
+          .equals(other.getBranchConfirmTxsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8706,13 +8305,9 @@ public final class Types {
         hash = (37 * hash) + PRIMARY_PREPARE_TX_ID_FIELD_NUMBER;
         hash = (53 * hash) + getPrimaryPrepareTxId().hashCode();
       }
-      if (hasPrimaryCommitTx()) {
-        hash = (37 * hash) + PRIMARY_COMMIT_TX_FIELD_NUMBER;
-        hash = (53 * hash) + getPrimaryCommitTx().hashCode();
-      }
-      if (hasPrimaryRollbackTx()) {
-        hash = (37 * hash) + PRIMARY_ROLLBACK_TX_FIELD_NUMBER;
-        hash = (53 * hash) + getPrimaryRollbackTx().hashCode();
+      if (hasPrimaryConfirmTx()) {
+        hash = (37 * hash) + PRIMARY_CONFIRM_TX_FIELD_NUMBER;
+        hash = (53 * hash) + getPrimaryConfirmTx().hashCode();
       }
       if (hasGlobalTxStatusQuery()) {
         hash = (37 * hash) + GLOBAL_TX_STATUS_QUERY_FIELD_NUMBER;
@@ -8721,6 +8316,10 @@ public final class Types {
       if (getBranchPrepareTxsCount() > 0) {
         hash = (37 * hash) + BRANCH_PREPARE_TXS_FIELD_NUMBER;
         hash = (53 * hash) + getBranchPrepareTxsList().hashCode();
+      }
+      if (getBranchConfirmTxsCount() > 0) {
+        hash = (37 * hash) + BRANCH_CONFIRM_TXS_FIELD_NUMBER;
+        hash = (53 * hash) + getBranchConfirmTxsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -8851,6 +8450,7 @@ public final class Types {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
           getBranchPrepareTxsFieldBuilder();
+          getBranchConfirmTxsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -8862,17 +8462,11 @@ public final class Types {
           primaryPrepareTxId_ = null;
           primaryPrepareTxIdBuilder_ = null;
         }
-        if (primaryCommitTxBuilder_ == null) {
-          primaryCommitTx_ = null;
+        if (primaryConfirmTxBuilder_ == null) {
+          primaryConfirmTx_ = null;
         } else {
-          primaryCommitTx_ = null;
-          primaryCommitTxBuilder_ = null;
-        }
-        if (primaryRollbackTxBuilder_ == null) {
-          primaryRollbackTx_ = null;
-        } else {
-          primaryRollbackTx_ = null;
-          primaryRollbackTxBuilder_ = null;
+          primaryConfirmTx_ = null;
+          primaryConfirmTxBuilder_ = null;
         }
         if (globalTxStatusQueryBuilder_ == null) {
           globalTxStatusQuery_ = null;
@@ -8885,6 +8479,12 @@ public final class Types {
           bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           branchPrepareTxsBuilder_.clear();
+        }
+        if (branchConfirmTxsBuilder_ == null) {
+          branchConfirmTxs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          branchConfirmTxsBuilder_.clear();
         }
         return this;
       }
@@ -8918,15 +8518,10 @@ public final class Types {
         } else {
           result.primaryPrepareTxId_ = primaryPrepareTxIdBuilder_.build();
         }
-        if (primaryCommitTxBuilder_ == null) {
-          result.primaryCommitTx_ = primaryCommitTx_;
+        if (primaryConfirmTxBuilder_ == null) {
+          result.primaryConfirmTx_ = primaryConfirmTx_;
         } else {
-          result.primaryCommitTx_ = primaryCommitTxBuilder_.build();
-        }
-        if (primaryRollbackTxBuilder_ == null) {
-          result.primaryRollbackTx_ = primaryRollbackTx_;
-        } else {
-          result.primaryRollbackTx_ = primaryRollbackTxBuilder_.build();
+          result.primaryConfirmTx_ = primaryConfirmTxBuilder_.build();
         }
         if (globalTxStatusQueryBuilder_ == null) {
           result.globalTxStatusQuery_ = globalTxStatusQuery_;
@@ -8941,6 +8536,15 @@ public final class Types {
           result.branchPrepareTxs_ = branchPrepareTxs_;
         } else {
           result.branchPrepareTxs_ = branchPrepareTxsBuilder_.build();
+        }
+        if (branchConfirmTxsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            branchConfirmTxs_ = java.util.Collections.unmodifiableList(branchConfirmTxs_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.branchConfirmTxs_ = branchConfirmTxs_;
+        } else {
+          result.branchConfirmTxs_ = branchConfirmTxsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -8993,11 +8597,8 @@ public final class Types {
         if (other.hasPrimaryPrepareTxId()) {
           mergePrimaryPrepareTxId(other.getPrimaryPrepareTxId());
         }
-        if (other.hasPrimaryCommitTx()) {
-          mergePrimaryCommitTx(other.getPrimaryCommitTx());
-        }
-        if (other.hasPrimaryRollbackTx()) {
-          mergePrimaryRollbackTx(other.getPrimaryRollbackTx());
+        if (other.hasPrimaryConfirmTx()) {
+          mergePrimaryConfirmTx(other.getPrimaryConfirmTx());
         }
         if (other.hasGlobalTxStatusQuery()) {
           mergeGlobalTxStatusQuery(other.getGlobalTxStatusQuery());
@@ -9025,6 +8626,32 @@ public final class Types {
                    getBranchPrepareTxsFieldBuilder() : null;
             } else {
               branchPrepareTxsBuilder_.addAllMessages(other.branchPrepareTxs_);
+            }
+          }
+        }
+        if (branchConfirmTxsBuilder_ == null) {
+          if (!other.branchConfirmTxs_.isEmpty()) {
+            if (branchConfirmTxs_.isEmpty()) {
+              branchConfirmTxs_ = other.branchConfirmTxs_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureBranchConfirmTxsIsMutable();
+              branchConfirmTxs_.addAll(other.branchConfirmTxs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.branchConfirmTxs_.isEmpty()) {
+            if (branchConfirmTxsBuilder_.isEmpty()) {
+              branchConfirmTxsBuilder_.dispose();
+              branchConfirmTxsBuilder_ = null;
+              branchConfirmTxs_ = other.branchConfirmTxs_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              branchConfirmTxsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBranchConfirmTxsFieldBuilder() : null;
+            } else {
+              branchConfirmTxsBuilder_.addAllMessages(other.branchConfirmTxs_);
             }
           }
         }
@@ -9177,256 +8804,137 @@ public final class Types {
         return primaryPrepareTxIdBuilder_;
       }
 
-      private com.zhigui.crossmesh.proto.Types.BranchTransaction primaryCommitTx_;
+      private com.zhigui.crossmesh.proto.Types.BranchTransaction primaryConfirmTx_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> primaryCommitTxBuilder_;
+          com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> primaryConfirmTxBuilder_;
       /**
-       * <code>.pb.BranchTransaction primary_commit_tx = 2;</code>
-       * @return Whether the primaryCommitTx field is set.
+       * <code>.pb.BranchTransaction primary_confirm_tx = 2;</code>
+       * @return Whether the primaryConfirmTx field is set.
        */
-      public boolean hasPrimaryCommitTx() {
-        return primaryCommitTxBuilder_ != null || primaryCommitTx_ != null;
+      public boolean hasPrimaryConfirmTx() {
+        return primaryConfirmTxBuilder_ != null || primaryConfirmTx_ != null;
       }
       /**
-       * <code>.pb.BranchTransaction primary_commit_tx = 2;</code>
-       * @return The primaryCommitTx.
+       * <code>.pb.BranchTransaction primary_confirm_tx = 2;</code>
+       * @return The primaryConfirmTx.
        */
-      public com.zhigui.crossmesh.proto.Types.BranchTransaction getPrimaryCommitTx() {
-        if (primaryCommitTxBuilder_ == null) {
-          return primaryCommitTx_ == null ? com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance() : primaryCommitTx_;
+      public com.zhigui.crossmesh.proto.Types.BranchTransaction getPrimaryConfirmTx() {
+        if (primaryConfirmTxBuilder_ == null) {
+          return primaryConfirmTx_ == null ? com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance() : primaryConfirmTx_;
         } else {
-          return primaryCommitTxBuilder_.getMessage();
+          return primaryConfirmTxBuilder_.getMessage();
         }
       }
       /**
-       * <code>.pb.BranchTransaction primary_commit_tx = 2;</code>
+       * <code>.pb.BranchTransaction primary_confirm_tx = 2;</code>
        */
-      public Builder setPrimaryCommitTx(com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
-        if (primaryCommitTxBuilder_ == null) {
+      public Builder setPrimaryConfirmTx(com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
+        if (primaryConfirmTxBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          primaryCommitTx_ = value;
+          primaryConfirmTx_ = value;
           onChanged();
         } else {
-          primaryCommitTxBuilder_.setMessage(value);
+          primaryConfirmTxBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
-       * <code>.pb.BranchTransaction primary_commit_tx = 2;</code>
+       * <code>.pb.BranchTransaction primary_confirm_tx = 2;</code>
        */
-      public Builder setPrimaryCommitTx(
+      public Builder setPrimaryConfirmTx(
           com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder builderForValue) {
-        if (primaryCommitTxBuilder_ == null) {
-          primaryCommitTx_ = builderForValue.build();
+        if (primaryConfirmTxBuilder_ == null) {
+          primaryConfirmTx_ = builderForValue.build();
           onChanged();
         } else {
-          primaryCommitTxBuilder_.setMessage(builderForValue.build());
+          primaryConfirmTxBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
-       * <code>.pb.BranchTransaction primary_commit_tx = 2;</code>
+       * <code>.pb.BranchTransaction primary_confirm_tx = 2;</code>
        */
-      public Builder mergePrimaryCommitTx(com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
-        if (primaryCommitTxBuilder_ == null) {
-          if (primaryCommitTx_ != null) {
-            primaryCommitTx_ =
-              com.zhigui.crossmesh.proto.Types.BranchTransaction.newBuilder(primaryCommitTx_).mergeFrom(value).buildPartial();
+      public Builder mergePrimaryConfirmTx(com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
+        if (primaryConfirmTxBuilder_ == null) {
+          if (primaryConfirmTx_ != null) {
+            primaryConfirmTx_ =
+              com.zhigui.crossmesh.proto.Types.BranchTransaction.newBuilder(primaryConfirmTx_).mergeFrom(value).buildPartial();
           } else {
-            primaryCommitTx_ = value;
+            primaryConfirmTx_ = value;
           }
           onChanged();
         } else {
-          primaryCommitTxBuilder_.mergeFrom(value);
+          primaryConfirmTxBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
-       * <code>.pb.BranchTransaction primary_commit_tx = 2;</code>
+       * <code>.pb.BranchTransaction primary_confirm_tx = 2;</code>
        */
-      public Builder clearPrimaryCommitTx() {
-        if (primaryCommitTxBuilder_ == null) {
-          primaryCommitTx_ = null;
+      public Builder clearPrimaryConfirmTx() {
+        if (primaryConfirmTxBuilder_ == null) {
+          primaryConfirmTx_ = null;
           onChanged();
         } else {
-          primaryCommitTx_ = null;
-          primaryCommitTxBuilder_ = null;
+          primaryConfirmTx_ = null;
+          primaryConfirmTxBuilder_ = null;
         }
 
         return this;
       }
       /**
-       * <code>.pb.BranchTransaction primary_commit_tx = 2;</code>
+       * <code>.pb.BranchTransaction primary_confirm_tx = 2;</code>
        */
-      public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder getPrimaryCommitTxBuilder() {
+      public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder getPrimaryConfirmTxBuilder() {
         
         onChanged();
-        return getPrimaryCommitTxFieldBuilder().getBuilder();
+        return getPrimaryConfirmTxFieldBuilder().getBuilder();
       }
       /**
-       * <code>.pb.BranchTransaction primary_commit_tx = 2;</code>
+       * <code>.pb.BranchTransaction primary_confirm_tx = 2;</code>
        */
-      public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getPrimaryCommitTxOrBuilder() {
-        if (primaryCommitTxBuilder_ != null) {
-          return primaryCommitTxBuilder_.getMessageOrBuilder();
+      public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getPrimaryConfirmTxOrBuilder() {
+        if (primaryConfirmTxBuilder_ != null) {
+          return primaryConfirmTxBuilder_.getMessageOrBuilder();
         } else {
-          return primaryCommitTx_ == null ?
-              com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance() : primaryCommitTx_;
+          return primaryConfirmTx_ == null ?
+              com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance() : primaryConfirmTx_;
         }
       }
       /**
-       * <code>.pb.BranchTransaction primary_commit_tx = 2;</code>
+       * <code>.pb.BranchTransaction primary_confirm_tx = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> 
-          getPrimaryCommitTxFieldBuilder() {
-        if (primaryCommitTxBuilder_ == null) {
-          primaryCommitTxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          getPrimaryConfirmTxFieldBuilder() {
+        if (primaryConfirmTxBuilder_ == null) {
+          primaryConfirmTxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder>(
-                  getPrimaryCommitTx(),
+                  getPrimaryConfirmTx(),
                   getParentForChildren(),
                   isClean());
-          primaryCommitTx_ = null;
+          primaryConfirmTx_ = null;
         }
-        return primaryCommitTxBuilder_;
-      }
-
-      private com.zhigui.crossmesh.proto.Types.BranchTransaction primaryRollbackTx_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> primaryRollbackTxBuilder_;
-      /**
-       * <code>.pb.BranchTransaction primary_rollback_tx = 3;</code>
-       * @return Whether the primaryRollbackTx field is set.
-       */
-      public boolean hasPrimaryRollbackTx() {
-        return primaryRollbackTxBuilder_ != null || primaryRollbackTx_ != null;
-      }
-      /**
-       * <code>.pb.BranchTransaction primary_rollback_tx = 3;</code>
-       * @return The primaryRollbackTx.
-       */
-      public com.zhigui.crossmesh.proto.Types.BranchTransaction getPrimaryRollbackTx() {
-        if (primaryRollbackTxBuilder_ == null) {
-          return primaryRollbackTx_ == null ? com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance() : primaryRollbackTx_;
-        } else {
-          return primaryRollbackTxBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.pb.BranchTransaction primary_rollback_tx = 3;</code>
-       */
-      public Builder setPrimaryRollbackTx(com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
-        if (primaryRollbackTxBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          primaryRollbackTx_ = value;
-          onChanged();
-        } else {
-          primaryRollbackTxBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.pb.BranchTransaction primary_rollback_tx = 3;</code>
-       */
-      public Builder setPrimaryRollbackTx(
-          com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder builderForValue) {
-        if (primaryRollbackTxBuilder_ == null) {
-          primaryRollbackTx_ = builderForValue.build();
-          onChanged();
-        } else {
-          primaryRollbackTxBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.pb.BranchTransaction primary_rollback_tx = 3;</code>
-       */
-      public Builder mergePrimaryRollbackTx(com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
-        if (primaryRollbackTxBuilder_ == null) {
-          if (primaryRollbackTx_ != null) {
-            primaryRollbackTx_ =
-              com.zhigui.crossmesh.proto.Types.BranchTransaction.newBuilder(primaryRollbackTx_).mergeFrom(value).buildPartial();
-          } else {
-            primaryRollbackTx_ = value;
-          }
-          onChanged();
-        } else {
-          primaryRollbackTxBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.pb.BranchTransaction primary_rollback_tx = 3;</code>
-       */
-      public Builder clearPrimaryRollbackTx() {
-        if (primaryRollbackTxBuilder_ == null) {
-          primaryRollbackTx_ = null;
-          onChanged();
-        } else {
-          primaryRollbackTx_ = null;
-          primaryRollbackTxBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.pb.BranchTransaction primary_rollback_tx = 3;</code>
-       */
-      public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder getPrimaryRollbackTxBuilder() {
-        
-        onChanged();
-        return getPrimaryRollbackTxFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.pb.BranchTransaction primary_rollback_tx = 3;</code>
-       */
-      public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getPrimaryRollbackTxOrBuilder() {
-        if (primaryRollbackTxBuilder_ != null) {
-          return primaryRollbackTxBuilder_.getMessageOrBuilder();
-        } else {
-          return primaryRollbackTx_ == null ?
-              com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance() : primaryRollbackTx_;
-        }
-      }
-      /**
-       * <code>.pb.BranchTransaction primary_rollback_tx = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> 
-          getPrimaryRollbackTxFieldBuilder() {
-        if (primaryRollbackTxBuilder_ == null) {
-          primaryRollbackTxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder>(
-                  getPrimaryRollbackTx(),
-                  getParentForChildren(),
-                  isClean());
-          primaryRollbackTx_ = null;
-        }
-        return primaryRollbackTxBuilder_;
+        return primaryConfirmTxBuilder_;
       }
 
       private com.zhigui.crossmesh.proto.Types.Invocation globalTxStatusQuery_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.zhigui.crossmesh.proto.Types.Invocation, com.zhigui.crossmesh.proto.Types.Invocation.Builder, com.zhigui.crossmesh.proto.Types.InvocationOrBuilder> globalTxStatusQueryBuilder_;
       /**
-       * <code>.pb.Invocation global_tx_status_query = 4;</code>
+       * <code>.pb.Invocation global_tx_status_query = 3;</code>
        * @return Whether the globalTxStatusQuery field is set.
        */
       public boolean hasGlobalTxStatusQuery() {
         return globalTxStatusQueryBuilder_ != null || globalTxStatusQuery_ != null;
       }
       /**
-       * <code>.pb.Invocation global_tx_status_query = 4;</code>
+       * <code>.pb.Invocation global_tx_status_query = 3;</code>
        * @return The globalTxStatusQuery.
        */
       public com.zhigui.crossmesh.proto.Types.Invocation getGlobalTxStatusQuery() {
@@ -9437,7 +8945,7 @@ public final class Types {
         }
       }
       /**
-       * <code>.pb.Invocation global_tx_status_query = 4;</code>
+       * <code>.pb.Invocation global_tx_status_query = 3;</code>
        */
       public Builder setGlobalTxStatusQuery(com.zhigui.crossmesh.proto.Types.Invocation value) {
         if (globalTxStatusQueryBuilder_ == null) {
@@ -9453,7 +8961,7 @@ public final class Types {
         return this;
       }
       /**
-       * <code>.pb.Invocation global_tx_status_query = 4;</code>
+       * <code>.pb.Invocation global_tx_status_query = 3;</code>
        */
       public Builder setGlobalTxStatusQuery(
           com.zhigui.crossmesh.proto.Types.Invocation.Builder builderForValue) {
@@ -9467,7 +8975,7 @@ public final class Types {
         return this;
       }
       /**
-       * <code>.pb.Invocation global_tx_status_query = 4;</code>
+       * <code>.pb.Invocation global_tx_status_query = 3;</code>
        */
       public Builder mergeGlobalTxStatusQuery(com.zhigui.crossmesh.proto.Types.Invocation value) {
         if (globalTxStatusQueryBuilder_ == null) {
@@ -9485,7 +8993,7 @@ public final class Types {
         return this;
       }
       /**
-       * <code>.pb.Invocation global_tx_status_query = 4;</code>
+       * <code>.pb.Invocation global_tx_status_query = 3;</code>
        */
       public Builder clearGlobalTxStatusQuery() {
         if (globalTxStatusQueryBuilder_ == null) {
@@ -9499,7 +9007,7 @@ public final class Types {
         return this;
       }
       /**
-       * <code>.pb.Invocation global_tx_status_query = 4;</code>
+       * <code>.pb.Invocation global_tx_status_query = 3;</code>
        */
       public com.zhigui.crossmesh.proto.Types.Invocation.Builder getGlobalTxStatusQueryBuilder() {
         
@@ -9507,7 +9015,7 @@ public final class Types {
         return getGlobalTxStatusQueryFieldBuilder().getBuilder();
       }
       /**
-       * <code>.pb.Invocation global_tx_status_query = 4;</code>
+       * <code>.pb.Invocation global_tx_status_query = 3;</code>
        */
       public com.zhigui.crossmesh.proto.Types.InvocationOrBuilder getGlobalTxStatusQueryOrBuilder() {
         if (globalTxStatusQueryBuilder_ != null) {
@@ -9518,7 +9026,7 @@ public final class Types {
         }
       }
       /**
-       * <code>.pb.Invocation global_tx_status_query = 4;</code>
+       * <code>.pb.Invocation global_tx_status_query = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.zhigui.crossmesh.proto.Types.Invocation, com.zhigui.crossmesh.proto.Types.Invocation.Builder, com.zhigui.crossmesh.proto.Types.InvocationOrBuilder> 
@@ -9547,7 +9055,7 @@ public final class Types {
           com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> branchPrepareTxsBuilder_;
 
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
        */
       public java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> getBranchPrepareTxsList() {
         if (branchPrepareTxsBuilder_ == null) {
@@ -9557,7 +9065,7 @@ public final class Types {
         }
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
        */
       public int getBranchPrepareTxsCount() {
         if (branchPrepareTxsBuilder_ == null) {
@@ -9567,7 +9075,7 @@ public final class Types {
         }
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
        */
       public com.zhigui.crossmesh.proto.Types.BranchTransaction getBranchPrepareTxs(int index) {
         if (branchPrepareTxsBuilder_ == null) {
@@ -9577,7 +9085,7 @@ public final class Types {
         }
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
        */
       public Builder setBranchPrepareTxs(
           int index, com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
@@ -9594,7 +9102,7 @@ public final class Types {
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
        */
       public Builder setBranchPrepareTxs(
           int index, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder builderForValue) {
@@ -9608,7 +9116,7 @@ public final class Types {
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
        */
       public Builder addBranchPrepareTxs(com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
         if (branchPrepareTxsBuilder_ == null) {
@@ -9624,7 +9132,7 @@ public final class Types {
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
        */
       public Builder addBranchPrepareTxs(
           int index, com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
@@ -9641,7 +9149,7 @@ public final class Types {
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
        */
       public Builder addBranchPrepareTxs(
           com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder builderForValue) {
@@ -9655,7 +9163,7 @@ public final class Types {
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
        */
       public Builder addBranchPrepareTxs(
           int index, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder builderForValue) {
@@ -9669,7 +9177,7 @@ public final class Types {
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
        */
       public Builder addAllBranchPrepareTxs(
           java.lang.Iterable<? extends com.zhigui.crossmesh.proto.Types.BranchTransaction> values) {
@@ -9684,7 +9192,7 @@ public final class Types {
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
        */
       public Builder clearBranchPrepareTxs() {
         if (branchPrepareTxsBuilder_ == null) {
@@ -9697,7 +9205,7 @@ public final class Types {
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
        */
       public Builder removeBranchPrepareTxs(int index) {
         if (branchPrepareTxsBuilder_ == null) {
@@ -9710,14 +9218,14 @@ public final class Types {
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
        */
       public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder getBranchPrepareTxsBuilder(
           int index) {
         return getBranchPrepareTxsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
        */
       public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getBranchPrepareTxsOrBuilder(
           int index) {
@@ -9727,7 +9235,7 @@ public final class Types {
         }
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
        */
       public java.util.List<? extends com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> 
            getBranchPrepareTxsOrBuilderList() {
@@ -9738,14 +9246,14 @@ public final class Types {
         }
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
        */
       public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder addBranchPrepareTxsBuilder() {
         return getBranchPrepareTxsFieldBuilder().addBuilder(
             com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance());
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
        */
       public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder addBranchPrepareTxsBuilder(
           int index) {
@@ -9753,7 +9261,7 @@ public final class Types {
             index, com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance());
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 5;</code>
+       * <code>repeated .pb.BranchTransaction branch_prepare_txs = 4;</code>
        */
       public java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder> 
            getBranchPrepareTxsBuilderList() {
@@ -9772,6 +9280,246 @@ public final class Types {
           branchPrepareTxs_ = null;
         }
         return branchPrepareTxsBuilder_;
+      }
+
+      private java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> branchConfirmTxs_ =
+        java.util.Collections.emptyList();
+      private void ensureBranchConfirmTxsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          branchConfirmTxs_ = new java.util.ArrayList<com.zhigui.crossmesh.proto.Types.BranchTransaction>(branchConfirmTxs_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> branchConfirmTxsBuilder_;
+
+      /**
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 5;</code>
+       */
+      public java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> getBranchConfirmTxsList() {
+        if (branchConfirmTxsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(branchConfirmTxs_);
+        } else {
+          return branchConfirmTxsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 5;</code>
+       */
+      public int getBranchConfirmTxsCount() {
+        if (branchConfirmTxsBuilder_ == null) {
+          return branchConfirmTxs_.size();
+        } else {
+          return branchConfirmTxsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 5;</code>
+       */
+      public com.zhigui.crossmesh.proto.Types.BranchTransaction getBranchConfirmTxs(int index) {
+        if (branchConfirmTxsBuilder_ == null) {
+          return branchConfirmTxs_.get(index);
+        } else {
+          return branchConfirmTxsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 5;</code>
+       */
+      public Builder setBranchConfirmTxs(
+          int index, com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
+        if (branchConfirmTxsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBranchConfirmTxsIsMutable();
+          branchConfirmTxs_.set(index, value);
+          onChanged();
+        } else {
+          branchConfirmTxsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 5;</code>
+       */
+      public Builder setBranchConfirmTxs(
+          int index, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder builderForValue) {
+        if (branchConfirmTxsBuilder_ == null) {
+          ensureBranchConfirmTxsIsMutable();
+          branchConfirmTxs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          branchConfirmTxsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 5;</code>
+       */
+      public Builder addBranchConfirmTxs(com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
+        if (branchConfirmTxsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBranchConfirmTxsIsMutable();
+          branchConfirmTxs_.add(value);
+          onChanged();
+        } else {
+          branchConfirmTxsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 5;</code>
+       */
+      public Builder addBranchConfirmTxs(
+          int index, com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
+        if (branchConfirmTxsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBranchConfirmTxsIsMutable();
+          branchConfirmTxs_.add(index, value);
+          onChanged();
+        } else {
+          branchConfirmTxsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 5;</code>
+       */
+      public Builder addBranchConfirmTxs(
+          com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder builderForValue) {
+        if (branchConfirmTxsBuilder_ == null) {
+          ensureBranchConfirmTxsIsMutable();
+          branchConfirmTxs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          branchConfirmTxsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 5;</code>
+       */
+      public Builder addBranchConfirmTxs(
+          int index, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder builderForValue) {
+        if (branchConfirmTxsBuilder_ == null) {
+          ensureBranchConfirmTxsIsMutable();
+          branchConfirmTxs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          branchConfirmTxsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 5;</code>
+       */
+      public Builder addAllBranchConfirmTxs(
+          java.lang.Iterable<? extends com.zhigui.crossmesh.proto.Types.BranchTransaction> values) {
+        if (branchConfirmTxsBuilder_ == null) {
+          ensureBranchConfirmTxsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, branchConfirmTxs_);
+          onChanged();
+        } else {
+          branchConfirmTxsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 5;</code>
+       */
+      public Builder clearBranchConfirmTxs() {
+        if (branchConfirmTxsBuilder_ == null) {
+          branchConfirmTxs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          branchConfirmTxsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 5;</code>
+       */
+      public Builder removeBranchConfirmTxs(int index) {
+        if (branchConfirmTxsBuilder_ == null) {
+          ensureBranchConfirmTxsIsMutable();
+          branchConfirmTxs_.remove(index);
+          onChanged();
+        } else {
+          branchConfirmTxsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 5;</code>
+       */
+      public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder getBranchConfirmTxsBuilder(
+          int index) {
+        return getBranchConfirmTxsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 5;</code>
+       */
+      public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getBranchConfirmTxsOrBuilder(
+          int index) {
+        if (branchConfirmTxsBuilder_ == null) {
+          return branchConfirmTxs_.get(index);  } else {
+          return branchConfirmTxsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 5;</code>
+       */
+      public java.util.List<? extends com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> 
+           getBranchConfirmTxsOrBuilderList() {
+        if (branchConfirmTxsBuilder_ != null) {
+          return branchConfirmTxsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(branchConfirmTxs_);
+        }
+      }
+      /**
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 5;</code>
+       */
+      public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder addBranchConfirmTxsBuilder() {
+        return getBranchConfirmTxsFieldBuilder().addBuilder(
+            com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 5;</code>
+       */
+      public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder addBranchConfirmTxsBuilder(
+          int index) {
+        return getBranchConfirmTxsFieldBuilder().addBuilder(
+            index, com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 5;</code>
+       */
+      public java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder> 
+           getBranchConfirmTxsBuilderList() {
+        return getBranchConfirmTxsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> 
+          getBranchConfirmTxsFieldBuilder() {
+        if (branchConfirmTxsBuilder_ == null) {
+          branchConfirmTxsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder>(
+                  branchConfirmTxs_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          branchConfirmTxs_ = null;
+        }
+        return branchConfirmTxsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -9846,27 +9594,27 @@ public final class Types {
     com.zhigui.crossmesh.proto.Types.TransactionIDOrBuilder getPrimaryConfirmTxIdOrBuilder();
 
     /**
-     * <code>repeated .pb.BranchTransaction branch_commit_or_rollback_txs = 2;</code>
+     * <code>repeated .pb.BranchTransaction branch_confirm_txs = 2;</code>
      */
     java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> 
-        getBranchCommitOrRollbackTxsList();
+        getBranchConfirmTxsList();
     /**
-     * <code>repeated .pb.BranchTransaction branch_commit_or_rollback_txs = 2;</code>
+     * <code>repeated .pb.BranchTransaction branch_confirm_txs = 2;</code>
      */
-    com.zhigui.crossmesh.proto.Types.BranchTransaction getBranchCommitOrRollbackTxs(int index);
+    com.zhigui.crossmesh.proto.Types.BranchTransaction getBranchConfirmTxs(int index);
     /**
-     * <code>repeated .pb.BranchTransaction branch_commit_or_rollback_txs = 2;</code>
+     * <code>repeated .pb.BranchTransaction branch_confirm_txs = 2;</code>
      */
-    int getBranchCommitOrRollbackTxsCount();
+    int getBranchConfirmTxsCount();
     /**
-     * <code>repeated .pb.BranchTransaction branch_commit_or_rollback_txs = 2;</code>
+     * <code>repeated .pb.BranchTransaction branch_confirm_txs = 2;</code>
      */
     java.util.List<? extends com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> 
-        getBranchCommitOrRollbackTxsOrBuilderList();
+        getBranchConfirmTxsOrBuilderList();
     /**
-     * <code>repeated .pb.BranchTransaction branch_commit_or_rollback_txs = 2;</code>
+     * <code>repeated .pb.BranchTransaction branch_confirm_txs = 2;</code>
      */
-    com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getBranchCommitOrRollbackTxsOrBuilder(
+    com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getBranchConfirmTxsOrBuilder(
         int index);
   }
   /**
@@ -9882,7 +9630,7 @@ public final class Types {
       super(builder);
     }
     private PrimaryTransactionConfirmedEvent() {
-      branchCommitOrRollbackTxs_ = java.util.Collections.emptyList();
+      branchConfirmTxs_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -9931,10 +9679,10 @@ public final class Types {
             }
             case 18: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                branchCommitOrRollbackTxs_ = new java.util.ArrayList<com.zhigui.crossmesh.proto.Types.BranchTransaction>();
+                branchConfirmTxs_ = new java.util.ArrayList<com.zhigui.crossmesh.proto.Types.BranchTransaction>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              branchCommitOrRollbackTxs_.add(
+              branchConfirmTxs_.add(
                   input.readMessage(com.zhigui.crossmesh.proto.Types.BranchTransaction.parser(), extensionRegistry));
               break;
             }
@@ -9954,7 +9702,7 @@ public final class Types {
             e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          branchCommitOrRollbackTxs_ = java.util.Collections.unmodifiableList(branchCommitOrRollbackTxs_);
+          branchConfirmTxs_ = java.util.Collections.unmodifiableList(branchConfirmTxs_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -9996,39 +9744,39 @@ public final class Types {
       return getPrimaryConfirmTxId();
     }
 
-    public static final int BRANCH_COMMIT_OR_ROLLBACK_TXS_FIELD_NUMBER = 2;
-    private java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> branchCommitOrRollbackTxs_;
+    public static final int BRANCH_CONFIRM_TXS_FIELD_NUMBER = 2;
+    private java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> branchConfirmTxs_;
     /**
-     * <code>repeated .pb.BranchTransaction branch_commit_or_rollback_txs = 2;</code>
+     * <code>repeated .pb.BranchTransaction branch_confirm_txs = 2;</code>
      */
-    public java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> getBranchCommitOrRollbackTxsList() {
-      return branchCommitOrRollbackTxs_;
+    public java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> getBranchConfirmTxsList() {
+      return branchConfirmTxs_;
     }
     /**
-     * <code>repeated .pb.BranchTransaction branch_commit_or_rollback_txs = 2;</code>
+     * <code>repeated .pb.BranchTransaction branch_confirm_txs = 2;</code>
      */
     public java.util.List<? extends com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> 
-        getBranchCommitOrRollbackTxsOrBuilderList() {
-      return branchCommitOrRollbackTxs_;
+        getBranchConfirmTxsOrBuilderList() {
+      return branchConfirmTxs_;
     }
     /**
-     * <code>repeated .pb.BranchTransaction branch_commit_or_rollback_txs = 2;</code>
+     * <code>repeated .pb.BranchTransaction branch_confirm_txs = 2;</code>
      */
-    public int getBranchCommitOrRollbackTxsCount() {
-      return branchCommitOrRollbackTxs_.size();
+    public int getBranchConfirmTxsCount() {
+      return branchConfirmTxs_.size();
     }
     /**
-     * <code>repeated .pb.BranchTransaction branch_commit_or_rollback_txs = 2;</code>
+     * <code>repeated .pb.BranchTransaction branch_confirm_txs = 2;</code>
      */
-    public com.zhigui.crossmesh.proto.Types.BranchTransaction getBranchCommitOrRollbackTxs(int index) {
-      return branchCommitOrRollbackTxs_.get(index);
+    public com.zhigui.crossmesh.proto.Types.BranchTransaction getBranchConfirmTxs(int index) {
+      return branchConfirmTxs_.get(index);
     }
     /**
-     * <code>repeated .pb.BranchTransaction branch_commit_or_rollback_txs = 2;</code>
+     * <code>repeated .pb.BranchTransaction branch_confirm_txs = 2;</code>
      */
-    public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getBranchCommitOrRollbackTxsOrBuilder(
+    public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getBranchConfirmTxsOrBuilder(
         int index) {
-      return branchCommitOrRollbackTxs_.get(index);
+      return branchConfirmTxs_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -10048,8 +9796,8 @@ public final class Types {
       if (primaryConfirmTxId_ != null) {
         output.writeMessage(1, getPrimaryConfirmTxId());
       }
-      for (int i = 0; i < branchCommitOrRollbackTxs_.size(); i++) {
-        output.writeMessage(2, branchCommitOrRollbackTxs_.get(i));
+      for (int i = 0; i < branchConfirmTxs_.size(); i++) {
+        output.writeMessage(2, branchConfirmTxs_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -10064,9 +9812,9 @@ public final class Types {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPrimaryConfirmTxId());
       }
-      for (int i = 0; i < branchCommitOrRollbackTxs_.size(); i++) {
+      for (int i = 0; i < branchConfirmTxs_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, branchCommitOrRollbackTxs_.get(i));
+          .computeMessageSize(2, branchConfirmTxs_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10088,8 +9836,8 @@ public final class Types {
         if (!getPrimaryConfirmTxId()
             .equals(other.getPrimaryConfirmTxId())) return false;
       }
-      if (!getBranchCommitOrRollbackTxsList()
-          .equals(other.getBranchCommitOrRollbackTxsList())) return false;
+      if (!getBranchConfirmTxsList()
+          .equals(other.getBranchConfirmTxsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -10105,9 +9853,9 @@ public final class Types {
         hash = (37 * hash) + PRIMARY_CONFIRM_TX_ID_FIELD_NUMBER;
         hash = (53 * hash) + getPrimaryConfirmTxId().hashCode();
       }
-      if (getBranchCommitOrRollbackTxsCount() > 0) {
-        hash = (37 * hash) + BRANCH_COMMIT_OR_ROLLBACK_TXS_FIELD_NUMBER;
-        hash = (53 * hash) + getBranchCommitOrRollbackTxsList().hashCode();
+      if (getBranchConfirmTxsCount() > 0) {
+        hash = (37 * hash) + BRANCH_CONFIRM_TXS_FIELD_NUMBER;
+        hash = (53 * hash) + getBranchConfirmTxsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -10237,7 +9985,7 @@ public final class Types {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getBranchCommitOrRollbackTxsFieldBuilder();
+          getBranchConfirmTxsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -10249,11 +9997,11 @@ public final class Types {
           primaryConfirmTxId_ = null;
           primaryConfirmTxIdBuilder_ = null;
         }
-        if (branchCommitOrRollbackTxsBuilder_ == null) {
-          branchCommitOrRollbackTxs_ = java.util.Collections.emptyList();
+        if (branchConfirmTxsBuilder_ == null) {
+          branchConfirmTxs_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          branchCommitOrRollbackTxsBuilder_.clear();
+          branchConfirmTxsBuilder_.clear();
         }
         return this;
       }
@@ -10287,14 +10035,14 @@ public final class Types {
         } else {
           result.primaryConfirmTxId_ = primaryConfirmTxIdBuilder_.build();
         }
-        if (branchCommitOrRollbackTxsBuilder_ == null) {
+        if (branchConfirmTxsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
-            branchCommitOrRollbackTxs_ = java.util.Collections.unmodifiableList(branchCommitOrRollbackTxs_);
+            branchConfirmTxs_ = java.util.Collections.unmodifiableList(branchConfirmTxs_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
-          result.branchCommitOrRollbackTxs_ = branchCommitOrRollbackTxs_;
+          result.branchConfirmTxs_ = branchConfirmTxs_;
         } else {
-          result.branchCommitOrRollbackTxs_ = branchCommitOrRollbackTxsBuilder_.build();
+          result.branchConfirmTxs_ = branchConfirmTxsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -10347,29 +10095,29 @@ public final class Types {
         if (other.hasPrimaryConfirmTxId()) {
           mergePrimaryConfirmTxId(other.getPrimaryConfirmTxId());
         }
-        if (branchCommitOrRollbackTxsBuilder_ == null) {
-          if (!other.branchCommitOrRollbackTxs_.isEmpty()) {
-            if (branchCommitOrRollbackTxs_.isEmpty()) {
-              branchCommitOrRollbackTxs_ = other.branchCommitOrRollbackTxs_;
+        if (branchConfirmTxsBuilder_ == null) {
+          if (!other.branchConfirmTxs_.isEmpty()) {
+            if (branchConfirmTxs_.isEmpty()) {
+              branchConfirmTxs_ = other.branchConfirmTxs_;
               bitField0_ = (bitField0_ & ~0x00000001);
             } else {
-              ensureBranchCommitOrRollbackTxsIsMutable();
-              branchCommitOrRollbackTxs_.addAll(other.branchCommitOrRollbackTxs_);
+              ensureBranchConfirmTxsIsMutable();
+              branchConfirmTxs_.addAll(other.branchConfirmTxs_);
             }
             onChanged();
           }
         } else {
-          if (!other.branchCommitOrRollbackTxs_.isEmpty()) {
-            if (branchCommitOrRollbackTxsBuilder_.isEmpty()) {
-              branchCommitOrRollbackTxsBuilder_.dispose();
-              branchCommitOrRollbackTxsBuilder_ = null;
-              branchCommitOrRollbackTxs_ = other.branchCommitOrRollbackTxs_;
+          if (!other.branchConfirmTxs_.isEmpty()) {
+            if (branchConfirmTxsBuilder_.isEmpty()) {
+              branchConfirmTxsBuilder_.dispose();
+              branchConfirmTxsBuilder_ = null;
+              branchConfirmTxs_ = other.branchConfirmTxs_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              branchCommitOrRollbackTxsBuilder_ = 
+              branchConfirmTxsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getBranchCommitOrRollbackTxsFieldBuilder() : null;
+                   getBranchConfirmTxsFieldBuilder() : null;
             } else {
-              branchCommitOrRollbackTxsBuilder_.addAllMessages(other.branchCommitOrRollbackTxs_);
+              branchConfirmTxsBuilder_.addAllMessages(other.branchConfirmTxs_);
             }
           }
         }
@@ -10522,244 +10270,244 @@ public final class Types {
         return primaryConfirmTxIdBuilder_;
       }
 
-      private java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> branchCommitOrRollbackTxs_ =
+      private java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> branchConfirmTxs_ =
         java.util.Collections.emptyList();
-      private void ensureBranchCommitOrRollbackTxsIsMutable() {
+      private void ensureBranchConfirmTxsIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          branchCommitOrRollbackTxs_ = new java.util.ArrayList<com.zhigui.crossmesh.proto.Types.BranchTransaction>(branchCommitOrRollbackTxs_);
+          branchConfirmTxs_ = new java.util.ArrayList<com.zhigui.crossmesh.proto.Types.BranchTransaction>(branchConfirmTxs_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> branchCommitOrRollbackTxsBuilder_;
+          com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> branchConfirmTxsBuilder_;
 
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_or_rollback_txs = 2;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 2;</code>
        */
-      public java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> getBranchCommitOrRollbackTxsList() {
-        if (branchCommitOrRollbackTxsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(branchCommitOrRollbackTxs_);
+      public java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction> getBranchConfirmTxsList() {
+        if (branchConfirmTxsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(branchConfirmTxs_);
         } else {
-          return branchCommitOrRollbackTxsBuilder_.getMessageList();
+          return branchConfirmTxsBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_or_rollback_txs = 2;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 2;</code>
        */
-      public int getBranchCommitOrRollbackTxsCount() {
-        if (branchCommitOrRollbackTxsBuilder_ == null) {
-          return branchCommitOrRollbackTxs_.size();
+      public int getBranchConfirmTxsCount() {
+        if (branchConfirmTxsBuilder_ == null) {
+          return branchConfirmTxs_.size();
         } else {
-          return branchCommitOrRollbackTxsBuilder_.getCount();
+          return branchConfirmTxsBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_or_rollback_txs = 2;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 2;</code>
        */
-      public com.zhigui.crossmesh.proto.Types.BranchTransaction getBranchCommitOrRollbackTxs(int index) {
-        if (branchCommitOrRollbackTxsBuilder_ == null) {
-          return branchCommitOrRollbackTxs_.get(index);
+      public com.zhigui.crossmesh.proto.Types.BranchTransaction getBranchConfirmTxs(int index) {
+        if (branchConfirmTxsBuilder_ == null) {
+          return branchConfirmTxs_.get(index);
         } else {
-          return branchCommitOrRollbackTxsBuilder_.getMessage(index);
+          return branchConfirmTxsBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_or_rollback_txs = 2;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 2;</code>
        */
-      public Builder setBranchCommitOrRollbackTxs(
+      public Builder setBranchConfirmTxs(
           int index, com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
-        if (branchCommitOrRollbackTxsBuilder_ == null) {
+        if (branchConfirmTxsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureBranchCommitOrRollbackTxsIsMutable();
-          branchCommitOrRollbackTxs_.set(index, value);
+          ensureBranchConfirmTxsIsMutable();
+          branchConfirmTxs_.set(index, value);
           onChanged();
         } else {
-          branchCommitOrRollbackTxsBuilder_.setMessage(index, value);
+          branchConfirmTxsBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_or_rollback_txs = 2;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 2;</code>
        */
-      public Builder setBranchCommitOrRollbackTxs(
+      public Builder setBranchConfirmTxs(
           int index, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder builderForValue) {
-        if (branchCommitOrRollbackTxsBuilder_ == null) {
-          ensureBranchCommitOrRollbackTxsIsMutable();
-          branchCommitOrRollbackTxs_.set(index, builderForValue.build());
+        if (branchConfirmTxsBuilder_ == null) {
+          ensureBranchConfirmTxsIsMutable();
+          branchConfirmTxs_.set(index, builderForValue.build());
           onChanged();
         } else {
-          branchCommitOrRollbackTxsBuilder_.setMessage(index, builderForValue.build());
+          branchConfirmTxsBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_or_rollback_txs = 2;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 2;</code>
        */
-      public Builder addBranchCommitOrRollbackTxs(com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
-        if (branchCommitOrRollbackTxsBuilder_ == null) {
+      public Builder addBranchConfirmTxs(com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
+        if (branchConfirmTxsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureBranchCommitOrRollbackTxsIsMutable();
-          branchCommitOrRollbackTxs_.add(value);
+          ensureBranchConfirmTxsIsMutable();
+          branchConfirmTxs_.add(value);
           onChanged();
         } else {
-          branchCommitOrRollbackTxsBuilder_.addMessage(value);
+          branchConfirmTxsBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_or_rollback_txs = 2;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 2;</code>
        */
-      public Builder addBranchCommitOrRollbackTxs(
+      public Builder addBranchConfirmTxs(
           int index, com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
-        if (branchCommitOrRollbackTxsBuilder_ == null) {
+        if (branchConfirmTxsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureBranchCommitOrRollbackTxsIsMutable();
-          branchCommitOrRollbackTxs_.add(index, value);
+          ensureBranchConfirmTxsIsMutable();
+          branchConfirmTxs_.add(index, value);
           onChanged();
         } else {
-          branchCommitOrRollbackTxsBuilder_.addMessage(index, value);
+          branchConfirmTxsBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_or_rollback_txs = 2;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 2;</code>
        */
-      public Builder addBranchCommitOrRollbackTxs(
+      public Builder addBranchConfirmTxs(
           com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder builderForValue) {
-        if (branchCommitOrRollbackTxsBuilder_ == null) {
-          ensureBranchCommitOrRollbackTxsIsMutable();
-          branchCommitOrRollbackTxs_.add(builderForValue.build());
+        if (branchConfirmTxsBuilder_ == null) {
+          ensureBranchConfirmTxsIsMutable();
+          branchConfirmTxs_.add(builderForValue.build());
           onChanged();
         } else {
-          branchCommitOrRollbackTxsBuilder_.addMessage(builderForValue.build());
+          branchConfirmTxsBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_or_rollback_txs = 2;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 2;</code>
        */
-      public Builder addBranchCommitOrRollbackTxs(
+      public Builder addBranchConfirmTxs(
           int index, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder builderForValue) {
-        if (branchCommitOrRollbackTxsBuilder_ == null) {
-          ensureBranchCommitOrRollbackTxsIsMutable();
-          branchCommitOrRollbackTxs_.add(index, builderForValue.build());
+        if (branchConfirmTxsBuilder_ == null) {
+          ensureBranchConfirmTxsIsMutable();
+          branchConfirmTxs_.add(index, builderForValue.build());
           onChanged();
         } else {
-          branchCommitOrRollbackTxsBuilder_.addMessage(index, builderForValue.build());
+          branchConfirmTxsBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_or_rollback_txs = 2;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 2;</code>
        */
-      public Builder addAllBranchCommitOrRollbackTxs(
+      public Builder addAllBranchConfirmTxs(
           java.lang.Iterable<? extends com.zhigui.crossmesh.proto.Types.BranchTransaction> values) {
-        if (branchCommitOrRollbackTxsBuilder_ == null) {
-          ensureBranchCommitOrRollbackTxsIsMutable();
+        if (branchConfirmTxsBuilder_ == null) {
+          ensureBranchConfirmTxsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, branchCommitOrRollbackTxs_);
+              values, branchConfirmTxs_);
           onChanged();
         } else {
-          branchCommitOrRollbackTxsBuilder_.addAllMessages(values);
+          branchConfirmTxsBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_or_rollback_txs = 2;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 2;</code>
        */
-      public Builder clearBranchCommitOrRollbackTxs() {
-        if (branchCommitOrRollbackTxsBuilder_ == null) {
-          branchCommitOrRollbackTxs_ = java.util.Collections.emptyList();
+      public Builder clearBranchConfirmTxs() {
+        if (branchConfirmTxsBuilder_ == null) {
+          branchConfirmTxs_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
-          branchCommitOrRollbackTxsBuilder_.clear();
+          branchConfirmTxsBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_or_rollback_txs = 2;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 2;</code>
        */
-      public Builder removeBranchCommitOrRollbackTxs(int index) {
-        if (branchCommitOrRollbackTxsBuilder_ == null) {
-          ensureBranchCommitOrRollbackTxsIsMutable();
-          branchCommitOrRollbackTxs_.remove(index);
+      public Builder removeBranchConfirmTxs(int index) {
+        if (branchConfirmTxsBuilder_ == null) {
+          ensureBranchConfirmTxsIsMutable();
+          branchConfirmTxs_.remove(index);
           onChanged();
         } else {
-          branchCommitOrRollbackTxsBuilder_.remove(index);
+          branchConfirmTxsBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_or_rollback_txs = 2;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 2;</code>
        */
-      public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder getBranchCommitOrRollbackTxsBuilder(
+      public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder getBranchConfirmTxsBuilder(
           int index) {
-        return getBranchCommitOrRollbackTxsFieldBuilder().getBuilder(index);
+        return getBranchConfirmTxsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_or_rollback_txs = 2;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 2;</code>
        */
-      public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getBranchCommitOrRollbackTxsOrBuilder(
+      public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getBranchConfirmTxsOrBuilder(
           int index) {
-        if (branchCommitOrRollbackTxsBuilder_ == null) {
-          return branchCommitOrRollbackTxs_.get(index);  } else {
-          return branchCommitOrRollbackTxsBuilder_.getMessageOrBuilder(index);
+        if (branchConfirmTxsBuilder_ == null) {
+          return branchConfirmTxs_.get(index);  } else {
+          return branchConfirmTxsBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_or_rollback_txs = 2;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 2;</code>
        */
       public java.util.List<? extends com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> 
-           getBranchCommitOrRollbackTxsOrBuilderList() {
-        if (branchCommitOrRollbackTxsBuilder_ != null) {
-          return branchCommitOrRollbackTxsBuilder_.getMessageOrBuilderList();
+           getBranchConfirmTxsOrBuilderList() {
+        if (branchConfirmTxsBuilder_ != null) {
+          return branchConfirmTxsBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(branchCommitOrRollbackTxs_);
+          return java.util.Collections.unmodifiableList(branchConfirmTxs_);
         }
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_or_rollback_txs = 2;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 2;</code>
        */
-      public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder addBranchCommitOrRollbackTxsBuilder() {
-        return getBranchCommitOrRollbackTxsFieldBuilder().addBuilder(
+      public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder addBranchConfirmTxsBuilder() {
+        return getBranchConfirmTxsFieldBuilder().addBuilder(
             com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance());
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_or_rollback_txs = 2;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 2;</code>
        */
-      public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder addBranchCommitOrRollbackTxsBuilder(
+      public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder addBranchConfirmTxsBuilder(
           int index) {
-        return getBranchCommitOrRollbackTxsFieldBuilder().addBuilder(
+        return getBranchConfirmTxsFieldBuilder().addBuilder(
             index, com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance());
       }
       /**
-       * <code>repeated .pb.BranchTransaction branch_commit_or_rollback_txs = 2;</code>
+       * <code>repeated .pb.BranchTransaction branch_confirm_txs = 2;</code>
        */
       public java.util.List<com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder> 
-           getBranchCommitOrRollbackTxsBuilderList() {
-        return getBranchCommitOrRollbackTxsFieldBuilder().getBuilderList();
+           getBranchConfirmTxsBuilderList() {
+        return getBranchConfirmTxsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
           com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> 
-          getBranchCommitOrRollbackTxsFieldBuilder() {
-        if (branchCommitOrRollbackTxsBuilder_ == null) {
-          branchCommitOrRollbackTxsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+          getBranchConfirmTxsFieldBuilder() {
+        if (branchConfirmTxsBuilder_ == null) {
+          branchConfirmTxsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder>(
-                  branchCommitOrRollbackTxs_,
+                  branchConfirmTxs_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
-          branchCommitOrRollbackTxs_ = null;
+          branchConfirmTxs_ = null;
         }
-        return branchCommitOrRollbackTxsBuilder_;
+        return branchConfirmTxsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -10849,34 +10597,19 @@ public final class Types {
     com.zhigui.crossmesh.proto.Types.InvocationOrBuilder getGlobalTxStatusQueryOrBuilder();
 
     /**
-     * <code>.pb.BranchTransaction commit_tx = 3;</code>
-     * @return Whether the commitTx field is set.
+     * <code>.pb.BranchTransaction confirm_tx = 3;</code>
+     * @return Whether the confirmTx field is set.
      */
-    boolean hasCommitTx();
+    boolean hasConfirmTx();
     /**
-     * <code>.pb.BranchTransaction commit_tx = 3;</code>
-     * @return The commitTx.
+     * <code>.pb.BranchTransaction confirm_tx = 3;</code>
+     * @return The confirmTx.
      */
-    com.zhigui.crossmesh.proto.Types.BranchTransaction getCommitTx();
+    com.zhigui.crossmesh.proto.Types.BranchTransaction getConfirmTx();
     /**
-     * <code>.pb.BranchTransaction commit_tx = 3;</code>
+     * <code>.pb.BranchTransaction confirm_tx = 3;</code>
      */
-    com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getCommitTxOrBuilder();
-
-    /**
-     * <code>.pb.BranchTransaction rollback_tx = 4;</code>
-     * @return Whether the rollbackTx field is set.
-     */
-    boolean hasRollbackTx();
-    /**
-     * <code>.pb.BranchTransaction rollback_tx = 4;</code>
-     * @return The rollbackTx.
-     */
-    com.zhigui.crossmesh.proto.Types.BranchTransaction getRollbackTx();
-    /**
-     * <code>.pb.BranchTransaction rollback_tx = 4;</code>
-     */
-    com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getRollbackTxOrBuilder();
+    com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getConfirmTxOrBuilder();
   }
   /**
    * Protobuf type {@code pb.BranchTransactionPreparedEvent}
@@ -10951,26 +10684,13 @@ public final class Types {
             }
             case 26: {
               com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder subBuilder = null;
-              if (commitTx_ != null) {
-                subBuilder = commitTx_.toBuilder();
+              if (confirmTx_ != null) {
+                subBuilder = confirmTx_.toBuilder();
               }
-              commitTx_ = input.readMessage(com.zhigui.crossmesh.proto.Types.BranchTransaction.parser(), extensionRegistry);
+              confirmTx_ = input.readMessage(com.zhigui.crossmesh.proto.Types.BranchTransaction.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(commitTx_);
-                commitTx_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 34: {
-              com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder subBuilder = null;
-              if (rollbackTx_ != null) {
-                subBuilder = rollbackTx_.toBuilder();
-              }
-              rollbackTx_ = input.readMessage(com.zhigui.crossmesh.proto.Types.BranchTransaction.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(rollbackTx_);
-                rollbackTx_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(confirmTx_);
+                confirmTx_ = subBuilder.buildPartial();
               }
 
               break;
@@ -11053,50 +10773,27 @@ public final class Types {
       return getGlobalTxStatusQuery();
     }
 
-    public static final int COMMIT_TX_FIELD_NUMBER = 3;
-    private com.zhigui.crossmesh.proto.Types.BranchTransaction commitTx_;
+    public static final int CONFIRM_TX_FIELD_NUMBER = 3;
+    private com.zhigui.crossmesh.proto.Types.BranchTransaction confirmTx_;
     /**
-     * <code>.pb.BranchTransaction commit_tx = 3;</code>
-     * @return Whether the commitTx field is set.
+     * <code>.pb.BranchTransaction confirm_tx = 3;</code>
+     * @return Whether the confirmTx field is set.
      */
-    public boolean hasCommitTx() {
-      return commitTx_ != null;
+    public boolean hasConfirmTx() {
+      return confirmTx_ != null;
     }
     /**
-     * <code>.pb.BranchTransaction commit_tx = 3;</code>
-     * @return The commitTx.
+     * <code>.pb.BranchTransaction confirm_tx = 3;</code>
+     * @return The confirmTx.
      */
-    public com.zhigui.crossmesh.proto.Types.BranchTransaction getCommitTx() {
-      return commitTx_ == null ? com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance() : commitTx_;
+    public com.zhigui.crossmesh.proto.Types.BranchTransaction getConfirmTx() {
+      return confirmTx_ == null ? com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance() : confirmTx_;
     }
     /**
-     * <code>.pb.BranchTransaction commit_tx = 3;</code>
+     * <code>.pb.BranchTransaction confirm_tx = 3;</code>
      */
-    public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getCommitTxOrBuilder() {
-      return getCommitTx();
-    }
-
-    public static final int ROLLBACK_TX_FIELD_NUMBER = 4;
-    private com.zhigui.crossmesh.proto.Types.BranchTransaction rollbackTx_;
-    /**
-     * <code>.pb.BranchTransaction rollback_tx = 4;</code>
-     * @return Whether the rollbackTx field is set.
-     */
-    public boolean hasRollbackTx() {
-      return rollbackTx_ != null;
-    }
-    /**
-     * <code>.pb.BranchTransaction rollback_tx = 4;</code>
-     * @return The rollbackTx.
-     */
-    public com.zhigui.crossmesh.proto.Types.BranchTransaction getRollbackTx() {
-      return rollbackTx_ == null ? com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance() : rollbackTx_;
-    }
-    /**
-     * <code>.pb.BranchTransaction rollback_tx = 4;</code>
-     */
-    public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getRollbackTxOrBuilder() {
-      return getRollbackTx();
+    public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getConfirmTxOrBuilder() {
+      return getConfirmTx();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -11119,11 +10816,8 @@ public final class Types {
       if (globalTxStatusQuery_ != null) {
         output.writeMessage(2, getGlobalTxStatusQuery());
       }
-      if (commitTx_ != null) {
-        output.writeMessage(3, getCommitTx());
-      }
-      if (rollbackTx_ != null) {
-        output.writeMessage(4, getRollbackTx());
+      if (confirmTx_ != null) {
+        output.writeMessage(3, getConfirmTx());
       }
       unknownFields.writeTo(output);
     }
@@ -11142,13 +10836,9 @@ public final class Types {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getGlobalTxStatusQuery());
       }
-      if (commitTx_ != null) {
+      if (confirmTx_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getCommitTx());
-      }
-      if (rollbackTx_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getRollbackTx());
+          .computeMessageSize(3, getConfirmTx());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -11175,15 +10865,10 @@ public final class Types {
         if (!getGlobalTxStatusQuery()
             .equals(other.getGlobalTxStatusQuery())) return false;
       }
-      if (hasCommitTx() != other.hasCommitTx()) return false;
-      if (hasCommitTx()) {
-        if (!getCommitTx()
-            .equals(other.getCommitTx())) return false;
-      }
-      if (hasRollbackTx() != other.hasRollbackTx()) return false;
-      if (hasRollbackTx()) {
-        if (!getRollbackTx()
-            .equals(other.getRollbackTx())) return false;
+      if (hasConfirmTx() != other.hasConfirmTx()) return false;
+      if (hasConfirmTx()) {
+        if (!getConfirmTx()
+            .equals(other.getConfirmTx())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -11204,13 +10889,9 @@ public final class Types {
         hash = (37 * hash) + GLOBAL_TX_STATUS_QUERY_FIELD_NUMBER;
         hash = (53 * hash) + getGlobalTxStatusQuery().hashCode();
       }
-      if (hasCommitTx()) {
-        hash = (37 * hash) + COMMIT_TX_FIELD_NUMBER;
-        hash = (53 * hash) + getCommitTx().hashCode();
-      }
-      if (hasRollbackTx()) {
-        hash = (37 * hash) + ROLLBACK_TX_FIELD_NUMBER;
-        hash = (53 * hash) + getRollbackTx().hashCode();
+      if (hasConfirmTx()) {
+        hash = (37 * hash) + CONFIRM_TX_FIELD_NUMBER;
+        hash = (53 * hash) + getConfirmTx().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -11357,17 +11038,11 @@ public final class Types {
           globalTxStatusQuery_ = null;
           globalTxStatusQueryBuilder_ = null;
         }
-        if (commitTxBuilder_ == null) {
-          commitTx_ = null;
+        if (confirmTxBuilder_ == null) {
+          confirmTx_ = null;
         } else {
-          commitTx_ = null;
-          commitTxBuilder_ = null;
-        }
-        if (rollbackTxBuilder_ == null) {
-          rollbackTx_ = null;
-        } else {
-          rollbackTx_ = null;
-          rollbackTxBuilder_ = null;
+          confirmTx_ = null;
+          confirmTxBuilder_ = null;
         }
         return this;
       }
@@ -11405,15 +11080,10 @@ public final class Types {
         } else {
           result.globalTxStatusQuery_ = globalTxStatusQueryBuilder_.build();
         }
-        if (commitTxBuilder_ == null) {
-          result.commitTx_ = commitTx_;
+        if (confirmTxBuilder_ == null) {
+          result.confirmTx_ = confirmTx_;
         } else {
-          result.commitTx_ = commitTxBuilder_.build();
-        }
-        if (rollbackTxBuilder_ == null) {
-          result.rollbackTx_ = rollbackTx_;
-        } else {
-          result.rollbackTx_ = rollbackTxBuilder_.build();
+          result.confirmTx_ = confirmTxBuilder_.build();
         }
         onBuilt();
         return result;
@@ -11469,11 +11139,8 @@ public final class Types {
         if (other.hasGlobalTxStatusQuery()) {
           mergeGlobalTxStatusQuery(other.getGlobalTxStatusQuery());
         }
-        if (other.hasCommitTx()) {
-          mergeCommitTx(other.getCommitTx());
-        }
-        if (other.hasRollbackTx()) {
-          mergeRollbackTx(other.getRollbackTx());
+        if (other.hasConfirmTx()) {
+          mergeConfirmTx(other.getConfirmTx());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -11742,242 +11409,123 @@ public final class Types {
         return globalTxStatusQueryBuilder_;
       }
 
-      private com.zhigui.crossmesh.proto.Types.BranchTransaction commitTx_;
+      private com.zhigui.crossmesh.proto.Types.BranchTransaction confirmTx_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> commitTxBuilder_;
+          com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> confirmTxBuilder_;
       /**
-       * <code>.pb.BranchTransaction commit_tx = 3;</code>
-       * @return Whether the commitTx field is set.
+       * <code>.pb.BranchTransaction confirm_tx = 3;</code>
+       * @return Whether the confirmTx field is set.
        */
-      public boolean hasCommitTx() {
-        return commitTxBuilder_ != null || commitTx_ != null;
+      public boolean hasConfirmTx() {
+        return confirmTxBuilder_ != null || confirmTx_ != null;
       }
       /**
-       * <code>.pb.BranchTransaction commit_tx = 3;</code>
-       * @return The commitTx.
+       * <code>.pb.BranchTransaction confirm_tx = 3;</code>
+       * @return The confirmTx.
        */
-      public com.zhigui.crossmesh.proto.Types.BranchTransaction getCommitTx() {
-        if (commitTxBuilder_ == null) {
-          return commitTx_ == null ? com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance() : commitTx_;
+      public com.zhigui.crossmesh.proto.Types.BranchTransaction getConfirmTx() {
+        if (confirmTxBuilder_ == null) {
+          return confirmTx_ == null ? com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance() : confirmTx_;
         } else {
-          return commitTxBuilder_.getMessage();
+          return confirmTxBuilder_.getMessage();
         }
       }
       /**
-       * <code>.pb.BranchTransaction commit_tx = 3;</code>
+       * <code>.pb.BranchTransaction confirm_tx = 3;</code>
        */
-      public Builder setCommitTx(com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
-        if (commitTxBuilder_ == null) {
+      public Builder setConfirmTx(com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
+        if (confirmTxBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          commitTx_ = value;
+          confirmTx_ = value;
           onChanged();
         } else {
-          commitTxBuilder_.setMessage(value);
+          confirmTxBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
-       * <code>.pb.BranchTransaction commit_tx = 3;</code>
+       * <code>.pb.BranchTransaction confirm_tx = 3;</code>
        */
-      public Builder setCommitTx(
+      public Builder setConfirmTx(
           com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder builderForValue) {
-        if (commitTxBuilder_ == null) {
-          commitTx_ = builderForValue.build();
+        if (confirmTxBuilder_ == null) {
+          confirmTx_ = builderForValue.build();
           onChanged();
         } else {
-          commitTxBuilder_.setMessage(builderForValue.build());
+          confirmTxBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
-       * <code>.pb.BranchTransaction commit_tx = 3;</code>
+       * <code>.pb.BranchTransaction confirm_tx = 3;</code>
        */
-      public Builder mergeCommitTx(com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
-        if (commitTxBuilder_ == null) {
-          if (commitTx_ != null) {
-            commitTx_ =
-              com.zhigui.crossmesh.proto.Types.BranchTransaction.newBuilder(commitTx_).mergeFrom(value).buildPartial();
+      public Builder mergeConfirmTx(com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
+        if (confirmTxBuilder_ == null) {
+          if (confirmTx_ != null) {
+            confirmTx_ =
+              com.zhigui.crossmesh.proto.Types.BranchTransaction.newBuilder(confirmTx_).mergeFrom(value).buildPartial();
           } else {
-            commitTx_ = value;
+            confirmTx_ = value;
           }
           onChanged();
         } else {
-          commitTxBuilder_.mergeFrom(value);
+          confirmTxBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
-       * <code>.pb.BranchTransaction commit_tx = 3;</code>
+       * <code>.pb.BranchTransaction confirm_tx = 3;</code>
        */
-      public Builder clearCommitTx() {
-        if (commitTxBuilder_ == null) {
-          commitTx_ = null;
+      public Builder clearConfirmTx() {
+        if (confirmTxBuilder_ == null) {
+          confirmTx_ = null;
           onChanged();
         } else {
-          commitTx_ = null;
-          commitTxBuilder_ = null;
+          confirmTx_ = null;
+          confirmTxBuilder_ = null;
         }
 
         return this;
       }
       /**
-       * <code>.pb.BranchTransaction commit_tx = 3;</code>
+       * <code>.pb.BranchTransaction confirm_tx = 3;</code>
        */
-      public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder getCommitTxBuilder() {
+      public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder getConfirmTxBuilder() {
         
         onChanged();
-        return getCommitTxFieldBuilder().getBuilder();
+        return getConfirmTxFieldBuilder().getBuilder();
       }
       /**
-       * <code>.pb.BranchTransaction commit_tx = 3;</code>
+       * <code>.pb.BranchTransaction confirm_tx = 3;</code>
        */
-      public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getCommitTxOrBuilder() {
-        if (commitTxBuilder_ != null) {
-          return commitTxBuilder_.getMessageOrBuilder();
+      public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getConfirmTxOrBuilder() {
+        if (confirmTxBuilder_ != null) {
+          return confirmTxBuilder_.getMessageOrBuilder();
         } else {
-          return commitTx_ == null ?
-              com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance() : commitTx_;
+          return confirmTx_ == null ?
+              com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance() : confirmTx_;
         }
       }
       /**
-       * <code>.pb.BranchTransaction commit_tx = 3;</code>
+       * <code>.pb.BranchTransaction confirm_tx = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> 
-          getCommitTxFieldBuilder() {
-        if (commitTxBuilder_ == null) {
-          commitTxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          getConfirmTxFieldBuilder() {
+        if (confirmTxBuilder_ == null) {
+          confirmTxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder>(
-                  getCommitTx(),
+                  getConfirmTx(),
                   getParentForChildren(),
                   isClean());
-          commitTx_ = null;
+          confirmTx_ = null;
         }
-        return commitTxBuilder_;
-      }
-
-      private com.zhigui.crossmesh.proto.Types.BranchTransaction rollbackTx_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> rollbackTxBuilder_;
-      /**
-       * <code>.pb.BranchTransaction rollback_tx = 4;</code>
-       * @return Whether the rollbackTx field is set.
-       */
-      public boolean hasRollbackTx() {
-        return rollbackTxBuilder_ != null || rollbackTx_ != null;
-      }
-      /**
-       * <code>.pb.BranchTransaction rollback_tx = 4;</code>
-       * @return The rollbackTx.
-       */
-      public com.zhigui.crossmesh.proto.Types.BranchTransaction getRollbackTx() {
-        if (rollbackTxBuilder_ == null) {
-          return rollbackTx_ == null ? com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance() : rollbackTx_;
-        } else {
-          return rollbackTxBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.pb.BranchTransaction rollback_tx = 4;</code>
-       */
-      public Builder setRollbackTx(com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
-        if (rollbackTxBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          rollbackTx_ = value;
-          onChanged();
-        } else {
-          rollbackTxBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.pb.BranchTransaction rollback_tx = 4;</code>
-       */
-      public Builder setRollbackTx(
-          com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder builderForValue) {
-        if (rollbackTxBuilder_ == null) {
-          rollbackTx_ = builderForValue.build();
-          onChanged();
-        } else {
-          rollbackTxBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.pb.BranchTransaction rollback_tx = 4;</code>
-       */
-      public Builder mergeRollbackTx(com.zhigui.crossmesh.proto.Types.BranchTransaction value) {
-        if (rollbackTxBuilder_ == null) {
-          if (rollbackTx_ != null) {
-            rollbackTx_ =
-              com.zhigui.crossmesh.proto.Types.BranchTransaction.newBuilder(rollbackTx_).mergeFrom(value).buildPartial();
-          } else {
-            rollbackTx_ = value;
-          }
-          onChanged();
-        } else {
-          rollbackTxBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.pb.BranchTransaction rollback_tx = 4;</code>
-       */
-      public Builder clearRollbackTx() {
-        if (rollbackTxBuilder_ == null) {
-          rollbackTx_ = null;
-          onChanged();
-        } else {
-          rollbackTx_ = null;
-          rollbackTxBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.pb.BranchTransaction rollback_tx = 4;</code>
-       */
-      public com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder getRollbackTxBuilder() {
-        
-        onChanged();
-        return getRollbackTxFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.pb.BranchTransaction rollback_tx = 4;</code>
-       */
-      public com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder getRollbackTxOrBuilder() {
-        if (rollbackTxBuilder_ != null) {
-          return rollbackTxBuilder_.getMessageOrBuilder();
-        } else {
-          return rollbackTx_ == null ?
-              com.zhigui.crossmesh.proto.Types.BranchTransaction.getDefaultInstance() : rollbackTx_;
-        }
-      }
-      /**
-       * <code>.pb.BranchTransaction rollback_tx = 4;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder> 
-          getRollbackTxFieldBuilder() {
-        if (rollbackTxBuilder_ == null) {
-          rollbackTxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.zhigui.crossmesh.proto.Types.BranchTransaction, com.zhigui.crossmesh.proto.Types.BranchTransaction.Builder, com.zhigui.crossmesh.proto.Types.BranchTransactionOrBuilder>(
-                  getRollbackTx(),
-                  getParentForChildren(),
-                  isClean());
-          rollbackTx_ = null;
-        }
-        return rollbackTxBuilder_;
+        return confirmTxBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -14546,59 +14094,55 @@ public final class Types {
       "\n\013types.proto\022\002pb\032\037google/protobuf/times" +
       "tamp.proto\"d\n\004Lock\0220\n\025primary_prepare_tx" +
       "_id\030\001 \001(\0132\021.pb.TransactionID\022\022\n\nprev_sta" +
-      "te\030\002 \001(\014\022\026\n\016updating_state\030\003 \001(\014\"\206\003\n\021Glo" +
+      "te\030\002 \001(\014\022\026\n\016updating_state\030\003 \001(\014\"\240\002\n\021Glo" +
       "balTransaction\0220\n\025primary_prepare_tx_id\030" +
-      "\001 \001(\0132\021.pb.TransactionID\0220\n\021primary_comm" +
-      "it_tx\030\002 \001(\0132\025.pb.BranchTransaction\0222\n\023pr" +
-      "imary_rollback_tx\030\003 \001(\0132\025.pb.BranchTrans" +
-      "action\0221\n\022branch_prepare_txs\030\004 \003(\0132\025.pb." +
-      "BranchTransaction\0220\n\021branch_commit_txs\030\005" +
-      " \003(\0132\025.pb.BranchTransaction\0222\n\023branch_ro" +
-      "llback_txs\030\006 \003(\0132\025.pb.BranchTransaction\022" +
-      "\022\n\nttl_height\030\007 \001(\004\022,\n\010ttl_time\030\010 \001(\0132\032." +
-      "google.protobuf.Timestamp\":\n\nInvocation\022" +
-      "\020\n\010contract\030\001 \001(\t\022\014\n\004func\030\002 \001(\t\022\014\n\004args\030" +
-      "\003 \003(\t\"M\n\021BranchTransaction\022\024\n\003uri\030\001 \001(\0132" +
-      "\007.pb.URI\022\"\n\ninvocation\030\002 \001(\0132\016.pb.Invoca" +
-      "tion\"\245\001\n\031BranchTransactionResponse\022 \n\005tx" +
-      "_id\030\001 \001(\0132\021.pb.TransactionID\0224\n\006status\030\002" +
-      " \001(\0162$.pb.BranchTransactionResponse.Stat" +
-      "us\022\r\n\005proof\030\003 \001(\014\"!\n\006Status\022\013\n\007SUCCESS\020\000" +
-      "\022\n\n\006FAILED\020\001\"-\n\017PrimaryLockMeta\022\013\n\003xid\030\001" +
-      " \001(\t\022\r\n\005chain\030\002 \001(\t\"%\n\003URI\022\017\n\007network\030\001 " +
-      "\001(\t\022\r\n\005chain\030\002 \001(\t\"1\n\rTransactionID\022\024\n\003u" +
-      "ri\030\001 \001(\0132\007.pb.URI\022\n\n\002id\030\002 \001(\t\"\234\002\n\037Primar" +
-      "yTransactionPreparedEvent\0220\n\025primary_pre" +
-      "pare_tx_id\030\001 \001(\0132\021.pb.TransactionID\0220\n\021p" +
-      "rimary_commit_tx\030\002 \001(\0132\025.pb.BranchTransa" +
-      "ction\0222\n\023primary_rollback_tx\030\003 \001(\0132\025.pb." +
-      "BranchTransaction\022.\n\026global_tx_status_qu" +
-      "ery\030\004 \001(\0132\016.pb.Invocation\0221\n\022branch_prep" +
-      "are_txs\030\005 \003(\0132\025.pb.BranchTransaction\"\222\001\n" +
-      " PrimaryTransactionConfirmedEvent\0220\n\025pri" +
-      "mary_confirm_tx_id\030\001 \001(\0132\021.pb.Transactio" +
-      "nID\022<\n\035branch_commit_or_rollback_txs\030\002 \003" +
-      "(\0132\025.pb.BranchTransaction\"\330\001\n\036BranchTran" +
-      "sactionPreparedEvent\0220\n\025primary_prepare_" +
-      "tx_id\030\001 \001(\0132\021.pb.TransactionID\022.\n\026global" +
-      "_tx_status_query\030\002 \001(\0132\016.pb.Invocation\022(" +
-      "\n\tcommit_tx\030\003 \001(\0132\025.pb.BranchTransaction" +
-      "\022*\n\013rollback_tx\030\004 \001(\0132\025.pb.BranchTransac" +
-      "tion\"\256\001\n\027GlobalTransactionStatus\0220\n\025prim" +
-      "ary_prepare_tx_id\030\001 \001(\0132\021.pb.Transaction" +
-      "ID\022/\n\006status\030\002 \001(\0162\037.pb.GlobalTransactio" +
-      "nStatusType\0220\n\025primary_confirm_tx_id\030\003 \001" +
-      "(\0132\021.pb.TransactionID\"0\n\nVerifyInfo\022\020\n\010C" +
-      "ontract\030\001 \001(\t\022\020\n\010function\030\002 \001(\t\"i\n Resou" +
-      "rceRegisteredOrUpdatedEvent\022\024\n\003uri\030\001 \001(\013" +
-      "2\007.pb.URI\022\022\n\nconnection\030\002 \001(\014\022\033\n\004type\030\003 " +
-      "\001(\0162\r.pb.ChainType*1\n\tChainType\022\n\n\006FABRI" +
-      "C\020\000\022\016\n\nXUPERCHAIN\020\001\022\010\n\004BCOS\020\002*\204\001\n\033Global" +
-      "TransactionStatusType\022 \n\034PRIMARY_TRANSAC" +
-      "TION_PREPARED\020\000\022!\n\035PRIMARY_TRANSACTION_C" +
-      "OMMITTED\020\001\022 \n\034PRIMARY_TRANSACTION_CANCEL" +
-      "ED\020\002B\034\n\032com.zhigui.crossmesh.protob\006prot" +
-      "o3"
+      "\001 \001(\0132\021.pb.TransactionID\0221\n\022primary_conf" +
+      "irm_tx\030\002 \001(\0132\025.pb.BranchTransaction\0221\n\022b" +
+      "ranch_prepare_txs\030\003 \003(\0132\025.pb.BranchTrans" +
+      "action\0221\n\022branch_confirm_txs\030\004 \003(\0132\025.pb." +
+      "BranchTransaction\022\022\n\nttl_height\030\005 \001(\004\022,\n" +
+      "\010ttl_time\030\006 \001(\0132\032.google.protobuf.Timest" +
+      "amp\":\n\nInvocation\022\020\n\010contract\030\001 \001(\t\022\014\n\004f" +
+      "unc\030\002 \001(\t\022\014\n\004args\030\003 \003(\t\"h\n\021BranchTransac" +
+      "tion\022 \n\005tx_id\030\001 \001(\0132\021.pb.TransactionID\022\"" +
+      "\n\ninvocation\030\002 \001(\0132\016.pb.Invocation\022\r\n\005pr" +
+      "oof\030\003 \001(\t\"\245\001\n\031BranchTransactionResponse\022" +
+      " \n\005tx_id\030\001 \001(\0132\021.pb.TransactionID\0224\n\006sta" +
+      "tus\030\002 \001(\0162$.pb.BranchTransactionResponse" +
+      ".Status\022\r\n\005proof\030\003 \001(\014\"!\n\006Status\022\013\n\007SUCC" +
+      "ESS\020\000\022\n\n\006FAILED\020\001\"-\n\017PrimaryLockMeta\022\013\n\003" +
+      "xid\030\001 \001(\t\022\r\n\005chain\030\002 \001(\t\"%\n\003URI\022\017\n\007netwo" +
+      "rk\030\001 \001(\t\022\r\n\005chain\030\002 \001(\t\"1\n\rTransactionID" +
+      "\022\024\n\003uri\030\001 \001(\0132\007.pb.URI\022\n\n\002id\030\002 \001(\t\"\234\002\n\037P" +
+      "rimaryTransactionPreparedEvent\0220\n\025primar" +
+      "y_prepare_tx_id\030\001 \001(\0132\021.pb.TransactionID" +
+      "\0221\n\022primary_confirm_tx\030\002 \001(\0132\025.pb.Branch" +
+      "Transaction\022.\n\026global_tx_status_query\030\003 " +
+      "\001(\0132\016.pb.Invocation\0221\n\022branch_prepare_tx" +
+      "s\030\004 \003(\0132\025.pb.BranchTransaction\0221\n\022branch" +
+      "_confirm_txs\030\005 \003(\0132\025.pb.BranchTransactio" +
+      "n\"\207\001\n PrimaryTransactionConfirmedEvent\0220" +
+      "\n\025primary_confirm_tx_id\030\001 \001(\0132\021.pb.Trans" +
+      "actionID\0221\n\022branch_confirm_txs\030\002 \003(\0132\025.p" +
+      "b.BranchTransaction\"\255\001\n\036BranchTransactio" +
+      "nPreparedEvent\0220\n\025primary_prepare_tx_id\030" +
+      "\001 \001(\0132\021.pb.TransactionID\022.\n\026global_tx_st" +
+      "atus_query\030\002 \001(\0132\016.pb.Invocation\022)\n\nconf" +
+      "irm_tx\030\003 \001(\0132\025.pb.BranchTransaction\"\256\001\n\027" +
+      "GlobalTransactionStatus\0220\n\025primary_prepa" +
+      "re_tx_id\030\001 \001(\0132\021.pb.TransactionID\022/\n\006sta" +
+      "tus\030\002 \001(\0162\037.pb.GlobalTransactionStatusTy" +
+      "pe\0220\n\025primary_confirm_tx_id\030\003 \001(\0132\021.pb.T" +
+      "ransactionID\"0\n\nVerifyInfo\022\020\n\010Contract\030\001" +
+      " \001(\t\022\020\n\010function\030\002 \001(\t\"i\n ResourceRegist" +
+      "eredOrUpdatedEvent\022\024\n\003uri\030\001 \001(\0132\007.pb.URI" +
+      "\022\022\n\nconnection\030\002 \001(\014\022\033\n\004type\030\003 \001(\0162\r.pb." +
+      "ChainType*1\n\tChainType\022\n\n\006FABRIC\020\000\022\016\n\nXU" +
+      "PERCHAIN\020\001\022\010\n\004BCOS\020\002*\204\001\n\033GlobalTransacti" +
+      "onStatusType\022 \n\034PRIMARY_TRANSACTION_PREP" +
+      "ARED\020\000\022!\n\035PRIMARY_TRANSACTION_COMMITTED\020" +
+      "\001\022 \n\034PRIMARY_TRANSACTION_CANCELED\020\002B\034\n\032c" +
+      "om.zhigui.crossmesh.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14616,7 +14160,7 @@ public final class Types {
     internal_static_pb_GlobalTransaction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pb_GlobalTransaction_descriptor,
-        new java.lang.String[] { "PrimaryPrepareTxId", "PrimaryCommitTx", "PrimaryRollbackTx", "BranchPrepareTxs", "BranchCommitTxs", "BranchRollbackTxs", "TtlHeight", "TtlTime", });
+        new java.lang.String[] { "PrimaryPrepareTxId", "PrimaryConfirmTx", "BranchPrepareTxs", "BranchConfirmTxs", "TtlHeight", "TtlTime", });
     internal_static_pb_Invocation_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_pb_Invocation_fieldAccessorTable = new
@@ -14628,7 +14172,7 @@ public final class Types {
     internal_static_pb_BranchTransaction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pb_BranchTransaction_descriptor,
-        new java.lang.String[] { "Uri", "Invocation", });
+        new java.lang.String[] { "TxId", "Invocation", "Proof", });
     internal_static_pb_BranchTransactionResponse_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_pb_BranchTransactionResponse_fieldAccessorTable = new
@@ -14658,19 +14202,19 @@ public final class Types {
     internal_static_pb_PrimaryTransactionPreparedEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pb_PrimaryTransactionPreparedEvent_descriptor,
-        new java.lang.String[] { "PrimaryPrepareTxId", "PrimaryCommitTx", "PrimaryRollbackTx", "GlobalTxStatusQuery", "BranchPrepareTxs", });
+        new java.lang.String[] { "PrimaryPrepareTxId", "PrimaryConfirmTx", "GlobalTxStatusQuery", "BranchPrepareTxs", "BranchConfirmTxs", });
     internal_static_pb_PrimaryTransactionConfirmedEvent_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_pb_PrimaryTransactionConfirmedEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pb_PrimaryTransactionConfirmedEvent_descriptor,
-        new java.lang.String[] { "PrimaryConfirmTxId", "BranchCommitOrRollbackTxs", });
+        new java.lang.String[] { "PrimaryConfirmTxId", "BranchConfirmTxs", });
     internal_static_pb_BranchTransactionPreparedEvent_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_pb_BranchTransactionPreparedEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pb_BranchTransactionPreparedEvent_descriptor,
-        new java.lang.String[] { "PrimaryPrepareTxId", "GlobalTxStatusQuery", "CommitTx", "RollbackTx", });
+        new java.lang.String[] { "PrimaryPrepareTxId", "GlobalTxStatusQuery", "ConfirmTx", });
     internal_static_pb_GlobalTransactionStatus_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_pb_GlobalTransactionStatus_fieldAccessorTable = new

@@ -17,7 +17,7 @@ import static com.zhigui.crossmesh.proto.Types.GlobalTransactionStatus;
  */
 public interface Resource {
 
-    CompletableFuture<BranchTransactionResponse> submitBranchTransaction(BranchTransaction branchTx, Invocation globalTxQuery);
+    CompletableFuture<BranchTransactionResponse> submitBranchTransaction(BranchTransaction branchTx);
 
     CompletableFuture<GlobalTransactionStatus> evaluateGlobalTransaction(Invocation globalTxQuery);
 

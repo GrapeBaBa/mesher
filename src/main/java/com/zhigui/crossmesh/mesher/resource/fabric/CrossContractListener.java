@@ -19,19 +19,21 @@ import static com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent;
 public class CrossContractListener implements Consumer<ContractEvent> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CrossContractListener.class);
-    public static final String PRIMARY_TRANSACTION_PREPARED_EVENT = "PRIMARY_TRANSACTION_PREPARED_EVENT";
-    public static final String PRIMARY_TRANSACTION_CONFIRMED_EVENT = "PRIMARY_TRANSACTION_CONFIRMED_EVENT";
-    public static final String BRANCH_TRANSACTION_PREPARED_EVENT = "BRANCH_TRANSACTION_PREPARED_EVENT";
-
-    public static final String RESOURCE_REGISTERED_EVENT = "RESOURCE_REGISTERED_EVENT";
+    public static final String PRIMARY_TRANSACTION_PREPARED_EVENT = "SIDE_MESH_PRIMARY_TRANSACTION_PREPARED_EVENT";
+    public static final String PRIMARY_TRANSACTION_CONFIRMED_EVENT = "SIDE_MESH_PRIMARY_TRANSACTION_CONFIRMED_EVENT";
+    public static final String BRANCH_TRANSACTION_PREPARED_EVENT = "SIDE_MESH_BRANCH_TRANSACTION_PREPARED_EVENT";
+    public static final String RESOURCE_REGISTERED_EVENT = "SIDE_MESH_RESOURCE_REGISTERED_EVENT";
 
     private final String name;
 
     private final Coordinator coordinator;
 
-    public CrossContractListener(String name, Coordinator coordinator) {
+    private final String contractName;
+
+    public CrossContractListener(String name, Coordinator coordinator, String contractName) {
         this.name = name;
         this.coordinator = coordinator;
+        this.contractName = contractName;
     }
 
     @Override
@@ -54,7 +56,10 @@ public class CrossContractListener implements Consumer<ContractEvent> {
                     LOGGER.error("parse primary tx prepared event exception", e);
                     return;
                 }
-                coordinator.handlePrimaryTransactionPrepared(primaryTransactionPreparedEvent);
+                PrimaryTransactionPreparedEvent.Builder primaryTransactionPreparedEventBuilder = primaryTransactionPreparedEvent.toBuilder();
+                primaryTransactionPreparedEventBuilder.getPrimaryConfirmTxBuilder().getInvocationBuilder().setContract(this.contractName);
+                primaryTransactionPreparedEventBuilder.getGlobalTxStatusQueryBuilder().setContract(this.contractName);
+                coordinator.handlePrimaryTransactionPrepared(primaryTransactionPreparedEventBuilder.build());
             case PRIMARY_TRANSACTION_CONFIRMED_EVENT:
                 if (!contractEvent.getTransactionEvent().isValid()) {
                     return;
@@ -75,6 +80,8 @@ public class CrossContractListener implements Consumer<ContractEvent> {
                     LOGGER.error("parse branch tx prepared event exception", e);
                     return;
                 }
+                BranchTransactionPreparedEvent.Builder branchTransactionPreparedEventBuilder = branchTransactionPreparedEvent.toBuilder();
+                branchTransactionPreparedEventBuilder.getConfirmTxBuilder().getInvocationBuilder().setContract(this.contractName);
                 coordinator.handleBranchTransactionPrepared(branchTransactionPreparedEvent);
             case RESOURCE_REGISTERED_EVENT:
                 ResourceRegisteredOrUpdatedEvent resourceRegisteredOrUpdatedEvent;

@@ -14,9 +14,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
-import static com.zhigui.crossmesh.proto.Types.BranchTransaction;
 import static com.zhigui.crossmesh.proto.Types.BranchTransactionPreparedEvent;
-import static com.zhigui.crossmesh.proto.Types.GlobalTransactionStatusType;
 
 @Component
 public class CrossTransactionMonitor {
@@ -51,10 +49,14 @@ public class CrossTransactionMonitor {
                         LOGGER.error("evaluate global transaction failed", throwable);
                         return;
                     }
-                    final BranchTransaction branchTransaction = globalTransactionStatus.getStatus() == GlobalTransactionStatusType.PRIMARY_TRANSACTION_COMMITTED ? preparedEvent.getCommitTx() : preparedEvent.getRollbackTx();
-                    resource.getProofForTransaction(globalTransactionStatus.getPrimaryConfirmTxId().getId()).whenComplete((s, throwable1) -> {
-                        Resource branchTxResource = resourceRegistry.getResource(branchTransaction.getUri());
-                        branchTxResource.submitBranchTransaction(branchTransaction, null).whenComplete((branchTransactionResponse, e) -> {
+                    resource.getProofForTransaction(globalTransactionStatus.getPrimaryConfirmTxId().getId()).whenComplete((proof, throwable1) -> {
+                        Resource branchTxResource = resourceRegistry.getResource(preparedEvent.getConfirmTx().getTxId().getUri());
+                        preparedEvent.getConfirmTx().getInvocation().getArgsList().add(String.valueOf(globalTransactionStatus.getStatus().getNumber()));
+                        preparedEvent.getConfirmTx().getInvocation().getArgsList().add(globalTransactionStatus.getPrimaryConfirmTxId().getUri().getNetwork());
+                        preparedEvent.getConfirmTx().getInvocation().getArgsList().add(globalTransactionStatus.getPrimaryConfirmTxId().getUri().getChain());
+                        preparedEvent.getConfirmTx().getInvocation().getArgsList().add(globalTransactionStatus.getPrimaryConfirmTxId().getId());
+                        preparedEvent.getConfirmTx().getInvocation().getArgsList().add(proof);
+                        branchTxResource.submitBranchTransaction(preparedEvent.getConfirmTx()).whenComplete((branchTransactionResponse, e) -> {
                             if (e != null) {
                                 LOGGER.error("submit branch tx failed", e);
                             }

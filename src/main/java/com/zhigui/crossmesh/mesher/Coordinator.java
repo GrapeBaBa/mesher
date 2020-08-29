@@ -10,15 +10,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
-import java.util.stream.Collectors;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 import static com.zhigui.crossmesh.proto.Types.BranchTransaction;
 import static com.zhigui.crossmesh.proto.Types.BranchTransactionPreparedEvent;
 import static com.zhigui.crossmesh.proto.Types.BranchTransactionResponse;
+import static com.zhigui.crossmesh.proto.Types.BranchTransactionResponse.Status.SUCCESS;
 import static com.zhigui.crossmesh.proto.Types.PrimaryTransactionConfirmedEvent;
 import static com.zhigui.crossmesh.proto.Types.PrimaryTransactionPreparedEvent;
 
@@ -57,28 +59,26 @@ public class Coordinator {
     }
 
     private void commitOrRollbackGlobalTransaction(PrimaryTransactionPreparedEvent primaryTransactionPreparedEvent, List<CompletableFuture<BranchTransactionResponse>> completableFutures) {
-        List<String> branchTxProofs = completableFutures.stream().map(branchTransactionResponseCompletableFuture -> {
+        for (int i = 0; i < primaryTransactionPreparedEvent.getBranchPrepareTxsList().size(); i++) {
+            primaryTransactionPreparedEvent.getPrimaryConfirmTx().getInvocation().getArgsList().add(primaryTransactionPreparedEvent.getBranchPrepareTxs(0).getTxId().getUri().getNetwork());
+            primaryTransactionPreparedEvent.getPrimaryConfirmTx().getInvocation().getArgsList().add(primaryTransactionPreparedEvent.getBranchPrepareTxs(0).getTxId().getUri().getChain());
+            primaryTransactionPreparedEvent.getPrimaryConfirmTx().getInvocation().getArgsList().add(primaryTransactionPreparedEvent.getBranchPrepareTxs(0).getTxId().getId());
+            CompletableFuture<BranchTransactionResponse> branchTxResCompletableFuture = completableFutures.get(0);
             try {
-                if (branchTransactionResponseCompletableFuture.get().getStatus() == BranchTransactionResponse.Status.FAILED) {
-                    return null;
+                BranchTransactionResponse branchTxRes = branchTxResCompletableFuture.get(30, TimeUnit.SECONDS);
+                if (branchTxRes.getStatus() == SUCCESS) {
+                    primaryTransactionPreparedEvent.getPrimaryConfirmTx().getInvocation().getArgsList().add(branchTxRes.getProof().toString());
+                } else {
+                    primaryTransactionPreparedEvent.getPrimaryConfirmTx().getInvocation().getArgsList().add("");
                 }
-                return branchTransactionResponseCompletableFuture.get().getProof().toString();
-            } catch (InterruptedException | ExecutionException e) {
+            } catch (InterruptedException | ExecutionException | TimeoutException e) {
                 LOGGER.error("get branch transaction response failed", e);
-                return null;
+                primaryTransactionPreparedEvent.getPrimaryConfirmTx().getInvocation().getArgsList().add("");
             }
-        }).collect(Collectors.toList());
-        boolean prepareFailed = branchTxProofs.stream().anyMatch(Objects::isNull) || branchTxProofs.size() < primaryTransactionPreparedEvent.getBranchPrepareTxsList().size();
-        BranchTransaction primaryConfirmTx;
-        if (!prepareFailed) {
-            primaryTransactionPreparedEvent.getPrimaryCommitTx().getInvocation().getArgsList().addAll(branchTxProofs);
-            primaryConfirmTx = primaryTransactionPreparedEvent.getPrimaryCommitTx();
-        } else {
-            primaryConfirmTx = primaryTransactionPreparedEvent.getPrimaryRollbackTx();
         }
 
-        Resource resource = resourceRegistry.getResource(primaryConfirmTx.getUri());
-        resource.submitBranchTransaction(primaryTransactionPreparedEvent.getPrimaryCommitTx(), null).whenComplete((branchTransactionResponse, throwable) -> {
+        Resource resource = resourceRegistry.getResource(primaryTransactionPreparedEvent.getPrimaryConfirmTx().getTxId().getUri());
+        resource.submitBranchTransaction(primaryTransactionPreparedEvent.getPrimaryConfirmTx()).whenComplete((branchTransactionResponse, throwable) -> {
             if (throwable != null) {
                 LOGGER.error("submit primary commit tx failed", throwable);
             }
@@ -88,27 +88,33 @@ public class Coordinator {
     private CompletableFuture<List<CompletableFuture<BranchTransactionResponse>>> prepareBranchTransaction(PrimaryTransactionPreparedEvent primaryTxPreparedEvent) {
         return resourceRegistry.getResource(primaryTxPreparedEvent.getPrimaryPrepareTxId().getUri())
             .getProofForTransaction(primaryTxPreparedEvent.getPrimaryPrepareTxId().getId())
-            .thenApply(proof -> primaryTxPreparedEvent.getBranchPrepareTxsList()
-                .parallelStream()
-                .map(branchTransaction -> {
-                    // add primary prepare tx proof to branch transaction invocation arg
-                    ProtocolStringList argsList = branchTransaction.getInvocation().getArgsList();
-                    argsList.add(primaryTxPreparedEvent.getPrimaryPrepareTxId().toByteString().toString());
+            .thenApply(proof -> {
+                List<CompletableFuture<BranchTransactionResponse>> futureResList = new ArrayList<>();
+                for (int i = 0; i < primaryTxPreparedEvent.getBranchPrepareTxsList().size(); i++) {
+                    BranchTransaction branchPrepareTx = primaryTxPreparedEvent.getBranchPrepareTxs(i);
+                    ProtocolStringList argsList = branchPrepareTx.getInvocation().getArgsList();
+                    argsList.add(primaryTxPreparedEvent.getGlobalTxStatusQuery().getContract());
+                    argsList.add(primaryTxPreparedEvent.getGlobalTxStatusQuery().getFunc());
+                    argsList.add(primaryTxPreparedEvent.getPrimaryPrepareTxId().getUri().getNetwork());
+                    argsList.add(primaryTxPreparedEvent.getPrimaryPrepareTxId().getUri().getChain());
+                    argsList.add(primaryTxPreparedEvent.getPrimaryPrepareTxId().getId());
                     argsList.add(proof);
-                    return resourceRegistry.getResource(branchTransaction.getUri()).submitBranchTransaction(branchTransaction, primaryTxPreparedEvent.getGlobalTxStatusQuery());
-                }).collect(Collectors.toList()));
+                    CompletableFuture<BranchTransactionResponse> response = resourceRegistry.getResource(branchPrepareTx.getTxId().getUri()).submitBranchTransaction(branchPrepareTx);
+                    futureResList.add(response);
+                }
+                return futureResList;
+            });
     }
 
     private void commitOrRollbackBranchTransaction(PrimaryTransactionConfirmedEvent primaryTransactionConfirmedEvent) {
         resourceRegistry.getResource(primaryTransactionConfirmedEvent.getPrimaryConfirmTxId().getUri())
             .getProofForTransaction(primaryTransactionConfirmedEvent.getPrimaryConfirmTxId().getId())
-            .thenAccept(proof -> primaryTransactionConfirmedEvent.getBranchCommitOrRollbackTxsList()
+            .thenAccept(proof -> primaryTransactionConfirmedEvent.getBranchConfirmTxsList()
                 .parallelStream()
                 .forEach(branchTransaction -> {
                     ProtocolStringList argsList = branchTransaction.getInvocation().getArgsList();
-                    argsList.add(primaryTransactionConfirmedEvent.getPrimaryConfirmTxId().toByteString().toString());
                     argsList.add(proof);
-                    resourceRegistry.getResource(branchTransaction.getUri()).submitBranchTransaction(branchTransaction, null);
+                    resourceRegistry.getResource(branchTransaction.getTxId().getUri()).submitBranchTransaction(branchTransaction);
                 })).exceptionally(throwable -> {
             LOGGER.error("commit or rollback branch transaction error", throwable);
             return null;
