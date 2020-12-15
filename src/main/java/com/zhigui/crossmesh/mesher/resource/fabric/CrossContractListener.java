@@ -39,6 +39,7 @@ public class CrossContractListener implements Consumer<ContractEvent> {
     @Override
     public void accept(ContractEvent contractEvent) {
         String eventName = contractEvent.getName();
+        LOGGER.info(eventName);
         Optional<byte[]> payloadOpt = contractEvent.getPayload();
         if (!payloadOpt.isPresent()) {
             return;
@@ -59,7 +60,11 @@ public class CrossContractListener implements Consumer<ContractEvent> {
                 PrimaryTransactionPreparedEvent.Builder primaryTransactionPreparedEventBuilder = primaryTransactionPreparedEvent.toBuilder();
                 primaryTransactionPreparedEventBuilder.getPrimaryConfirmTxBuilder().getInvocationBuilder().setContract(this.contractName);
                 primaryTransactionPreparedEventBuilder.getGlobalTxStatusQueryBuilder().setContract(this.contractName);
+                primaryTransactionPreparedEvent = primaryTransactionPreparedEventBuilder.build();
+                FabricResource fabricResourceForPrepare = (FabricResource) coordinator.getResourceRegistry().getResource(primaryTransactionPreparedEvent.getPrimaryPrepareTxId().getUri());
+                fabricResourceForPrepare.addTransactionEvent(contractEvent.getTransactionEvent().getTransactionID(), contractEvent.getTransactionEvent());
                 coordinator.handlePrimaryTransactionPrepared(primaryTransactionPreparedEventBuilder.build());
+                break;
             case PRIMARY_TRANSACTION_CONFIRMED_EVENT:
                 if (!contractEvent.getTransactionEvent().isValid()) {
                     return;
@@ -71,7 +76,10 @@ public class CrossContractListener implements Consumer<ContractEvent> {
                     LOGGER.error("parse primary tx confirmed event exception", e);
                     return;
                 }
+                FabricResource fabricResourceForConfirm = (FabricResource) coordinator.getResourceRegistry().getResource(primaryTransactionConfirmedEvent.getPrimaryConfirmTxId().getUri());
+                fabricResourceForConfirm.addTransactionEvent(contractEvent.getTransactionEvent().getTransactionID(), contractEvent.getTransactionEvent());
                 coordinator.handlePrimaryTransactionConfirmed(primaryTransactionConfirmedEvent);
+                break;
             case BRANCH_TRANSACTION_PREPARED_EVENT:
                 BranchTransactionPreparedEvent branchTransactionPreparedEvent;
                 try {
@@ -82,7 +90,8 @@ public class CrossContractListener implements Consumer<ContractEvent> {
                 }
                 BranchTransactionPreparedEvent.Builder branchTransactionPreparedEventBuilder = branchTransactionPreparedEvent.toBuilder();
                 branchTransactionPreparedEventBuilder.getConfirmTxBuilder().getInvocationBuilder().setContract(this.contractName);
-                coordinator.handleBranchTransactionPrepared(branchTransactionPreparedEvent);
+                coordinator.handleBranchTransactionPrepared(branchTransactionPreparedEventBuilder.build());
+                break;
             case RESOURCE_REGISTERED_EVENT:
                 ResourceRegisteredOrUpdatedEvent resourceRegisteredOrUpdatedEvent;
                 try {
@@ -92,7 +101,9 @@ public class CrossContractListener implements Consumer<ContractEvent> {
                     return;
                 }
                 coordinator.handleResourceRegisteredEvent(resourceRegisteredOrUpdatedEvent);
+                break;
             default:
+                break;
         }
     }
 

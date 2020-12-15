@@ -31,9 +31,6 @@ public class Config {
     @Value("${mesher.meta-chain.type}")
     private ChainType metaChainType;
 
-    @Value("${mesher.meta-chain.resource-registry-contract}")
-    private String resourceRegistryContract;
-
     @Value("${mesher.meta-chain.fabric.conn-path}")
     private String fabricMetaChainConn;
 
@@ -75,14 +72,6 @@ public class Config {
 
     public void setMetaChain(String metaChain) {
         this.metaChain = metaChain;
-    }
-
-    public String getResourceRegistryContract() {
-        return resourceRegistryContract;
-    }
-
-    public void setResourceRegistryContract(String resourceRegistryContract) {
-        this.resourceRegistryContract = resourceRegistryContract;
     }
 
     public ChainType getMetaChainType() {

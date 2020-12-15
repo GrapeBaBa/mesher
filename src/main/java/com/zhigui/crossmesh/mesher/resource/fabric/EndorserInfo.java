@@ -15,7 +15,7 @@ public class EndorserInfo implements Serializable {
 
     private String mspId;
 
-    private byte[] signature;
+    private String signature;
 
     public String getId() {
         return id;
@@ -33,11 +33,11 @@ public class EndorserInfo implements Serializable {
         this.mspId = mspId;
     }
 
-    public byte[] getSignature() {
+    public String getSignature() {
         return signature;
     }
 
-    public void setSignature(byte[] signature) {
+    public void setSignature(String signature) {
         this.signature = signature;
     }
 
@@ -48,14 +48,12 @@ public class EndorserInfo implements Serializable {
         EndorserInfo that = (EndorserInfo) o;
         return id.equals(that.id) &&
             mspId.equals(that.mspId) &&
-            Arrays.equals(signature, that.signature);
+            signature.equals(that.signature);
     }
 
     @Override
     public int hashCode() {
-        int result = Objects.hash(id, mspId);
-        result = 31 * result + Arrays.hashCode(signature);
-        return result;
+        return Objects.hash(id, mspId, signature);
     }
 
     @Override
@@ -63,7 +61,7 @@ public class EndorserInfo implements Serializable {
         return "EndorserInfo{" +
             "id='" + id + '\'' +
             ", mspId='" + mspId + '\'' +
-            ", signature=" + Arrays.toString(signature) +
+            ", signature='" + signature + '\'' +
             '}';
     }
 }

@@ -10,15 +10,15 @@ import java.util.Set;
  * Time: 3:18 PM
  */
 public class Proof implements Serializable {
-    private byte[] proposalResponsePayload;
+    private String proposalResponsePayload;
 
     private Set<EndorserInfo> endorserInfos;
 
-    public byte[] getProposalResponsePayload() {
+    public String getProposalResponsePayload() {
         return proposalResponsePayload;
     }
 
-    public void setProposalResponsePayload(byte[] proposalResponsePayload) {
+    public void setProposalResponsePayload(String proposalResponsePayload) {
         this.proposalResponsePayload = proposalResponsePayload;
     }
 

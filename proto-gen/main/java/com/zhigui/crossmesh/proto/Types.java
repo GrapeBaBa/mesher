@@ -4757,10 +4757,16 @@ public final class Types {
     com.zhigui.crossmesh.proto.Types.BranchTransactionResponse.Status getStatus();
 
     /**
-     * <code>bytes proof = 3;</code>
+     * <code>string proof = 3;</code>
      * @return The proof.
      */
-    com.google.protobuf.ByteString getProof();
+    java.lang.String getProof();
+    /**
+     * <code>string proof = 3;</code>
+     * @return The bytes for proof.
+     */
+    com.google.protobuf.ByteString
+        getProofBytes();
   }
   /**
    * Protobuf type {@code pb.BranchTransactionResponse}
@@ -4776,7 +4782,7 @@ public final class Types {
     }
     private BranchTransactionResponse() {
       status_ = 0;
-      proof_ = com.google.protobuf.ByteString.EMPTY;
+      proof_ = "";
     }
 
     @java.lang.Override
@@ -4829,8 +4835,9 @@ public final class Types {
               break;
             }
             case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
 
-              proof_ = input.readBytes();
+              proof_ = s;
               break;
             }
             default: {
@@ -5012,13 +5019,39 @@ public final class Types {
     }
 
     public static final int PROOF_FIELD_NUMBER = 3;
-    private com.google.protobuf.ByteString proof_;
+    private volatile java.lang.Object proof_;
     /**
-     * <code>bytes proof = 3;</code>
+     * <code>string proof = 3;</code>
      * @return The proof.
      */
-    public com.google.protobuf.ByteString getProof() {
-      return proof_;
+    public java.lang.String getProof() {
+      java.lang.Object ref = proof_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        proof_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string proof = 3;</code>
+     * @return The bytes for proof.
+     */
+    public com.google.protobuf.ByteString
+        getProofBytes() {
+      java.lang.Object ref = proof_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        proof_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -5041,8 +5074,8 @@ public final class Types {
       if (status_ != com.zhigui.crossmesh.proto.Types.BranchTransactionResponse.Status.SUCCESS.getNumber()) {
         output.writeEnum(2, status_);
       }
-      if (!proof_.isEmpty()) {
-        output.writeBytes(3, proof_);
+      if (!getProofBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, proof_);
       }
       unknownFields.writeTo(output);
     }
@@ -5061,9 +5094,8 @@ public final class Types {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, status_);
       }
-      if (!proof_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, proof_);
+      if (!getProofBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, proof_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5248,7 +5280,7 @@ public final class Types {
         }
         status_ = 0;
 
-        proof_ = com.google.protobuf.ByteString.EMPTY;
+        proof_ = "";
 
         return this;
       }
@@ -5337,8 +5369,9 @@ public final class Types {
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
         }
-        if (other.getProof() != com.google.protobuf.ByteString.EMPTY) {
-          setProof(other.getProof());
+        if (!other.getProof().isEmpty()) {
+          proof_ = other.proof_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5540,20 +5573,47 @@ public final class Types {
         return this;
       }
 
-      private com.google.protobuf.ByteString proof_ = com.google.protobuf.ByteString.EMPTY;
+      private java.lang.Object proof_ = "";
       /**
-       * <code>bytes proof = 3;</code>
+       * <code>string proof = 3;</code>
        * @return The proof.
        */
-      public com.google.protobuf.ByteString getProof() {
-        return proof_;
+      public java.lang.String getProof() {
+        java.lang.Object ref = proof_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          proof_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>bytes proof = 3;</code>
+       * <code>string proof = 3;</code>
+       * @return The bytes for proof.
+       */
+      public com.google.protobuf.ByteString
+          getProofBytes() {
+        java.lang.Object ref = proof_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          proof_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string proof = 3;</code>
        * @param value The proof to set.
        * @return This builder for chaining.
        */
-      public Builder setProof(com.google.protobuf.ByteString value) {
+      public Builder setProof(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5563,12 +5623,28 @@ public final class Types {
         return this;
       }
       /**
-       * <code>bytes proof = 3;</code>
+       * <code>string proof = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearProof() {
         
         proof_ = getDefaultInstance().getProof();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string proof = 3;</code>
+       * @param value The bytes for proof to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProofBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        proof_ = value;
         onChanged();
         return this;
       }
@@ -14109,7 +14185,7 @@ public final class Types {
       "oof\030\003 \001(\t\"\245\001\n\031BranchTransactionResponse\022" +
       " \n\005tx_id\030\001 \001(\0132\021.pb.TransactionID\0224\n\006sta" +
       "tus\030\002 \001(\0162$.pb.BranchTransactionResponse" +
-      ".Status\022\r\n\005proof\030\003 \001(\014\"!\n\006Status\022\013\n\007SUCC" +
+      ".Status\022\r\n\005proof\030\003 \001(\t\"!\n\006Status\022\013\n\007SUCC" +
       "ESS\020\000\022\n\n\006FAILED\020\001\"-\n\017PrimaryLockMeta\022\013\n\003" +
       "xid\030\001 \001(\t\022\r\n\005chain\030\002 \001(\t\"%\n\003URI\022\017\n\007netwo" +
       "rk\030\001 \001(\t\022\r\n\005chain\030\002 \001(\t\"1\n\rTransactionID" +

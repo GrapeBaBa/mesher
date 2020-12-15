@@ -2,6 +2,7 @@ package com.zhigui.crossmesh.mesher;
 
 import com.zhigui.crossmesh.mesher.resource.Resource;
 import com.zhigui.crossmesh.mesher.resource.ResourceRegistry;
+import com.zhigui.crossmesh.proto.Types;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -14,6 +15,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
+import static com.zhigui.crossmesh.proto.Types.*;
 import static com.zhigui.crossmesh.proto.Types.BranchTransactionPreparedEvent;
 
 @Component
@@ -39,6 +41,11 @@ public class CrossTransactionMonitor {
         this.bookKeeper.submit(this.completedGlobalTransactionCleaner);
     }
 
+    public void stop() {
+        this.bookKeeper.shutdown();
+        this.executorService.shutdown();
+    }
+
     public ScheduledFuture<?> monitor(BranchTransactionPreparedEvent preparedEvent) {
         return this.executorService.scheduleWithFixedDelay(() -> {
             Resource resource = resourceRegistry.getResource(preparedEvent.getPrimaryPrepareTxId().getUri());
@@ -51,12 +58,15 @@ public class CrossTransactionMonitor {
                     }
                     resource.getProofForTransaction(globalTransactionStatus.getPrimaryConfirmTxId().getId()).whenComplete((proof, throwable1) -> {
                         Resource branchTxResource = resourceRegistry.getResource(preparedEvent.getConfirmTx().getTxId().getUri());
-                        preparedEvent.getConfirmTx().getInvocation().getArgsList().add(String.valueOf(globalTransactionStatus.getStatus().getNumber()));
-                        preparedEvent.getConfirmTx().getInvocation().getArgsList().add(globalTransactionStatus.getPrimaryConfirmTxId().getUri().getNetwork());
-                        preparedEvent.getConfirmTx().getInvocation().getArgsList().add(globalTransactionStatus.getPrimaryConfirmTxId().getUri().getChain());
-                        preparedEvent.getConfirmTx().getInvocation().getArgsList().add(globalTransactionStatus.getPrimaryConfirmTxId().getId());
-                        preparedEvent.getConfirmTx().getInvocation().getArgsList().add(proof);
-                        branchTxResource.submitBranchTransaction(preparedEvent.getConfirmTx()).whenComplete((branchTransactionResponse, e) -> {
+                        BranchTransaction.Builder builder=preparedEvent.toBuilder().getConfirmTxBuilder();
+                        builder.getInvocationBuilder()
+                        .addArgs(String.valueOf(globalTransactionStatus.getStatus().getNumber()))
+                        .addArgs(globalTransactionStatus.getPrimaryConfirmTxId().getUri().getNetwork())
+                        .addArgs(globalTransactionStatus.getPrimaryConfirmTxId().getUri().getChain())
+                        .addArgs(globalTransactionStatus.getPrimaryConfirmTxId().getId())
+                        .addArgs(proof);
+                        BranchTransaction confirmTx=builder.build();
+                        branchTxResource.submitBranchTransaction(confirmTx).whenComplete((branchTransactionResponse, e) -> {
                             if (e != null) {
                                 LOGGER.error("submit branch tx failed", e);
                             }

@@ -40,7 +40,7 @@ message BranchTransactionResponse {
         FAILED = 1;
     }
     Status status = 2;
-    bytes proof = 3;
+    string proof = 3;
 }
 
 enum ChainType {
