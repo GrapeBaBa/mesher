@@ -2,7 +2,6 @@ package com.zhigui.crossmesh.mesher;
 
 import com.zhigui.crossmesh.mesher.resource.Resource;
 import com.zhigui.crossmesh.mesher.resource.ResourceRegistry;
-import com.zhigui.crossmesh.proto.Types;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -15,7 +14,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
-import static com.zhigui.crossmesh.proto.Types.*;
+import static com.zhigui.crossmesh.proto.Types.BranchTransaction;
 import static com.zhigui.crossmesh.proto.Types.BranchTransactionPreparedEvent;
 
 @Component

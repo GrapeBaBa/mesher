@@ -100,10 +100,12 @@ public class FabricResource implements Resource {
                 builder.setStatus(BranchTransactionResponse.Status.SUCCESS);
             } catch (ContractException | TimeoutException | InterruptedException | GatewayRuntimeException e) {
                 LOGGER.error("submit transaction failed", e);
+                builder.setProof("");
                 builder.setStatus(BranchTransactionResponse.Status.FAILED);
                 if (e instanceof InterruptedException) {
                     Thread.currentThread().interrupt();
                 }
+                return builder.build();
             }
 
             try {

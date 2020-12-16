@@ -70,14 +70,14 @@ public class Coordinator {
                 .addArgs(primaryTxPreparedEvent.getBranchPrepareTxs(i).getTxId().getUri().getChain());
             CompletableFuture<BranchTransactionResponse> branchTxResCompletableFuture = completableFutures.get(i);
             try {
-                BranchTransactionResponse branchTxRes = branchTxResCompletableFuture.get(30, TimeUnit.SECONDS);
+                BranchTransactionResponse branchTxRes = branchTxResCompletableFuture.get();
                 invBuilder.addArgs(branchTxRes.getTxId().getId());
                 if (branchTxRes.getStatus() == SUCCESS) {
                     invBuilder.addArgs(branchTxRes.getProof());
                 } else {
                     invBuilder.addArgs("");
                 }
-            } catch (InterruptedException | ExecutionException | TimeoutException e) {
+            } catch (InterruptedException | ExecutionException e) {
                 LOGGER.error("get branch transaction response failed", e);
                 invBuilder.addArgs("");
                 if (e instanceof InterruptedException) {
