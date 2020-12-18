@@ -2,30 +2,25 @@ package com.zhigui.crossmesh.mesher;
 
 import com.zhigui.crossmesh.mesher.resource.Resource;
 import com.zhigui.crossmesh.mesher.resource.ResourceRegistry;
-import com.zhigui.crossmesh.proto.Types;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
 
-import static com.zhigui.crossmesh.proto.Types.*;
 import static com.zhigui.crossmesh.proto.Types.BranchTransaction;
-import static com.zhigui.crossmesh.proto.Types.BranchTransaction.*;
 import static com.zhigui.crossmesh.proto.Types.BranchTransactionPreparedEvent;
 import static com.zhigui.crossmesh.proto.Types.BranchTransactionResponse;
 import static com.zhigui.crossmesh.proto.Types.BranchTransactionResponse.Status.SUCCESS;
-import static com.zhigui.crossmesh.proto.Types.Invocation.*;
+import static com.zhigui.crossmesh.proto.Types.Invocation;
 import static com.zhigui.crossmesh.proto.Types.PrimaryTransactionConfirmedEvent;
 import static com.zhigui.crossmesh.proto.Types.PrimaryTransactionPreparedEvent;
+import static com.zhigui.crossmesh.proto.Types.ResourceRegisteredOrUpdatedEvent;
 
 @Component
 public class Coordinator {
@@ -37,13 +32,8 @@ public class Coordinator {
     @Autowired
     private CrossTransactionMonitor crossTransactionMonitor;
 
-    @PostConstruct
-    public void start() {
-        this.crossTransactionMonitor.start();
-    }
-
     public void handleBranchTransactionPrepared(final BranchTransactionPreparedEvent branchTransactionPreparedEvent) {
-        this.crossTransactionMonitor.getPreparedBranchTransactions().computeIfAbsent(branchTransactionPreparedEvent, this.crossTransactionMonitor::monitor);
+        this.crossTransactionMonitor.monitor(branchTransactionPreparedEvent);
     }
 
     public void handlePrimaryTransactionConfirmed(final PrimaryTransactionConfirmedEvent primaryTransactionConfirmedEvent) {

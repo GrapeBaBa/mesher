@@ -1,13 +1,11 @@
 package com.zhigui.crossmesh.mesher.resource;
 
-import com.zhigui.crossmesh.proto.Types;
-
 import java.util.concurrent.CompletableFuture;
 
-import static com.zhigui.crossmesh.proto.Types.*;
 import static com.zhigui.crossmesh.proto.Types.BranchTransaction;
 import static com.zhigui.crossmesh.proto.Types.BranchTransactionResponse;
 import static com.zhigui.crossmesh.proto.Types.GlobalTransactionStatus;
+import static com.zhigui.crossmesh.proto.Types.Invocation;
 
 /**
  * Created by IntelliJ IDEA.
@@ -22,4 +20,6 @@ public interface Resource {
     CompletableFuture<GlobalTransactionStatus> evaluateGlobalTransaction(Invocation globalTxQuery);
 
     CompletableFuture<String> getProofForTransaction(String txId);
+
+    void close();
 }

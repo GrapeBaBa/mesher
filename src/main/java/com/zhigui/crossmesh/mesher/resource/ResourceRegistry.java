@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import java.nio.file.Paths;
 import java.util.Base64;
 import java.util.concurrent.ConcurrentHashMap;
@@ -46,7 +47,7 @@ public class ResourceRegistry {
     public void handleResourceRegisteredEvent(ResourceRegisteredOrUpdatedEvent resourceRegisteredEvent) {
         switch (resourceRegisteredEvent.getType()) {
             case FABRIC:
-                this.resources.compute(resourceRegisteredEvent.getUri(), (uri,val) -> new FabricResource(uri, Base64.getDecoder().decode(resourceRegisteredEvent.getConnection().toStringUtf8()), null, coordinator, config));
+                this.resources.compute(resourceRegisteredEvent.getUri(), (uri, val) -> new FabricResource(uri, Base64.getDecoder().decode(resourceRegisteredEvent.getConnection().toStringUtf8()), null, coordinator, config));
                 break;
             case XUPERCHAIN:
             case BCOS:
@@ -54,5 +55,10 @@ public class ResourceRegistry {
             default:
                 throw new RuntimeException();
         }
+    }
+
+    @PreDestroy
+    public void stop() {
+        this.resources.forEach(this.resources.size(), (uri, resource) -> resource.close());
     }
 }

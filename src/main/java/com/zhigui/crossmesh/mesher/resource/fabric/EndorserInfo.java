@@ -1,7 +1,6 @@
 package com.zhigui.crossmesh.mesher.resource.fabric;
 
 import java.io.Serializable;
-import java.util.Arrays;
 import java.util.Objects;
 
 /**

@@ -41,6 +41,9 @@ import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
@@ -66,13 +69,19 @@ public class FabricResource implements Resource {
 
     private final Coordinator coordinator;
 
+    private final ScheduledExecutorService scheduledExecutorService;
+
+    private final ConcurrentHashMap<String, ScheduledFuture<?>> proofFutures;
+
     public FabricResource(URI uri, byte[] connection, Path connPath, Coordinator coordinator, Config config) {
         this.coordinator = coordinator;
         this.selfNetwork = config.getSelfNetwork();
         this.baseUrl = config.getIdBasePath();
         this.uri = uri;
         this.transactionResults = new ConcurrentHashMap<>();
+        this.scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
         setConnection(connection, connPath);
+        proofFutures = new ConcurrentHashMap<>();
     }
 
     @Override
@@ -111,6 +120,7 @@ public class FabricResource implements Resource {
             try {
                 String proofStr = getProofForTransaction(tx.getTransactionId()).get(30, TimeUnit.SECONDS);
                 builder.setProof(proofStr);
+                return builder.build();
             } catch (InterruptedException | ExecutionException | TimeoutException e) {
                 LOGGER.error("get transaction proof failed", e);
                 builder.setProof("");
@@ -118,9 +128,10 @@ public class FabricResource implements Resource {
                 if (e instanceof InterruptedException) {
                     Thread.currentThread().interrupt();
                 }
+                return builder.build();
             }
 
-            return builder.build();
+
         });
     }
 
@@ -143,7 +154,7 @@ public class FabricResource implements Resource {
                     EndorserInfo endorserInfo = new EndorserInfo();
                     endorserInfo.setId(txInfo.getEndorsementInfo(i).getId());
                     endorserInfo.setMspId(txInfo.getEndorsementInfo(i).getMspid());
-                    endorserInfo.setSignature(Hex.encodeHexString(txInfo.getEndorsementInfo(i).getSignature()));
+                    endorserInfo.setSignature(ByteString.copyFrom(txInfo.getEndorsementInfo(i).getSignature()).toStringUtf8());
                     endorserInfos.add(endorserInfo);
                 }
                 proof.setEndorserInfos(endorserInfos);
@@ -151,56 +162,58 @@ public class FabricResource implements Resource {
                 return proofJson.toJson(proof);
             });
         } else {
-            return CompletableFuture.supplyAsync(() -> {
-                for (; ; ) {
-                    try {
-                        TransactionInfo txInfo = network.getChannel().queryTransactionByID(txId);
-                        if (txInfo == null) {
-                            Thread.sleep(1000);
-                            continue;
-                        }
-                        Common.Envelope envelope = txInfo.getEnvelope();
-                        Common.Payload payload = Common.Payload.parseFrom(envelope.getPayload());
-                        TransactionPackage.Transaction transaction = TransactionPackage.Transaction.parseFrom(payload.getData());
-                        TransactionPackage.TransactionAction action = transaction.getActionsList().get(0);
-                        TransactionPackage.ChaincodeActionPayload chaincodeActionPayload = TransactionPackage.ChaincodeActionPayload.parseFrom(action.getPayload());
-                        ProposalResponsePackage.ProposalResponsePayload prp = ProposalResponsePackage.ProposalResponsePayload.parseFrom(chaincodeActionPayload.getAction().getProposalResponsePayload());
-                        ProposalPackage.ChaincodeAction ccaction = ProposalPackage.ChaincodeAction.parseFrom(prp.getExtension());
-
-                        Proof proof = new Proof();
-                        proof.setProposalResponsePayload(ByteString.copyFrom(ccaction.getResponse().getPayload().toByteArray()).toStringUtf8());
-                        Set<EndorserInfo> endorserInfos = new HashSet<>();
-                        chaincodeActionPayload.getAction().getEndorsementsList().forEach(endorsement -> {
-                            EndorserInfo endorserInfo = new EndorserInfo();
-                            try {
-                                endorserInfo.setId(Identities.SerializedIdentity.parseFrom(endorsement.getEndorser()).getIdBytes().toStringUtf8());
-                            } catch (InvalidProtocolBufferException e) {
-                                throw new InvalidProtocolBufferRuntimeException(e);
-                            }
-                            try {
-                                endorserInfo.setMspId(Identities.SerializedIdentity.parseFrom(endorsement.getEndorser()).getMspid());
-                            } catch (InvalidProtocolBufferException e) {
-                                throw new InvalidProtocolBufferRuntimeException(e);
-                            }
-
-                            endorserInfo.setSignature(Hex.encodeHexString(endorsement.getSignature().toByteArray()));
-                            endorserInfos.add(endorserInfo);
-                        });
-                        proof.setEndorserInfos(endorserInfos);
-                        Gson proofJson = new Gson();
-                        return proofJson.toJson(proof);
-                    } catch (ProposalException | InvalidArgumentException | InvalidProtocolBufferException | InterruptedException e) {
-                        if (e instanceof InterruptedException) {
-                            Thread.currentThread().interrupt();
-                        }
-                        throw new RuntimeException(e);
+            CompletableFuture<String> completableFuture = new CompletableFuture<>();
+            this.proofFutures.computeIfAbsent(txId, s -> scheduledExecutorService.scheduleAtFixedRate(() -> {
+                try {
+                    TransactionInfo txInfo = network.getChannel().queryTransactionByID(txId);
+                    if (txInfo == null) {
+                        return;
                     }
+                    Common.Envelope envelope = txInfo.getEnvelope();
+                    Common.Payload payload = Common.Payload.parseFrom(envelope.getPayload());
+                    TransactionPackage.Transaction transaction = TransactionPackage.Transaction.parseFrom(payload.getData());
+                    TransactionPackage.TransactionAction action = transaction.getActionsList().get(0);
+                    TransactionPackage.ChaincodeActionPayload chaincodeActionPayload = TransactionPackage.ChaincodeActionPayload.parseFrom(action.getPayload());
+                    ProposalResponsePackage.ProposalResponsePayload prp = ProposalResponsePackage.ProposalResponsePayload.parseFrom(chaincodeActionPayload.getAction().getProposalResponsePayload());
+                    ProposalPackage.ChaincodeAction ccaction = ProposalPackage.ChaincodeAction.parseFrom(prp.getExtension());
+
+                    Proof proof = new Proof();
+                    proof.setProposalResponsePayload(ByteString.copyFrom(ccaction.getResponse().getPayload().toByteArray()).toStringUtf8());
+                    Set<EndorserInfo> endorserInfos = new HashSet<>();
+                    chaincodeActionPayload.getAction().getEndorsementsList().forEach(endorsement -> {
+                        EndorserInfo endorserInfo = new EndorserInfo();
+                        try {
+                            endorserInfo.setId(Identities.SerializedIdentity.parseFrom(endorsement.getEndorser()).getIdBytes().toStringUtf8());
+                        } catch (InvalidProtocolBufferException e) {
+                            throw new InvalidProtocolBufferRuntimeException(e);
+                        }
+                        try {
+                            endorserInfo.setMspId(Identities.SerializedIdentity.parseFrom(endorsement.getEndorser()).getMspid());
+                        } catch (InvalidProtocolBufferException e) {
+                            throw new InvalidProtocolBufferRuntimeException(e);
+                        }
+
+                        endorserInfo.setSignature(Hex.encodeHexString(endorsement.getSignature().toByteArray()));
+                        endorserInfos.add(endorserInfo);
+                    });
+                    proof.setEndorserInfos(endorserInfos);
+                    Gson proofJson = new Gson();
+                    completableFuture.complete(proofJson.toJson(proof));
+                } catch (ProposalException | InvalidArgumentException | InvalidProtocolBufferException e) {
+                    completableFuture.completeExceptionally(e);
+
                 }
-            });
+                this.proofFutures.remove(txId).cancel(true);
+            }, 0, 1, TimeUnit.SECONDS));
 
-
+            return completableFuture;
         }
 
+    }
+
+    @Override
+    public void close() {
+        this.scheduledExecutorService.shutdown();
     }
 
     public void addTransactionEvent(String txID, TransactionEvent transactionEvent) {
