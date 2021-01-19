@@ -28,10 +28,13 @@ dependencies {
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor") {
         exclude group: 'com.vaadin.external.google', module: 'android-json'
     }
-    implementation 'org.hyperledger.fabric:fabric-gateway-java:2.2.0'
+    implementation('org.hyperledger.fabric:fabric-gateway-java:2.2.0') {
+        exclude group: 'io.netty', module: 'netty-tcnative-boringssl-static'
+    }
     implementation('net.devh:grpc-server-spring-boot-starter:2.9.0.RELEASE') {
         exclude group: 'io.grpc', module: 'grpc-netty-shaded'
     }
+    implementation 'org.fisco-bcos.java-sdk:fisco-bcos-java-sdk:2.7.1'
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
