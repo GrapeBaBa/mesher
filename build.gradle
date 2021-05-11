@@ -30,7 +30,9 @@ dependencies {
     }
     implementation('org.hyperledger.fabric:fabric-gateway-java:2.2.0') {
         exclude group: 'io.netty', module: 'netty-tcnative-boringssl-static'
+        exclude group: 'org.hyperledger.fabric-sdk-java'
     }
+    implementation('org.hyperledger.fabric-sdk-java:fabric-sdk-java:2.2.0')
     implementation('net.devh:grpc-server-spring-boot-starter:2.9.0.RELEASE') {
         exclude group: 'io.grpc', module: 'grpc-netty-shaded'
     }
